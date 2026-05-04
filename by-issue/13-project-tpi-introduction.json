@@ -1,0 +1,24 @@
+{
+  "issue": {
+    "number": 13,
+    "title": "Project - TPI Introduction",
+    "description": "## 📄 Description\nMeet the first expert, let him explain the unfolding of the project.\nRead and sign the CDC.",
+    "estimatedMins": 60,
+    "estimatedHours": 1,
+    "sprint": null
+  },
+  "totalLoggedMins": 60,
+  "totalLoggedHours": 1,
+  "logs": [
+    {
+      "date": "2026-05-04",
+      "durationMins": 60,
+      "durationHours": 1,
+      "description": "TPI intro, meeting first expert, reading & signing cdc",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    }
+  ],
+  "completionRate": 1
+}

@@ -1,0 +1,33 @@
+{
+  "date": "2026-05-04",
+  "totalMins": 315,
+  "totalHours": 5.25,
+  "logs": [
+    {
+      "issue": {
+        "number": 13,
+        "title": "Project - TPI Introduction"
+      },
+      "sprint": null,
+      "durationMins": 60,
+      "durationHours": 1,
+      "description": "TPI intro, meeting first expert, reading & signing cdc",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 20,
+        "title": "Project - Intial Planning"
+      },
+      "sprint": null,
+      "durationMins": 255,
+      "durationHours": 4.25,
+      "description": "Intial planning : Defining the 3 sprints, user stories, tech stories, other tasks. Attributing time estimates, priority, size, scope to tasks.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    }
+  ]
+}
