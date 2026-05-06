@@ -1,7 +1,7 @@
 {
   "date": "2026-05-06",
-  "totalMins": 335,
-  "totalHours": 5.583333333333333,
+  "totalMins": 420,
+  "totalHours": 7,
   "logs": [
     {
       "issue": {
@@ -103,6 +103,19 @@
       "durationMins": 20,
       "durationHours": 0.3333333333333333,
       "description": "Created a docker compose file at project root with frontend, backend, db containers; added project root env and env example files",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 8,
+        "title": "Doc - Project Report"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 85,
+      "durationHours": 1.4166666666666667,
+      "description": "Working on the docx project report, mostly doing the title page, formating (headers, footers), writing section 1.1 contexte & mandat and section 1.2 méthode et organisation.",
       "outcome": "success",
       "reflection": null,
       "aids": null

@@ -1,0 +1,24 @@
+{
+  "issue": {
+    "number": 8,
+    "title": "Doc - Project Report",
+    "description": "## 📄 Description\nKeep an update to date project document\n",
+    "estimatedMins": 1200,
+    "estimatedHours": 20,
+    "sprint": "Sprint 1"
+  },
+  "totalLoggedMins": 85,
+  "totalLoggedHours": 1.4166666666666667,
+  "logs": [
+    {
+      "date": "2026-05-06",
+      "durationMins": 85,
+      "durationHours": 1.4166666666666667,
+      "description": "Working on the docx project report, mostly doing the title page, formating (headers, footers), writing section 1.1 contexte & mandat and section 1.2 méthode et organisation.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    }
+  ],
+  "completionRate": 0.07
+}
