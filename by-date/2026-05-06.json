@@ -1,7 +1,7 @@
 {
   "date": "2026-05-06",
-  "totalMins": 120,
-  "totalHours": 2,
+  "totalMins": 195,
+  "totalHours": 3.25,
   "logs": [
     {
       "issue": {
@@ -41,6 +41,19 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "issue": {
+        "number": 25,
+        "title": "Setup - Project"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 75,
+      "durationHours": 1.25,
+      "description": "Set up the project structure, main & sub dependencies, and config files / other needed files (.env) for both the backend and frontend.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "backend: <br> https://www.typescriptlang.org/ <br> https://www.prisma.io/docs/prisma-orm/quickstart/mysql <br> https://zod.dev/ <br> https://vitest.dev/guide/ <br> https://www.npmjs.com/package/supertest <br><br> frontend: <br> https://superforms.rocks/get-started <br> https://svelte.dev/docs/cli/sv-create"
     }
   ]
 }

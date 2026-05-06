@@ -1,0 +1,24 @@
+{
+  "issue": {
+    "number": 25,
+    "title": "Setup - Project",
+    "description": "## 🔧 Tech Story\nAs a developer,\nI want to set the project structure and dependencies,\nso that the codebase is organized and ready for feature development.\n\n## 📋Acceptance Criteria\n- [x] Create the file/folder structure for the project\n- [x] Install main dependencies (Express, Svelte, Prisma, Typescript)\n- [x] Install sub dependencies (validation, cryptographic, frontend styling/formating)\n\n## 🔍 Tech Analysis\n- Folder structure with /backend & /frontend at root\n- Frontend: standard svelte structure\n- Backend: \n   - /src in root containing routes, controllers, repositories, services, utils, helpers, middleware, validators\n   - /tests containing tests and mock elements (mock repos, services)\n   - /uploads for user uploaded content (images)\n- Vitest for testing\n- Zod for validation and input parsing\n- Crypto for hashing / cryptographic\n- Tailwind for frontend UI styling\n- Prettier & eslint for formating and linting\n",
+    "estimatedMins": 180,
+    "estimatedHours": 3,
+    "sprint": "Sprint 1"
+  },
+  "totalLoggedMins": 75,
+  "totalLoggedHours": 1.25,
+  "logs": [
+    {
+      "date": "2026-05-06",
+      "durationMins": 75,
+      "durationHours": 1.25,
+      "description": "Set up the project structure, main & sub dependencies, and config files / other needed files (.env) for both the backend and frontend.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "backend: <br> https://www.typescriptlang.org/ <br> https://www.prisma.io/docs/prisma-orm/quickstart/mysql <br> https://zod.dev/ <br> https://vitest.dev/guide/ <br> https://www.npmjs.com/package/supertest <br><br> frontend: <br> https://superforms.rocks/get-started <br> https://svelte.dev/docs/cli/sv-create"
+    }
+  ],
+  "completionRate": 0.42
+}
