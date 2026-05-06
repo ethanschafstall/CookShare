@@ -20,7 +20,12 @@
     "seed": "tsx prisma/seed.ts",
     "db:generate": "npx prisma generate",
     "db:migrate": "npx prisma migrate dev",
-    "db:deploy": "npx prisma migrate deploy && npx prisma generate"
+    "db:deploy": "npx prisma migrate deploy && npx prisma generate",
+    "test:unit": "vitest",
+    "test:api": "vitest",
+    "test": "npm run test:unit -- --run",
+    "lint": "prettier --check . && eslint .",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@prisma/adapter-mariadb": "^7.8.0",
@@ -33,16 +38,22 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/cookie-parser": "^1.4.10",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^25.6.0",
     "@types/supertest": "^7.2.0",
+    "eslint": "^10.3.0",
+    "globals": "^17.6.0",
+    "prettier": "3.8.3",
+    "prettier-plugin-prisma": "^5.0.0",
     "prisma": "^7.8.0",
     "supertest": "^7.2.2",
     "tsx": "^4.21.0",
     "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.2",
     "vitest": "^4.1.5"
   }
 }
