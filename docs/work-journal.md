@@ -4,9 +4,13 @@
 
 ---
 
-# Work Log — 6 May 2026
+## 6 May 2026
 
 **Sprint:** Sprint 1 (6 May 2026 → 12 May 2026)
+
+**Day summary**
+
+> Lots of setup (general project and ci/cd). Backlog refinement (acceptance criteria, tech analysis).  starting report.
 
 | # | Task | Time spent | Description | Outcome | Reflection | Aids used |
 |---|------|------------|-------------|---------|------------|-----------|
@@ -18,16 +22,13 @@
 | [#25](https://github.com/ethanschafstall/CookShare/issues/25) | Setup - Project | 0h 10m | Installed eslint & prettier packages in backend; Created format & lint npm scripts for the workflows. | ✅ Success | — | https://prettier.io/docs/install https://eslint.org/docs/latest/use/getting-started |
 | [#26](https://github.com/ethanschafstall/CookShare/issues/26) | Setup - CI/CD | 0h 50m | Created two workflows (backend & frontend) with 3 triggers: push feat & /backend; on pull request on dev branch; workflow dispatch (manual). | ✅ Success | — | Aids: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax |
 | [#26](https://github.com/ethanschafstall/CookShare/issues/26) | Setup - CI/CD | 0h 20m | Created a docker compose file at project root with frontend, backend, db containers; added project root env and env example files | ✅ Success | — | — |
+| [#8](https://github.com/ethanschafstall/CookShare/issues/8) | Doc - Project Report | 1h 25m | Working on the docx project report, mostly doing the title page, formating (headers, footers), writing section 1.1 contexte & mandat and section 1.2 méthode et organisation. | ✅ Success | — | — |
 
-**Total time:** 5h 35m
+**Total time:** 7h
 
 ---
 
----
-
-# Work Log — 4 May 2026
-
-**Sprint:** —
+## 4 May 2026
 
 **Day summary**
 
