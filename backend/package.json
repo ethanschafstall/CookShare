@@ -23,7 +23,7 @@
     "db:deploy": "npx prisma migrate deploy && npx prisma generate",
     "test:unit": "vitest",
     "test:api": "vitest",
-    "test": "npm run test:unit -- --run",
+    "test": "npm run test:api -- --run",
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write ."
   },
