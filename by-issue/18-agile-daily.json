@@ -1,0 +1,24 @@
+{
+  "issue": {
+    "number": 18,
+    "title": "Agile - Daily",
+    "description": "## 📄 Description\nBrief daily/self reflection session on what has been done, what is planned, and any blockers.",
+    "estimatedMins": 150,
+    "estimatedHours": 2.5,
+    "sprint": null
+  },
+  "totalLoggedMins": 15,
+  "totalLoggedHours": 0.25,
+  "logs": [
+    {
+      "date": "2026-05-06",
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "Getting prepared on what needs to be done today, and in what order.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    }
+  ],
+  "completionRate": 0.1
+}

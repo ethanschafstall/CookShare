@@ -1,0 +1,24 @@
+{
+  "issue": {
+    "number": 21,
+    "title": "Agile - Backlog Refinement",
+    "description": "## 🔧 Tech Story\nAs a developer,\nI want to review and refine the backlog between sprints,\nso that upcoming issues are well defined, estimated and ready to implement.",
+    "estimatedMins": 120,
+    "estimatedHours": 2,
+    "sprint": null
+  },
+  "totalLoggedMins": 75,
+  "totalLoggedHours": 1.25,
+  "logs": [
+    {
+      "date": "2026-05-06",
+      "durationMins": 75,
+      "durationHours": 1.25,
+      "description": "Added to acceptance criteria and tech analysis to tasks:\r\n- [Auth - Login #1](https://github.com/ethanschafstall/CookShare/issues/1)\r\n- [Auth - Logout #2](https://github.com/ethanschafstall/CookShare/issues/2)\r\n- [Setup - Project #25](https://github.com/ethanschafstall/CookShare/issues/25)\r\n- [Setup - CI/CD #26](https://github.com/ethanschafstall/CookShare/issues/26)",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://omacy.medium.com/implementing-the-repository-design-pattern-in-node-js-express-a-complete-guide-354cfadc22a0"
+    }
+  ],
+  "completionRate": 0.63
+}
