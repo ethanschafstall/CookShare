@@ -45,7 +45,7 @@
       "@controllers/*": ["./src/controllers/*"],
       "@repositories/*": ["./src/repositories/*"],
       "@utils/*": ["./src/utils/*"],
-      "@routes/*": ["src/routes/*"],
+      "@routes/*": ["./src/routes/*"],
       "@middleware/*": ["./src/middleware/*"],
       "@helpers/*": ["./src/helpers/*"],
       "@validators/*": ["./src/validators/*"]
