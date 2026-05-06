@@ -1,7 +1,7 @@
 {
   "date": "2026-05-06",
-  "totalMins": 195,
-  "totalHours": 3.25,
+  "totalMins": 335,
+  "totalHours": 5.583333333333333,
   "logs": [
     {
       "issue": {
@@ -54,6 +54,58 @@
       "outcome": "success",
       "reflection": null,
       "aids": "backend: <br> https://www.typescriptlang.org/ <br> https://www.prisma.io/docs/prisma-orm/quickstart/mysql <br> https://zod.dev/ <br> https://vitest.dev/guide/ <br> https://www.npmjs.com/package/supertest <br><br> frontend: <br> https://superforms.rocks/get-started <br> https://svelte.dev/docs/cli/sv-create"
+    },
+    {
+      "issue": {
+        "number": 26,
+        "title": "Setup - CI/CD"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 60,
+      "durationHours": 1,
+      "description": "Set up the dockerfiles for both frontend and backend.",
+      "outcome": "partial",
+      "reflection": "Ran into Prisma related errors when trying to run the docker image \"Issue: error: Argument \"url\" is missing in data source block \"db\". error\" \r\nThe errors were related to a mismatch between the prisma package and the prisma client. They both needed to be version >=7.",
+      "aids": "https://github.com/prisma/prisma/discussions/12170\r\nhttps://www.prisma.io/docs/orm/reference/error-reference\r\nhttps://www.prisma.io/docs/orm/reference/connection-urls\r\n\r\n\r\n"
+    },
+    {
+      "issue": {
+        "number": 25,
+        "title": "Setup - Project"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 10,
+      "durationHours": 0.16666666666666666,
+      "description": "Installed eslint & prettier packages in backend; Created format & lint npm scripts for the workflows.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://prettier.io/docs/install\r\nhttps://eslint.org/docs/latest/use/getting-started"
+    },
+    {
+      "issue": {
+        "number": 26,
+        "title": "Setup - CI/CD"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 50,
+      "durationHours": 0.8333333333333334,
+      "description": "Created two workflows (backend & frontend) with 3 triggers: push feat & /backend; on pull request on dev branch; workflow dispatch (manual).",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "Aids: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax"
+    },
+    {
+      "issue": {
+        "number": 26,
+        "title": "Setup - CI/CD"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 20,
+      "durationHours": 0.3333333333333333,
+      "description": "Created a docker compose file at project root with frontend, backend, db containers; added project root env and env example files",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ]
 }

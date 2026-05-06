@@ -1,0 +1,42 @@
+{
+  "issue": {
+    "number": 26,
+    "title": "Setup - CI/CD",
+    "description": "## 🔧 Tech Story\nAs a developer,\nI want to setup CI/CD elements,\nso to automise my workflow, reduce human related errors, and facilitate deployment.\n\n## 📋Acceptance Criteria\n- [ ] Dockerfile for for building an image of the app components\n- [ ] A github workflow for linting & running tests\n- [ ] A docker compose for running the app containers\n\n## 🔍 Tech Analysis\n- Seperated Dockerfile for frontend and backend\n- Seperated Github workflow files for frontend and backed\n- Github workflow files are tiggered apon push to feat/* branches & pull request to dev branch\n- Workflow steps are install dependencies > run linting > run tests\n- Docker compose includes both frontend & backend containers, as well as mariadb\n- Environment variables injected via local .env files for dev, and Github secrets for public",
+    "estimatedMins": 120,
+    "estimatedHours": 2,
+    "sprint": "Sprint 1"
+  },
+  "totalLoggedMins": 130,
+  "totalLoggedHours": 2.1666666666666665,
+  "logs": [
+    {
+      "date": "2026-05-06",
+      "durationMins": 60,
+      "durationHours": 1,
+      "description": "Set up the dockerfiles for both frontend and backend.",
+      "outcome": "partial",
+      "reflection": "Ran into Prisma related errors when trying to run the docker image \"Issue: error: Argument \"url\" is missing in data source block \"db\". error\" \r\nThe errors were related to a mismatch between the prisma package and the prisma client. They both needed to be version >=7.",
+      "aids": "https://github.com/prisma/prisma/discussions/12170\r\nhttps://www.prisma.io/docs/orm/reference/error-reference\r\nhttps://www.prisma.io/docs/orm/reference/connection-urls\r\n\r\n\r\n"
+    },
+    {
+      "date": "2026-05-06",
+      "durationMins": 50,
+      "durationHours": 0.8333333333333334,
+      "description": "Created two workflows (backend & frontend) with 3 triggers: push feat & /backend; on pull request on dev branch; workflow dispatch (manual).",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "Aids: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax"
+    },
+    {
+      "date": "2026-05-06",
+      "durationMins": 20,
+      "durationHours": 0.3333333333333333,
+      "description": "Created a docker compose file at project root with frontend, backend, db containers; added project root env and env example files",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    }
+  ],
+  "completionRate": 1.08
+}

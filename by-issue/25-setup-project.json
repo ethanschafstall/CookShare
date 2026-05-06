@@ -7,8 +7,8 @@
     "estimatedHours": 3,
     "sprint": "Sprint 1"
   },
-  "totalLoggedMins": 75,
-  "totalLoggedHours": 1.25,
+  "totalLoggedMins": 85,
+  "totalLoggedHours": 1.4166666666666667,
   "logs": [
     {
       "date": "2026-05-06",
@@ -18,7 +18,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": "backend: <br> https://www.typescriptlang.org/ <br> https://www.prisma.io/docs/prisma-orm/quickstart/mysql <br> https://zod.dev/ <br> https://vitest.dev/guide/ <br> https://www.npmjs.com/package/supertest <br><br> frontend: <br> https://superforms.rocks/get-started <br> https://svelte.dev/docs/cli/sv-create"
+    },
+    {
+      "date": "2026-05-06",
+      "durationMins": 10,
+      "durationHours": 0.16666666666666666,
+      "description": "Installed eslint & prettier packages in backend; Created format & lint npm scripts for the workflows.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://prettier.io/docs/install\r\nhttps://eslint.org/docs/latest/use/getting-started"
     }
   ],
-  "completionRate": 0.42
+  "completionRate": 0.47
 }
