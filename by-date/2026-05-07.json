@@ -1,7 +1,7 @@
 {
   "date": "2026-05-07",
-  "totalMins": 320,
-  "totalHours": 5.333333333333333,
+  "totalMins": 350,
+  "totalHours": 5.833333333333333,
   "logs": [
     {
       "issue": {
@@ -54,6 +54,19 @@
       "outcome": "success",
       "reflection": null,
       "aids": "https://auth0.com/blog/stateless-auth-for-stateful-minds/,\r\nDiscussion avec Mathieu Meylan (prof)"
+    },
+    {
+      "issue": {
+        "number": 18,
+        "title": "Agile - Daily"
+      },
+      "sprint": null,
+      "durationMins": 30,
+      "durationHours": 0.5,
+      "description": "Discussion with M. Sahli about the state of the project, showing him the tasks, the db models, mockups.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ]
 }
