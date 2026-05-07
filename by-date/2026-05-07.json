@@ -1,7 +1,7 @@
 {
   "date": "2026-05-07",
-  "totalMins": 115,
-  "totalHours": 1.9166666666666667,
+  "totalMins": 225,
+  "totalHours": 3.75,
   "logs": [
     {
       "issue": {
@@ -15,6 +15,19 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "issue": {
+        "number": 14,
+        "title": "UI & UX - Mockups"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 110,
+      "durationHours": 1.8333333333333333,
+      "description": "Created the mockups for: User not logged in; User logged in; User drop down menu with log out button; Login page.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://www.iconpacks.net/ , https://claude.ai/share/a327d48e-b216-4bca-9afd-e10006412ffb , https://www.seedprod.com/login-page-examples/"
     }
   ]
 }

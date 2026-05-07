@@ -1,0 +1,24 @@
+{
+  "issue": {
+    "number": 14,
+    "title": "UI & UX - Mockups",
+    "description": "## 🔧 Tech Story\nAs a developer,\nI want to design mockups for the main features,\nso that the interface is validated before implementation begins.",
+    "estimatedMins": 240,
+    "estimatedHours": 4,
+    "sprint": "Sprint 1"
+  },
+  "totalLoggedMins": 110,
+  "totalLoggedHours": 1.8333333333333333,
+  "logs": [
+    {
+      "date": "2026-05-07",
+      "durationMins": 110,
+      "durationHours": 1.8333333333333333,
+      "description": "Created the mockups for: User not logged in; User logged in; User drop down menu with log out button; Login page.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://www.iconpacks.net/ , https://claude.ai/share/a327d48e-b216-4bca-9afd-e10006412ffb , https://www.seedprod.com/login-page-examples/"
+    }
+  ],
+  "completionRate": 0.46
+}
