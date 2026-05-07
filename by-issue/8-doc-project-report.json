@@ -7,8 +7,8 @@
     "estimatedHours": 20,
     "sprint": "Sprint 1"
   },
-  "totalLoggedMins": 85,
-  "totalLoggedHours": 1.4166666666666667,
+  "totalLoggedMins": 200,
+  "totalLoggedHours": 3.3333333333333335,
   "logs": [
     {
       "date": "2026-05-06",
@@ -18,7 +18,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-07",
+      "durationMins": 115,
+      "durationHours": 1.9166666666666667,
+      "description": "Continuing project report from 06.05.2026. Finished the whole 1.2 section (méthode et organisation), started the 1.3 (analyse des exigences).",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.07
+  "completionRate": 0.17
 }
