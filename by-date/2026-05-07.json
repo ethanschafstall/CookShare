@@ -1,7 +1,7 @@
 {
   "date": "2026-05-07",
-  "totalMins": 350,
-  "totalHours": 5.833333333333333,
+  "totalMins": 410,
+  "totalHours": 6.833333333333333,
   "logs": [
     {
       "issue": {
@@ -64,6 +64,32 @@
       "durationMins": 30,
       "durationHours": 0.5,
       "description": "Discussion with M. Sahli about the state of the project, showing him the tasks, the db models, mockups.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 14,
+        "title": "UI & UX - Mockups"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 30,
+      "durationHours": 0.5,
+      "description": "Updating mockups after discussion with M. Sahli",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 8,
+        "title": "Doc - Project Report"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 30,
+      "durationHours": 0.5,
+      "description": "Finished 1.3.1 of the report.",
       "outcome": "success",
       "reflection": null,
       "aids": null

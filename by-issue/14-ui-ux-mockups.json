@@ -7,8 +7,8 @@
     "estimatedHours": 4,
     "sprint": "Sprint 1"
   },
-  "totalLoggedMins": 110,
-  "totalLoggedHours": 1.8333333333333333,
+  "totalLoggedMins": 140,
+  "totalLoggedHours": 2.3333333333333335,
   "logs": [
     {
       "date": "2026-05-07",
@@ -18,7 +18,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": "https://www.iconpacks.net/ , https://claude.ai/share/a327d48e-b216-4bca-9afd-e10006412ffb , https://www.seedprod.com/login-page-examples/"
+    },
+    {
+      "date": "2026-05-07",
+      "durationMins": 30,
+      "durationHours": 0.5,
+      "description": "Updating mockups after discussion with M. Sahli",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.46
+  "completionRate": 0.58
 }
