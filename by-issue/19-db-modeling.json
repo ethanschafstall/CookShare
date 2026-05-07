@@ -1,0 +1,24 @@
+{
+  "issue": {
+    "number": 19,
+    "title": "DB - Modeling",
+    "description": "## 🔧 Tech Story\nAs a developer,\nI want to design the database schema,\nso that the data meets all application features.",
+    "estimatedMins": 180,
+    "estimatedHours": 3,
+    "sprint": "Sprint 1"
+  },
+  "totalLoggedMins": 80,
+  "totalLoggedHours": 1.3333333333333333,
+  "logs": [
+    {
+      "date": "2026-05-07",
+      "durationMins": 80,
+      "durationHours": 1.3333333333333333,
+      "description": "Modeling the db with user and role tables; researching the differences between and use cases for stateful vs statless sessions to determine if db needs a sessions table.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://auth0.com/blog/stateless-auth-for-stateful-minds/,\r\nDiscussion avec Mathieu Meylan (prof)"
+    }
+  ],
+  "completionRate": 0.44
+}

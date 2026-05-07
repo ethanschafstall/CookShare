@@ -1,7 +1,7 @@
 {
   "date": "2026-05-07",
-  "totalMins": 240,
-  "totalHours": 4,
+  "totalMins": 320,
+  "totalHours": 5.333333333333333,
   "logs": [
     {
       "issue": {
@@ -41,6 +41,19 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "issue": {
+        "number": 19,
+        "title": "DB - Modeling"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 80,
+      "durationHours": 1.3333333333333333,
+      "description": "Modeling the db with user and role tables; researching the differences between and use cases for stateful vs statless sessions to determine if db needs a sessions table.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://auth0.com/blog/stateless-auth-for-stateful-minds/,\r\nDiscussion avec Mathieu Meylan (prof)"
     }
   ]
 }
