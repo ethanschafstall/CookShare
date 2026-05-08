@@ -1,13 +1,10 @@
 {
   "date": "2026-05-08",
-  "totalMins": 1630,
-  "totalHours": 27.166666666666668,
+  "totalMins": 430,
+  "totalHours": 7.166666666666667,
   "logs": [
     {
-      "issue": {
-        "number": 18,
-        "title": "Agile - Daily"
-      },
+      "issue": { "number": 18, "title": "Agile - Daily" },
       "sprint": null,
       "durationMins": 10,
       "durationHours": 0.16666666666666666,
@@ -17,10 +14,7 @@
       "aids": null
     },
     {
-      "issue": {
-        "number": 1,
-        "title": "Auth - Login"
-      },
+      "issue": { "number": 1, "title": "Auth - Login" },
       "sprint": "Sprint 1",
       "durationMins": 40,
       "durationHours": 0.6666666666666666,
@@ -30,10 +24,7 @@
       "aids": "https://www.prisma.io/docs/orm/prisma-client/setup-and-configuration/ "
     },
     {
-      "issue": {
-        "number": 1,
-        "title": "Auth - Login"
-      },
+      "issue": { "number": 1, "title": "Auth - Login" },
       "sprint": "Sprint 1",
       "durationMins": 55,
       "durationHours": 0.9166666666666666,
@@ -43,10 +34,7 @@
       "aids": "https://zod.dev/api"
     },
     {
-      "issue": {
-        "number": 1,
-        "title": "Auth - Login"
-      },
+      "issue": { "number": 1, "title": "Auth - Login" },
       "sprint": "Sprint 1",
       "durationMins": 25,
       "durationHours": 0.4166666666666667,
@@ -56,10 +44,7 @@
       "aids": "https://zod.dev/api"
     },
     {
-      "issue": {
-        "number": 1,
-        "title": "Auth - Login"
-      },
+      "issue": { "number": 1, "title": "Auth - Login" },
       "sprint": "Sprint 1",
       "durationMins": 135,
       "durationHours": 2.25,
@@ -69,10 +54,7 @@
       "aids": "https://www.geeksforgeeks.org/node-js/explain-error-handling-in-express-js-using-an-example/\r\nhttps://www.w3tutorials.net/blog/controller-service-repository-pattern-nodejs/\r\nhttps://medium.com/@mohammedbasit362/breaking-free-from-mvc-hell-why-your-node-js-code-needs-the-service-repository-controller-pattern-c080725ab910\r\n"
     },
     {
-      "issue": {
-        "number": 1,
-        "title": "Auth - Login"
-      },
+      "issue": { "number": 1, "title": "Auth - Login" },
       "sprint": "Sprint 1",
       "durationMins": 40,
       "durationHours": 0.6666666666666666,
@@ -82,10 +64,7 @@
       "aids": null
     },
     {
-      "issue": {
-        "number": 1,
-        "title": "Auth - Login"
-      },
+      "issue": { "number": 1, "title": "Auth - Login" },
       "sprint": "Sprint 1",
       "durationMins": 50,
       "durationHours": 0.8333333333333334,
@@ -95,10 +74,7 @@
       "aids": "https://superforms.rocks/get-started/zod"
     },
     {
-      "issue": {
-        "number": 1,
-        "title": "Auth - Login"
-      },
+      "issue": { "number": 1, "title": "Auth - Login" },
       "sprint": "Sprint 1",
       "durationMins": 40,
       "durationHours": 0.6666666666666666,
@@ -118,23 +94,7 @@
       "aids": null
     },
     {
-      "issue": {
-        "number": 15,
-        "title": "Tests - Definition"
-      },
-      "sprint": "Sprint 1",
-      "durationMins": 1200,
-      "durationHours": 20,
-      "description": "Reflection on the test cases for the backend.",
-      "outcome": "success",
-      "reflection": null,
-      "aids": null
-    },
-    {
-      "issue": {
-        "number": 15,
-        "title": "Tests - Definition"
-      },
+      "issue": { "number": 15, "title": "Tests - Definition" },
       "sprint": "Sprint 1",
       "durationMins": 20,
       "durationHours": 0.3333333333333333,
