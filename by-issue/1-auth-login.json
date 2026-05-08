@@ -7,13 +7,13 @@
     "estimatedHours": 3,
     "sprint": "Sprint 1"
   },
-  "totalLoggedMins": 405,
-  "totalLoggedHours": 6.75,
+  "totalLoggedMins": 385,
+  "totalLoggedHours": 6.416666666666667,
   "logs": [
     {
       "date": "2026-05-08",
-      "durationMins": 60,
-      "durationHours": 1,
+      "durationMins": 40,
+      "durationHours": 0.6666666666666666,
       "description": "Created the User and Role models; Added a seed file for inserting roles + an admin user; generated a new prisma client using updated models; Created init migration.",
       "outcome": "success",
       "reflection": null,
@@ -74,5 +74,5 @@
       "aids": "https://claude.ai/"
     }
   ],
-  "completionRate": 2.25
+  "completionRate": 2.138888888888889
 }
