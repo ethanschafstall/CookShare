@@ -1,7 +1,7 @@
 {
   "date": "2026-05-08",
-  "totalMins": 1610,
-  "totalHours": 26.833333333333332,
+  "totalMins": 1630,
+  "totalHours": 27.166666666666668,
   "logs": [
     {
       "issue": {
@@ -125,6 +125,19 @@
       "sprint": "Sprint 1",
       "durationMins": 1200,
       "durationHours": 20,
+      "description": "Reflection on the test cases for the backend.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 15,
+        "title": "Tests - Definition"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 20,
+      "durationHours": 0.3333333333333333,
       "description": "Reflection on the test cases for the backend.",
       "outcome": "success",
       "reflection": null,

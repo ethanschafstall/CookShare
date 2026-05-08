@@ -7,8 +7,8 @@
     "estimatedHours": 8,
     "sprint": "Sprint 1"
   },
-  "totalLoggedMins": 1200,
-  "totalLoggedHours": 20,
+  "totalLoggedMins": 1220,
+  "totalLoggedHours": 20.333333333333332,
   "logs": [
     {
       "date": "2026-05-08",
@@ -18,7 +18,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-08",
+      "durationMins": 20,
+      "durationHours": 0.3333333333333333,
+      "description": "Reflection on the test cases for the backend.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 2.5
+  "completionRate": 2.54
 }
