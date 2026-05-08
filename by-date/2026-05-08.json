@@ -1,7 +1,7 @@
 {
   "date": "2026-05-08",
-  "totalMins": 10,
-  "totalHours": 0.16666666666666666,
+  "totalMins": 150,
+  "totalHours": 2.5,
   "logs": [
     {
       "issue": {
@@ -15,6 +15,45 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "issue": {
+        "number": 1,
+        "title": "Auth - Login"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 60,
+      "durationHours": 1,
+      "description": "Created the User and Role models; Added a seed file for inserting roles + an admin user; generated a new prisma client using updated models; Created init migration.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://www.prisma.io/docs/orm/prisma-client/setup-and-configuration/ "
+    },
+    {
+      "issue": {
+        "number": 1,
+        "title": "Auth - Login"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 55,
+      "durationHours": 0.9166666666666666,
+      "description": "Added the middleware and helpers:\r\nValidate middleware for checking request bodies; Authenticate middleware checking for if the jwt validity; jwt helper for generation tokens; password helper for password salt gen, and hashing/hash compare.\r\n",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://zod.dev/api"
+    },
+    {
+      "issue": {
+        "number": 1,
+        "title": "Auth - Login"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 25,
+      "durationHours": 0.4166666666666667,
+      "description": "Added validation schemas and types for login and register bodies, the schemas will get used by the validate middleware.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://zod.dev/api"
     }
   ]
 }

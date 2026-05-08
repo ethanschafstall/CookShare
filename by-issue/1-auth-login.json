@@ -1,0 +1,42 @@
+{
+  "issue": {
+    "number": 1,
+    "title": "Auth - Login",
+    "description": "## 💡 User Story\nAs a user,\nI want to log into my account,\nso that I can manage my recipes.\n\n## 📋Acceptance Criteria\n- [x]  A \"Login\" button is present at the top of the page when the user is not logged in\n- [x]  When clicked, the user is brought to a Login page with fields: email, password\n- [x]  A \"Login\" button exists below the form\n- [x]  If a required field is missing, a validation error is shown\n- [x]  If the username or password is incorrect, the error is shown\n- [x]  Upon successful login, a session cookie in saved in the browser\n- [x]  The \"Login\" button is not visible when the user is already logged in\n\n## 🔍 Tech Analysis\n### Backend\n- Controller-Service-Repository design pattern\n- User repository for direct user related crud via the orm\n- Auth service for containing auth logic (hasing, jwt generation, business validation)\n- Auth controller for handling http (requests, reponses, cookie setting)\n- Auth router for directing traffic to the controller\n- Validation middleware for handling incoming post requests\n### Frontend\n- [Mockup]()",
+    "estimatedMins": 180,
+    "estimatedHours": 3,
+    "sprint": "Sprint 1"
+  },
+  "totalLoggedMins": 140,
+  "totalLoggedHours": 2.3333333333333335,
+  "logs": [
+    {
+      "date": "2026-05-08",
+      "durationMins": 60,
+      "durationHours": 1,
+      "description": "Created the User and Role models; Added a seed file for inserting roles + an admin user; generated a new prisma client using updated models; Created init migration.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://www.prisma.io/docs/orm/prisma-client/setup-and-configuration/ "
+    },
+    {
+      "date": "2026-05-08",
+      "durationMins": 55,
+      "durationHours": 0.9166666666666666,
+      "description": "Added the middleware and helpers:\r\nValidate middleware for checking request bodies; Authenticate middleware checking for if the jwt validity; jwt helper for generation tokens; password helper for password salt gen, and hashing/hash compare.\r\n",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://zod.dev/api"
+    },
+    {
+      "date": "2026-05-08",
+      "durationMins": 25,
+      "durationHours": 0.4166666666666667,
+      "description": "Added validation schemas and types for login and register bodies, the schemas will get used by the validate middleware.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://zod.dev/api"
+    }
+  ],
+  "completionRate": 0.78
+}
