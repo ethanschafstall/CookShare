@@ -1,12 +1,12 @@
 {
   "date": "2026-05-08",
-  "totalMins": 430,
-  "totalHours": 7.166666666666667,
+  "totalMins": 410,
+  "totalHours": 6.833333333333333,
   "logs": [
     {
       "issue": {
         "number": 18,
-        "title": "Agile - Daily"
+        "title": "Agile - Daily" 
       },
       "sprint": null,
       "durationMins": 10,
@@ -22,16 +22,16 @@
         "title": "Auth - Login"
       },
       "sprint": "Sprint 1",
-      "durationMins": 60,
-      "durationHours": 1,
+      "durationMins": 40,
+      "durationHours": 0.6666666666666666,
       "description": "Created the User and Role models; Added a seed file for inserting roles + an admin user; generated a new prisma client using updated models; Created init migration.",
       "outcome": "success",
       "reflection": null,
       "aids": "https://www.prisma.io/docs/orm/prisma-client/setup-and-configuration/ "
     },
     {
-      "issue": {
-        "number": 1,
+      "issue": { 
+        "number": 1, 
         "title": "Auth - Login"
       },
       "sprint": "Sprint 1",
@@ -43,9 +43,9 @@
       "aids": "https://zod.dev/api"
     },
     {
-      "issue": {
-        "number": 1,
-        "title": "Auth - Login"
+      "issue": { 
+        "number": 1, 
+        "title": "Auth - Login" 
       },
       "sprint": "Sprint 1",
       "durationMins": 25,
@@ -69,7 +69,7 @@
       "aids": "https://www.geeksforgeeks.org/node-js/explain-error-handling-in-express-js-using-an-example/\r\nhttps://www.w3tutorials.net/blog/controller-service-repository-pattern-nodejs/\r\nhttps://medium.com/@mohammedbasit362/breaking-free-from-mvc-hell-why-your-node-js-code-needs-the-service-repository-controller-pattern-c080725ab910\r\n"
     },
     {
-      "issue": {
+      "issue": { 
         "number": 1,
         "title": "Auth - Login"
       },
@@ -82,9 +82,9 @@
       "aids": null
     },
     {
-      "issue": {
-        "number": 1,
-        "title": "Auth - Login"
+      "issue": { 
+        "number": 1, 
+        "title": "Auth - Login" 
       },
       "sprint": "Sprint 1",
       "durationMins": 50,
@@ -95,9 +95,9 @@
       "aids": "https://superforms.rocks/get-started/zod"
     },
     {
-      "issue": {
-        "number": 1,
-        "title": "Auth - Login"
+      "issue": { 
+        "number": 1, 
+        "title": "Auth - Login" 
       },
       "sprint": "Sprint 1",
       "durationMins": 40,
