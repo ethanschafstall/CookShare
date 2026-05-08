@@ -1,7 +1,7 @@
 {
   "date": "2026-05-08",
-  "totalMins": 325,
-  "totalHours": 5.416666666666667,
+  "totalMins": 375,
+  "totalHours": 6.25,
   "logs": [
     {
       "issue": {
@@ -80,6 +80,19 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "issue": {
+        "number": 1,
+        "title": "Auth - Login"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 50,
+      "durationHours": 0.8333333333333334,
+      "description": "Adds login page with frontend validation schema using superforms and zod",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://superforms.rocks/get-started/zod"
     }
   ]
 }
