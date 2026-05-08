@@ -12,15 +12,6 @@
   "logs": [
     {
       "date": "2026-05-08",
-      "durationMins": 1200,
-      "durationHours": 20,
-      "description": "Reflection on the test cases for the backend.",
-      "outcome": "success",
-      "reflection": null,
-      "aids": null
-    },
-    {
-      "date": "2026-05-08",
       "durationMins": 20,
       "durationHours": 0.3333333333333333,
       "description": "Reflection on the test cases for the backend.",
