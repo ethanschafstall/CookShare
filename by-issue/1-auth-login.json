@@ -7,8 +7,8 @@
     "estimatedHours": 3,
     "sprint": "Sprint 1"
   },
-  "totalLoggedMins": 140,
-  "totalLoggedHours": 2.3333333333333335,
+  "totalLoggedMins": 275,
+  "totalLoggedHours": 4.583333333333333,
   "logs": [
     {
       "date": "2026-05-08",
@@ -36,7 +36,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": "https://zod.dev/api"
+    },
+    {
+      "date": "2026-05-08",
+      "durationMins": 135,
+      "durationHours": 2.25,
+      "description": "Create the user repo for direct db querying; auth service for business logic; auth controller for http handling; auth routes; Custom Errors + Error handler",
+      "outcome": "partial",
+      "reflection": "Error handling took longer than expected, and I had to create custom errors and an error handler in order to return correct errors from service to controller.",
+      "aids": "https://www.geeksforgeeks.org/node-js/explain-error-handling-in-express-js-using-an-example/\r\nhttps://www.w3tutorials.net/blog/controller-service-repository-pattern-nodejs/\r\nhttps://medium.com/@mohammedbasit362/breaking-free-from-mvc-hell-why-your-node-js-code-needs-the-service-repository-controller-pattern-c080725ab910\r\n"
     }
   ],
-  "completionRate": 0.78
+  "completionRate": 1.53
 }
