@@ -7,8 +7,8 @@
     "estimatedHours": 3,
     "sprint": "Sprint 1"
   },
-  "totalLoggedMins": 275,
-  "totalLoggedHours": 4.583333333333333,
+  "totalLoggedMins": 315,
+  "totalLoggedHours": 5.25,
   "logs": [
     {
       "date": "2026-05-08",
@@ -45,7 +45,16 @@
       "outcome": "partial",
       "reflection": "Error handling took longer than expected, and I had to create custom errors and an error handler in order to return correct errors from service to controller.",
       "aids": "https://www.geeksforgeeks.org/node-js/explain-error-handling-in-express-js-using-an-example/\r\nhttps://www.w3tutorials.net/blog/controller-service-repository-pattern-nodejs/\r\nhttps://medium.com/@mohammedbasit362/breaking-free-from-mvc-hell-why-your-node-js-code-needs-the-service-repository-controller-pattern-c080725ab910\r\n"
+    },
+    {
+      "date": "2026-05-08",
+      "durationMins": 40,
+      "durationHours": 0.6666666666666666,
+      "description": "Adds the svelte ui components (header, sidebar, user menu, login button, body)",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 1.53
+  "completionRate": 1.75
 }
