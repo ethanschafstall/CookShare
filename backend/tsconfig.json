@@ -34,7 +34,7 @@
 
     // Recommended Options
     "strict": true,
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
@@ -48,7 +48,10 @@
       "@routes/*": ["./src/routes/*"],
       "@middleware/*": ["./src/middleware/*"],
       "@helpers/*": ["./src/helpers/*"],
-      "@validators/*": ["./src/validators/*"]
+      "@validators/*": ["./src/validators/*"],
+      "@db/*": ["./src/db/*"],
+      "@generated/*": ["./generated/*"],
+      "@errors/*": ["./src/errors/*"]
     }
   }
 }
