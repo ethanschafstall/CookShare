@@ -1,13 +1,13 @@
 import {
-    ConflictError,
-    NotFoundError,
-    UnauthorizedError,
+  ConflictError,
+  NotFoundError,
+  UnauthorizedError,
 } from "@errors/app.error.js";
 import generateToken from "@helpers/jwt.helper.js";
 import {
-    comparePassword,
-    genSalt,
-    hashPassword,
+  comparePassword,
+  genSalt,
+  hashPassword,
 } from "@helpers/password.helper.js";
 import { UserRepository } from "@repositories/user.repository.js";
 import { LoginInput, RegisterInput } from "@validators/auth.validator.js";
@@ -59,6 +59,8 @@ export class AuthService {
     const safeUser = {
       id: user.id,
       email: user.email,
+      firstname: user.firstname,
+      lastname: user.lastname,
       role: user.role.name,
       permissions: user.role.permissions,
     };
