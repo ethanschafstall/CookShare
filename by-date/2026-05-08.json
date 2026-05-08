@@ -1,7 +1,7 @@
 {
   "date": "2026-05-08",
-  "totalMins": 375,
-  "totalHours": 6.25,
+  "totalMins": 415,
+  "totalHours": 6.916666666666667,
   "logs": [
     {
       "issue": {
@@ -93,6 +93,19 @@
       "outcome": "success",
       "reflection": null,
       "aids": "https://superforms.rocks/get-started/zod"
+    },
+    {
+      "issue": {
+        "number": 1,
+        "title": "Auth - Login"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 40,
+      "durationHours": 0.6666666666666666,
+      "description": "Added condtional homepage based on if user is logged in,\r\nHad claude generate the placeholder recipe data for the \"logged in\" homepage to reflect the figma mockup",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://claude.ai/"
     }
   ]
 }
