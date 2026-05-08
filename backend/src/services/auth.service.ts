@@ -1,3 +1,8 @@
+import {
+    ConflictError,
+    NotFoundError,
+    UnauthorizedError,
+} from "@errors/app.error.js";
 import generateToken from "@helpers/jwt.helper.js";
 import {
     comparePassword,
@@ -13,7 +18,7 @@ export class AuthService {
   async login(input: LoginInput) {
     const user = await this.userRepo.getByEmail(input.email);
     if (!user) {
-      throw new Error("Invalid email or password");
+      throw new UnauthorizedError("Invalid email or password");
     }
     const isValid = comparePassword(
       input.password,
@@ -21,7 +26,7 @@ export class AuthService {
       user.passwordSalt,
     );
     if (!isValid) {
-      throw new Error("Invalid email or password");
+      throw new UnauthorizedError("Invalid email or password");
     }
     const payload = { id: user.id, email: user.email, role: user.role.name };
     const token = generateToken(payload);
@@ -30,7 +35,7 @@ export class AuthService {
   async register(input: RegisterInput) {
     const existingUser = await this.userRepo.getByEmail(input.email);
     if (existingUser) {
-      throw new Error("Email already in use");
+      throw new ConflictError("Email already in use");
     }
     const salt = genSalt();
     const safePassword = hashPassword(input.password, salt);
@@ -49,7 +54,7 @@ export class AuthService {
   async getMe(id: number) {
     const user = await this.userRepo.getById(id);
     if (!user) {
-      throw new Error("User not found");
+      throw new NotFoundError("User not found");
     }
     const safeUser = {
       id: user.id,

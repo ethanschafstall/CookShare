@@ -1,3 +1,4 @@
+import errorHandler from "@middleware/errorHandler.middleware.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import "dotenv/config";
@@ -15,5 +16,6 @@ app.use(
 app.use(cookieParser());
 app.use(express.json());
 app.use("/api/v1", router);
+app.use(errorHandler);
 
 export default app;
