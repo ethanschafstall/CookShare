@@ -54,7 +54,12 @@
 			<!-- Remember me + Forraot password -->
 			<div class="mb-10 flex items-center justify-between">
 				<label class="flex cursor-pointer items-center gap-2 text-sm text-[#BFBDBD]">
-					<input type="checkbox" class="h-4 w-4 rounded text-[#BFBDBD] accent-[#F4571D]" />
+					<input
+						type="checkbox"
+						name="rememberMe"
+						bind:checked={$form.rememberMe}
+						class="h-4 w-4 rounded accent-[#F4571D]"
+					/>
 					Remember me
 				</label>
 				<p class="text-sm text-[#F4571D] hover:underline">Forgot your password?</p>
