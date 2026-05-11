@@ -51,7 +51,8 @@
       "@validators/*": ["./src/validators/*"],
       "@db/*": ["./src/db/*"],
       "@generated/*": ["./generated/*"],
-      "@errors/*": ["./src/errors/*"]
+      "@errors/*": ["./src/errors/*"],
+      "@tests/*": ["./tests/*"]
     }
   }
 }
