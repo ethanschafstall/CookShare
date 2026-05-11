@@ -1,7 +1,7 @@
 {
   "date": "2026-05-11",
-  "totalMins": 325,
-  "totalHours": 5.416666666666667,
+  "totalMins": 350,
+  "totalHours": 5.833333333333333,
   "logs": [
     {
       "issue": {
@@ -86,6 +86,16 @@
       "description": "Reflection on the past sprint: What worked and why didn't, and what to change next time",
       "outcome": "partial",
       "reflection": "Mostly how the login task took double the amount of time todo because I was implementing middleware which will be used by other features; and how repo / service / controller design pattern takes longer to implement than normal mvc.",
+      "aids": null
+    },
+    {
+      "customTitle": "Orginising Paper Notes",
+      "sprint": null,
+      "durationMins": 25,
+      "durationHours": 0.4166666666666667,
+      "description": "Reading the paper notes and preparing for the work report doc writing session during next sprint.",
+      "outcome": "success",
+      "reflection": null,
       "aids": null
     }
   ]
