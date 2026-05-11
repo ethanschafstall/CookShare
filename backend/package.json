@@ -21,9 +21,9 @@
     "db:generate": "npx prisma generate",
     "db:migrate": "npx prisma migrate dev",
     "db:deploy": "npx prisma migrate deploy && npx prisma generate",
-    "test:unit": "vitest",
-    "test:api": "vitest",
-    "test": "npm run test:api -- --run",
+    "test:unit": "vitest run tests/unit",
+    "test:api": "vitest run tests/api",
+    "test": "vitest run",
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write ."
   },
