@@ -1,0 +1,24 @@
+{
+  "issue": {
+    "number": 11,
+    "title": "Agile - Sprint Retro",
+    "description": "## 🔧 Tech Story\nAs a developer,\nI want to reflect on what went well and what to improve,\nso that each sprint sees an improvement over the last.",
+    "estimatedMins": 60,
+    "estimatedHours": 1,
+    "sprint": null
+  },
+  "totalLoggedMins": 30,
+  "totalLoggedHours": 0.5,
+  "logs": [
+    {
+      "date": "2026-05-11",
+      "durationMins": 30,
+      "durationHours": 0.5,
+      "description": "Reflection on the past sprint: What worked and why didn't, and what to change next time",
+      "outcome": "partial",
+      "reflection": "Mostly how the login task took double the amount of time todo because I was implementing middleware which will be used by other features; and how repo / service / controller design pattern takes longer to implement than normal mvc.",
+      "aids": null
+    }
+  ],
+  "completionRate": 0.5
+}

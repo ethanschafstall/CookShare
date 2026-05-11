@@ -1,7 +1,7 @@
 {
   "date": "2026-05-11",
-  "totalMins": 295,
-  "totalHours": 4.916666666666667,
+  "totalMins": 325,
+  "totalHours": 5.416666666666667,
   "logs": [
     {
       "issue": {
@@ -73,6 +73,19 @@
       "description": "Sprint review with M. Sahli, showing the demo + going through and validating each task completed during the sprint.",
       "outcome": "success",
       "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 11,
+        "title": "Agile - Sprint Retro"
+      },
+      "sprint": null,
+      "durationMins": 30,
+      "durationHours": 0.5,
+      "description": "Reflection on the past sprint: What worked and why didn't, and what to change next time",
+      "outcome": "partial",
+      "reflection": "Mostly how the login task took double the amount of time todo because I was implementing middleware which will be used by other features; and how repo / service / controller design pattern takes longer to implement than normal mvc.",
       "aids": null
     }
   ]
