@@ -19,4 +19,3 @@ const genSalt = (length: number = 32) => {
 };
 
 export { comparePassword, genSalt, hashPassword };
-

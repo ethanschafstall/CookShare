@@ -17,4 +17,3 @@ type RegisterInput = z.infer<typeof register>;
 
 export default { login, register };
 export type { LoginInput, RegisterInput };
-
