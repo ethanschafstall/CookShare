@@ -1,0 +1,24 @@
+{
+  "issue": {
+    "number": 2,
+    "title": "Auth - Logout",
+    "description": "## 💡 User Story\nAs a user,\nI want to log out of my account,\nso that others cannot access my account.\n\n## 📋Acceptance Criteria\n- [ ] A \"Logout\" button is present on the button of the sidebar\n- [ ]  The \"Logout\" button is only visible when the user is logged in\n- [ ]  When clicked, the user session is invalidated\n- [ ]  After logout, the Login button reappears in the navigation\n\n## 🔍 Tech Analysis\n### Backend\n- Uses existing controller, service, repository defined in #1\n- Clears session cookie on POST auth/logout\n\n### Frontend\n- [Mockup]()",
+    "estimatedMins": 180,
+    "estimatedHours": 3,
+    "sprint": "Sprint 1"
+  },
+  "totalLoggedMins": 80,
+  "totalLoggedHours": 1.3333333333333333,
+  "logs": [
+    {
+      "date": "2026-05-11",
+      "durationMins": 80,
+      "durationHours": 1.3333333333333333,
+      "description": "Creating the user drop downmenu interface, added the the login button & svelte +page.server for cookie deletion; Updated the \"remember me\" field on the login page to actually affect cookie session expire time (checked = 30 days, unchecked = current session)",
+      "outcome": "partial",
+      "reflection": "I wasted a bit of time on the backend for a logout route/controller function to delete the cookie. I was unable to delete the cookie via backend because svelte \"owns\" the frontend cookie because of how I set it in the +page.server.ts, so backend isn't is only used for creating the token, not for removing it.",
+      "aids": "https://www.loopwerk.io/articles/2021/sveltekit-cookies-tokens/ \r\nhttps://dev.to/theether0/sveltekit-changes-session-and-cookies-enb\r\n"
+    }
+  ],
+  "completionRate": 0.44
+}

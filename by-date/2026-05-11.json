@@ -1,7 +1,7 @@
 {
   "date": "2026-05-11",
-  "totalMins": 160,
-  "totalHours": 2.6666666666666665,
+  "totalMins": 240,
+  "totalHours": 4,
   "logs": [
     {
       "issue": {
@@ -38,6 +38,19 @@
       "outcome": "partial",
       "reflection": "The issue was related related to eslint and typescript not liking that the my unused next param in the errorHandler middleware",
       "aids": "https://github.com/vercel/next.js/discussions/52871\r\n"
+    },
+    {
+      "issue": {
+        "number": 2,
+        "title": "Auth - Logout"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 80,
+      "durationHours": 1.3333333333333333,
+      "description": "Creating the user drop downmenu interface, added the the login button & svelte +page.server for cookie deletion; Updated the \"remember me\" field on the login page to actually affect cookie session expire time (checked = 30 days, unchecked = current session)",
+      "outcome": "partial",
+      "reflection": "I wasted a bit of time on the backend for a logout route/controller function to delete the cookie. I was unable to delete the cookie via backend because svelte \"owns\" the frontend cookie because of how I set it in the +page.server.ts, so backend isn't is only used for creating the token, not for removing it.",
+      "aids": "https://www.loopwerk.io/articles/2021/sveltekit-cookies-tokens/ \r\nhttps://dev.to/theether0/sveltekit-changes-session-and-cookies-enb\r\n"
     }
   ]
 }
