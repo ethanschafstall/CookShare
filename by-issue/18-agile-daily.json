@@ -7,8 +7,8 @@
     "estimatedHours": 2.5,
     "sprint": null
   },
-  "totalLoggedMins": 70,
-  "totalLoggedHours": 1.1666666666666667,
+  "totalLoggedMins": 85,
+  "totalLoggedHours": 1.4166666666666667,
   "logs": [
     {
       "date": "2026-05-06",
@@ -45,7 +45,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-11",
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "Daily to prepare/refresh after the weekend on the daily tasks before the end of sprint one",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.47
+  "completionRate": 0.57
 }

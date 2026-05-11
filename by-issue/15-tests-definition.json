@@ -7,8 +7,8 @@
     "estimatedHours": 8,
     "sprint": "Sprint 1"
   },
-  "totalLoggedMins": 20,
-  "totalLoggedHours": 0.33,
+  "totalLoggedMins": 150,
+  "totalLoggedHours": 2.5,
   "logs": [
     {
       "date": "2026-05-08",
@@ -18,7 +18,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-11",
+      "durationMins": 130,
+      "durationHours": 2.1666666666666665,
+      "description": "Defined and implemented auth-related unit and API tests (login, register, getMe, middleware). Set up the test infrastructure including repository and service mocks, and a reusable test app factory; fixed some issues with the npm commands, and lintage/prettier formating.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 2.54
+  "completionRate": 0.31
 }

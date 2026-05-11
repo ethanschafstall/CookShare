@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-11",
+  "totalMins": 160,
+  "totalHours": 2.6666666666666665,
+  "logs": [
+    {
+      "issue": {
+        "number": 18,
+        "title": "Agile - Daily"
+      },
+      "sprint": null,
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "Daily to prepare/refresh after the weekend on the daily tasks before the end of sprint one",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 15,
+        "title": "Tests - Definition"
+      },
+      "sprint": "Sprint 1",
+      "durationMins": 130,
+      "durationHours": 2.1666666666666665,
+      "description": "Defined and implemented auth-related unit and API tests (login, register, getMe, middleware). Set up the test infrastructure including repository and service mocks, and a reusable test app factory; fixed some issues with the npm commands, and lintage/prettier formating.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "customTitle": "Pull Request",
+      "sprint": null,
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "Created a pr containing the details of the new feat; fixed issues with code format causing the github workflows to fail.",
+      "outcome": "partial",
+      "reflection": "The issue was related related to eslint and typescript not liking that the my unused next param in the errorHandler middleware",
+      "aids": "https://github.com/vercel/next.js/discussions/52871\r\n"
+    }
+  ]
+}
