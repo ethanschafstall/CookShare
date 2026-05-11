@@ -1,7 +1,7 @@
 {
   "date": "2026-05-11",
-  "totalMins": 240,
-  "totalHours": 4,
+  "totalMins": 295,
+  "totalHours": 4.916666666666667,
   "logs": [
     {
       "issue": {
@@ -51,6 +51,29 @@
       "outcome": "partial",
       "reflection": "I wasted a bit of time on the backend for a logout route/controller function to delete the cookie. I was unable to delete the cookie via backend because svelte \"owns\" the frontend cookie because of how I set it in the +page.server.ts, so backend isn't is only used for creating the token, not for removing it.",
       "aids": "https://www.loopwerk.io/articles/2021/sveltekit-cookies-tokens/ \r\nhttps://dev.to/theether0/sveltekit-changes-session-and-cookies-enb\r\n"
+    },
+    {
+      "customTitle": "Work Logs",
+      "sprint": null,
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "Logging work for the day without issues I had and aids used",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 10,
+        "title": "Agile - Sprint Review"
+      },
+      "sprint": null,
+      "durationMins": 40,
+      "durationHours": 0.6666666666666666,
+      "description": "Sprint review with M. Sahli, showing the demo + going through and validating each task completed during the sprint.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ]
 }

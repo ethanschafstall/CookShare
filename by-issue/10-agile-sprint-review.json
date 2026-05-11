@@ -1,0 +1,24 @@
+{
+  "issue": {
+    "number": 10,
+    "title": "Agile - Sprint Review",
+    "description": "## 🔧 Tech Story\nAs a developer,\nI want to review what was completed during the sprint,\nso that progress is documented and validated.",
+    "estimatedMins": 60,
+    "estimatedHours": 1,
+    "sprint": null
+  },
+  "totalLoggedMins": 40,
+  "totalLoggedHours": 0.6666666666666666,
+  "logs": [
+    {
+      "date": "2026-05-11",
+      "durationMins": 40,
+      "durationHours": 0.6666666666666666,
+      "description": "Sprint review with M. Sahli, showing the demo + going through and validating each task completed during the sprint.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    }
+  ],
+  "completionRate": 0.67
+}
