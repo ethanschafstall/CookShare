@@ -30,9 +30,9 @@ export const actions = {
 			const token = setCookie.split(';')[0].split('=')[1];
 			cookies.set('session_token', token, {
 				path: '/',
-				expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000)
+				expires: form.data.rememberMe ? new Date(Date.now() + 30 * 24 * 60 * 60 * 1000) : undefined
 			});
 		}
-		throw redirect(303, '/');
+		redirect(303, '/');
 	}
 };
