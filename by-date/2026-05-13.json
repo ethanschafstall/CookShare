@@ -1,7 +1,7 @@
 {
   "date": "2026-05-13",
-  "totalMins": 175,
-  "totalHours": 2.9166666666666665,
+  "totalMins": 460,
+  "totalHours": 7.666666666666667,
   "logs": [
     {
       "issue": {
@@ -38,6 +38,32 @@
       "durationMins": 20,
       "durationHours": 0.3333333333333333,
       "description": "Planned the 2nd Sprint, assigning which tasks are to be done on which 4 days.\r\n[Agile - Sprint Planning #9](https://github.com/ethanschafstall/CookShare/issues/9)",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 19,
+        "title": "DB - Modeling"
+      },
+      "sprint": "Sprint 2",
+      "durationMins": 85,
+      "durationHours": 1.4166666666666667,
+      "description": "Modeled the recipe related tables : recipe_steps, recipes, recipe_ingredients, recipe_nutrition_facts, ingredients, recipe_images",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 8,
+        "title": "Doc - Project Report"
+      },
+      "sprint": "Sprint 2",
+      "durationMins": 200,
+      "durationHours": 3.3333333333333335,
+      "description": "Worked on the project report",
       "outcome": "success",
       "reflection": null,
       "aids": null

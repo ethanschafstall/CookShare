@@ -7,8 +7,8 @@
     "estimatedHours": 20,
     "sprint": "Sprint 1"
   },
-  "totalLoggedMins": 230,
-  "totalLoggedHours": 3.8333333333333335,
+  "totalLoggedMins": 430,
+  "totalLoggedHours": 7.166666666666667,
   "logs": [
     {
       "date": "2026-05-06",
@@ -36,7 +36,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-13",
+      "durationMins": 200,
+      "durationHours": 3.3333333333333335,
+      "description": "Worked on the project report",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.19
+  "completionRate": 0.36
 }

@@ -7,8 +7,8 @@
     "estimatedHours": 3,
     "sprint": "Sprint 1"
   },
-  "totalLoggedMins": 80,
-  "totalLoggedHours": 1.3333333333333333,
+  "totalLoggedMins": 165,
+  "totalLoggedHours": 2.75,
   "logs": [
     {
       "date": "2026-05-07",
@@ -18,7 +18,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": "https://auth0.com/blog/stateless-auth-for-stateful-minds/,\r\nDiscussion avec Mathieu Meylan (prof)"
+    },
+    {
+      "date": "2026-05-13",
+      "durationMins": 85,
+      "durationHours": 1.4166666666666667,
+      "description": "Modeled the recipe related tables : recipe_steps, recipes, recipe_ingredients, recipe_nutrition_facts, ingredients, recipe_images",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.44
+  "completionRate": 0.92
 }
