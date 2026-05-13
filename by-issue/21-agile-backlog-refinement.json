@@ -7,8 +7,8 @@
     "estimatedHours": 2,
     "sprint": null
   },
-  "totalLoggedMins": 75,
-  "totalLoggedHours": 1.25,
+  "totalLoggedMins": 215,
+  "totalLoggedHours": 3.5833333333333335,
   "logs": [
     {
       "date": "2026-05-06",
@@ -18,7 +18,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": "https://omacy.medium.com/implementing-the-repository-design-pattern-in-node-js-express-a-complete-guide-354cfadc22a0"
+    },
+    {
+      "date": "2026-05-13",
+      "durationMins": 140,
+      "durationHours": 2.3333333333333335,
+      "description": "Added acceptance criteria and tech analysis to:\r\n<br> [Recipes - View Recipe #4](https://github.com/ethanschafstall/CookShare/issues/4) <br> [Recipes - Create Recipe #5](https://github.com/ethanschafstall/CookShare/issues/5) <br> [Recipes - Delete Recipe #6](https://github.com/ethanschafstall/CookShare/issues/6) <br> [Recipes - Edit Recipe #7](https://github.com/ethanschafstall/CookShare/issues/7)",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.63
+  "completionRate": 1.79
 }

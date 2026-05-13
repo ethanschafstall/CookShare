@@ -1,0 +1,46 @@
+{
+  "date": "2026-05-13",
+  "totalMins": 175,
+  "totalHours": 2.9166666666666665,
+  "logs": [
+    {
+      "issue": {
+        "number": 18,
+        "title": "Agile - Daily"
+      },
+      "sprint": null,
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "Preparing for the day: Looking at the tasks I preped for sprint 2, rereading the CDC.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 21,
+        "title": "Agile - Backlog Refinement"
+      },
+      "sprint": null,
+      "durationMins": 140,
+      "durationHours": 2.3333333333333335,
+      "description": "Added acceptance criteria and tech analysis to:\r\n<br> [Recipes - View Recipe #4](https://github.com/ethanschafstall/CookShare/issues/4) <br> [Recipes - Create Recipe #5](https://github.com/ethanschafstall/CookShare/issues/5) <br> [Recipes - Delete Recipe #6](https://github.com/ethanschafstall/CookShare/issues/6) <br> [Recipes - Edit Recipe #7](https://github.com/ethanschafstall/CookShare/issues/7)",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 9,
+        "title": "Agile - Sprint Planning"
+      },
+      "sprint": null,
+      "durationMins": 20,
+      "durationHours": 0.3333333333333333,
+      "description": "Planned the 2nd Sprint, assigning which tasks are to be done on which 4 days.\r\n[Agile - Sprint Planning #9](https://github.com/ethanschafstall/CookShare/issues/9)",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    }
+  ]
+}

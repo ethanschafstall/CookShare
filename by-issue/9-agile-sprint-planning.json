@@ -7,8 +7,8 @@
     "estimatedHours": 1,
     "sprint": null
   },
-  "totalLoggedMins": 30,
-  "totalLoggedHours": 0.5,
+  "totalLoggedMins": 50,
+  "totalLoggedHours": 0.8333333333333334,
   "logs": [
     {
       "date": "2026-05-06",
@@ -18,7 +18,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-13",
+      "durationMins": 20,
+      "durationHours": 0.3333333333333333,
+      "description": "Planned the 2nd Sprint, assigning which tasks are to be done on which 4 days.\r\n[Agile - Sprint Planning #9](https://github.com/ethanschafstall/CookShare/issues/9)",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.5
+  "completionRate": 0.83
 }
