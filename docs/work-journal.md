@@ -1,6 +1,27 @@
 # Work Journal — @ethanschafstall's CookShare project
 
-*6 days*
+*7 days*
+
+---
+
+## 18 May 2026
+
+**Sprint:** Sprint 2 (13 May 2026 → 22 May 2026)
+
+**Day summary**
+
+> Finished the mockups for sprint 2 and worked on the project report. Meet with expert 2 and project manager.
+
+| # | Task | Time spent | Description | Outcome | Reflection | Aids used |
+|---|------|------------|-------------|---------|------------|-----------|
+| [#18](https://github.com/ethanschafstall/CookShare/issues/18) | Agile - Daily | 0h 15m | Read the sprint planning and preparing for today's work | ✅ Success | — | — |
+| [#14](https://github.com/ethanschafstall/CookShare/issues/14) | UI & UX - Mockups | 2h 40m | Created the mockups for the main CRUD functionality. My recipes page where user can see and manage (edit, delete, view) their recipes and create new ones; The create recipe page + form which is the same form the edit functionality uses; View recipe page. | ✅ Success | — | https://claude.ai/share/a38d52fc-9000-401c-a0af-c1a430fe17ed |
+| [#24](https://github.com/ethanschafstall/CookShare/issues/24) | Project - Meeting with Expert 2 | 0h 30m | Meet the 2nd expert we talked about the project & how it's going; Showed them the mockups and github projects with the project tasks/issues; talked about general organization and asked some questions. | ✅ Success | — | — |
+| — | Git and task updating | 0h 15m | Updated [ · UI & UX - Mockups · #14](https://github.com/ethanschafstall/CookShare/issues/14) with the new mockups; commited mockups to the repo | ✅ Success | — | — |
+| [#8](https://github.com/ethanschafstall/CookShare/issues/8) | Doc - Project Report | 1h 20m | Worked on the project report, added the mockups for sprint 2; added the intial planning; added the CDC | ✅ Success | — | — |
+| — | Meeting with project manager (Sahli. B) | 0h 35m | Meet up with Sahli showed him the mockups got some ui feedback; showed the db schemas, talked about the problems with modeling the db and choices made; Talked about the external api and the upcoming days. | ✅ Success | — | — |
+
+**Total time:** 5h 35m
 
 ---
 
