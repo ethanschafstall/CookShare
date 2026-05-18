@@ -1,0 +1,24 @@
+{
+  "issue": {
+    "number": 24,
+    "title": "Project - Meeting with Expert 2",
+    "description": "Meet up with the 2nd expert.",
+    "estimatedMins": 30,
+    "estimatedHours": 0.5,
+    "sprint": null
+  },
+  "totalLoggedMins": 30,
+  "totalLoggedHours": 0.5,
+  "logs": [
+    {
+      "date": "2026-05-18",
+      "durationMins": 30,
+      "durationHours": 0.5,
+      "description": "Meet the 2nd expert we talked about the project & how it's going; Showed them the mockups and github projects with the project tasks/issues; talked about general organization and asked some questions.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    }
+  ],
+  "completionRate": 1
+}

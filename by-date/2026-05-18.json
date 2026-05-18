@@ -1,0 +1,56 @@
+{
+  "date": "2026-05-18",
+  "totalMins": 220,
+  "totalHours": 3.6666666666666665,
+  "logs": [
+    {
+      "issue": {
+        "number": 18,
+        "title": "Agile - Daily"
+      },
+      "sprint": null,
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "Read the sprint planning and preparing for today's work",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 14,
+        "title": "UI & UX - Mockups"
+      },
+      "sprint": "Sprint 2",
+      "durationMins": 160,
+      "durationHours": 2.6666666666666665,
+      "description": "Created the mockups for the main CRUD functionality. My recipes page where user can see and manage (edit, delete, view) their recipes and create new ones; The create recipe page + form which is the same form the edit functionality uses; View recipe page.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://claude.ai/share/a38d52fc-9000-401c-a0af-c1a430fe17ed"
+    },
+    {
+      "issue": {
+        "number": 24,
+        "title": "Project - Meeting with Expert 2"
+      },
+      "sprint": null,
+      "durationMins": 30,
+      "durationHours": 0.5,
+      "description": "Meet the 2nd expert we talked about the project & how it's going; Showed them the mockups and github projects with the project tasks/issues; talked about general organization and asked some questions.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "customTitle": "Git and task updating",
+      "sprint": null,
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "Updated [\r\nUI & UX - Mockups\r\n#14](https://github.com/ethanschafstall/CookShare/issues/14) with the new mockups; commited mockups to the repo",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    }
+  ]
+}

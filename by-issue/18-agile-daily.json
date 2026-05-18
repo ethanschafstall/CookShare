@@ -7,8 +7,8 @@
     "estimatedHours": 2.5,
     "sprint": null
   },
-  "totalLoggedMins": 100,
-  "totalLoggedHours": 1.6666666666666667,
+  "totalLoggedMins": 115,
+  "totalLoggedHours": 1.9166666666666667,
   "logs": [
     {
       "date": "2026-05-06",
@@ -63,7 +63,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-18",
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "Read the sprint planning and preparing for today's work",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.67
+  "completionRate": 0.77
 }

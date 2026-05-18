@@ -7,8 +7,8 @@
     "estimatedHours": 4,
     "sprint": "Sprint 1"
   },
-  "totalLoggedMins": 140,
-  "totalLoggedHours": 2.3333333333333335,
+  "totalLoggedMins": 300,
+  "totalLoggedHours": 5,
   "logs": [
     {
       "date": "2026-05-07",
@@ -27,7 +27,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-18",
+      "durationMins": 160,
+      "durationHours": 2.6666666666666665,
+      "description": "Created the mockups for the main CRUD functionality. My recipes page where user can see and manage (edit, delete, view) their recipes and create new ones; The create recipe page + form which is the same form the edit functionality uses; View recipe page.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://claude.ai/share/a38d52fc-9000-401c-a0af-c1a430fe17ed"
     }
   ],
-  "completionRate": 0.58
+  "completionRate": 1.25
 }
