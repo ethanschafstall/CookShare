@@ -1,7 +1,7 @@
 {
   "date": "2026-05-18",
-  "totalMins": 220,
-  "totalHours": 3.6666666666666665,
+  "totalMins": 335,
+  "totalHours": 5.583333333333333,
   "logs": [
     {
       "issue": {
@@ -48,6 +48,29 @@
       "durationMins": 15,
       "durationHours": 0.25,
       "description": "Updated [\r\nUI & UX - Mockups\r\n#14](https://github.com/ethanschafstall/CookShare/issues/14) with the new mockups; commited mockups to the repo",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 8,
+        "title": "Doc - Project Report"
+      },
+      "sprint": "Sprint 2",
+      "durationMins": 80,
+      "durationHours": 1.3333333333333333,
+      "description": "Worked on the project report, added the mockups for sprint 2; added the intial planning; added the CDC",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "customTitle": "Meeting with project manager (Sahli. B)",
+      "sprint": null,
+      "durationMins": 35,
+      "durationHours": 0.5833333333333334,
+      "description": "Meet up with Sahli showed him the mockups got some ui feedback; showed the db schemas, talked about the problems with modeling the db and choices made; Talked about the external api and the upcoming days.",
       "outcome": "success",
       "reflection": null,
       "aids": null

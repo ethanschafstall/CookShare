@@ -7,8 +7,8 @@
     "estimatedHours": 20,
     "sprint": "Sprint 1"
   },
-  "totalLoggedMins": 430,
-  "totalLoggedHours": 7.166666666666667,
+  "totalLoggedMins": 510,
+  "totalLoggedHours": 8.5,
   "logs": [
     {
       "date": "2026-05-06",
@@ -45,7 +45,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-18",
+      "durationMins": 80,
+      "durationHours": 1.3333333333333333,
+      "description": "Worked on the project report, added the mockups for sprint 2; added the intial planning; added the CDC",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.36
+  "completionRate": 0.43
 }
