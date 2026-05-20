@@ -1,19 +1,20 @@
 import * as z from "zod";
 
-const login = z.object({
+const LoginSchema = z.object({
   email: z.email(),
   password: z.string(),
 });
 
-const register = z.object({
+const RegisterSchema = z.object({
   email: z.email(),
   password: z.string(),
   firstname: z.string(),
   lastname: z.string(),
 });
 
-type LoginInput = z.infer<typeof login>;
-type RegisterInput = z.infer<typeof register>;
+type LoginInput = z.infer<typeof LoginSchema>;
+type RegisterInput = z.infer<typeof RegisterSchema>;
 
-export default { login, register };
+export default { LoginSchema, RegisterSchema };
 export type { LoginInput, RegisterInput };
+
