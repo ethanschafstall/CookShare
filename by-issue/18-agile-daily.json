@@ -7,8 +7,8 @@
     "estimatedHours": 2.5,
     "sprint": null
   },
-  "totalLoggedMins": 115,
-  "totalLoggedHours": 1.9166666666666667,
+  "totalLoggedMins": 125,
+  "totalLoggedHours": 2.0833333333333335,
   "logs": [
     {
       "date": "2026-05-06",
@@ -72,7 +72,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-20",
+      "durationMins": 10,
+      "durationHours": 0.16666666666666666,
+      "description": "Looking at sprint planning and preping for today's tasks",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.77
+  "completionRate": 0.83
 }
