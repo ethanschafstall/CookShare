@@ -46,4 +46,3 @@ type RecipeImageInput = z.infer<typeof RecipeImageSchema>;
 
 export default { RecipeSchema, RecipeImageSchema };
 export type { RecipeImageInput, RecipeInput };
-

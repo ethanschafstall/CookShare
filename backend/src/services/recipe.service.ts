@@ -1,5 +1,5 @@
 import { RecipeRepository } from "@repositories/recipe.repository.js";
-import { RecipeInput } from "@validators/recipe.validator.js";
+import { RecipeImageInput, RecipeInput } from "@validators/recipe.validator.js";
 import { nanoid } from "nanoid";
 import slugify from "slugify";
 
