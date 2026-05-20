@@ -1,0 +1,24 @@
+{
+  "issue": {
+    "number": 5,
+    "title": "Recipes - Create Recipe",
+    "description": "## 💡 User Story\nAs a contributor,\nI want to create an recipe,\nso that other users can try making them.\n\n## 📋Acceptance Criteria\n\n- [ ] contributor and admin role users with the permission create:recipes can access the page\n- [ ] visitor users without the create:recipes permission are redirected to homepage\n- [ ] The create form includes: title, description, duration, difficulty, ingredients (dynamic list), steps (dynamic list), image(s)\n- [ ] Ingredients can be added/removed dynamically without page reload\n- [ ] Steps can be added/removed dynamically without page reload\n- [ ] All required fields are filled in order to submit the recipe\n- [ ] After submission the user is redirected to the newly created recipe page\n- [ ] A nutritional details table is automatically created after the recipe submission\n- [ ] After the submission of the recipe the nutritional details table is updated with info from OpenFoodFacts\n- [ ] While nutritional data is being updated, a loading indicator is shown in the nutritional details table\n\n## 🔍 Tech Analysis\n### Backend\n- POST /recipes\n- Verify the requesting user has create:recipes permission\n- Validate all required fields\n- Create a recipe entry in the DB with all fields: title, description, duration, difficulty, ingredients, steps\n- Images are uploaded to storage and the image path(s) are saved in the DB\n- Create an empty nutritional details table entry linked to the recipe\n- For each ingredient, check the DB for existing ingredient data\n- If found, populate the nutritional details table from DB\n- If not found, add the ingredient to a job queue for OpenFoodFacts data fetching\n- As each result returns, add an entry for said ingredient to the DB and update the nutritional details table\n\n### Frontend\n- Page is conditionally accessible based on user.role === contributor or user.role === admin\n- Users without create:recipes permission are redirected to the homepage\n- Ingredients and steps are managed as dynamic lists in local state (add/remove without page reload)\n- All required fields are validated before the form can be submitted\n- On success, user is redirected to the newly created recipe page\n- On error, show an error dialog notification\n- While nutritional data is being fetched, show a loading indicator in the nutritional details table",
+    "estimatedMins": 420,
+    "estimatedHours": 7,
+    "sprint": "Sprint 2"
+  },
+  "totalLoggedMins": 420,
+  "totalLoggedHours": 7,
+  "logs": [
+    {
+      "date": "2026-05-20",
+      "durationMins": 420,
+      "durationHours": 7,
+      "description": "Created the backend elements for the create recipe & recipe images (repo, service, controller, routes); added two near middleware for authorisation and image uploading (multer). ",
+      "outcome": "partial",
+      "reflection": "Ran into issues with the image uploading, I was able to get the images. I was able to get the images to upload but there are issues with the schemas, and req data. So atm it's not being saved in the db. I will try to fix tomorrow.\r\nWas able to work on the frontend but it's not finished or polished, so tomorrow too.\r\nAnd nothing atm relating to external api and nut facts, i will see when i can do that,",
+      "aids": "For handling user image uploads\r\nhttps://dev.to/satyasootar/storing-uploaded-files-and-serving-them-in-express-ob4\r\nhttps://expressjs.com/en/resources/middleware/multer/\r\n\r\nQuestion about custom slugs\r\nhttps://claude.ai/share/bdb6c5ee-0ea1-45c0-a64b-b928f9fe7001\r\nhttps://github.com/ai/nanoid\r\nhttps://github.com/simov/slugify\r\n"
+    }
+  ],
+  "completionRate": 1
+}
