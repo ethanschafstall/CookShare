@@ -1,7 +1,7 @@
 {
   "date": "2026-05-21",
-  "totalMins": 70,
-  "totalHours": 1.1666666666666667,
+  "totalMins": 355,
+  "totalHours": 5.916666666666667,
   "logs": [
     {
       "issue": {
@@ -14,6 +14,52 @@
       "description": "Finally got the image uploading working completely. There is some technical debt however.",
       "outcome": "success",
       "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 5,
+        "title": "Recipes - Create Recipe"
+      },
+      "sprint": "Sprint 2",
+      "durationMins": 130,
+      "durationHours": 2.1666666666666665,
+      "description": "Finished the frontend part of the create recipe feat.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "customTitle": "Git and task updating",
+      "sprint": null,
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "Finalised git commits; created the PR; updated github project tasks",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 4,
+        "title": "Recipes - View Recipe"
+      },
+      "sprint": "Sprint 2",
+      "durationMins": 100,
+      "durationHours": 1.6666666666666667,
+      "description": "Created the view recipe related backend and frontend elements (route, controller/service/repo functions, frontend routes) etc.",
+      "outcome": "partial",
+      "reflection": "Ran into issues with the user images. I'm not sure how I can handle serving images from my backend to the client via the frontend.",
+      "aids": null
+    },
+    {
+      "customTitle": "Asking question to M. Meylan (teacher)",
+      "sprint": null,
+      "durationMins": 40,
+      "durationHours": 0.6666666666666666,
+      "description": "Asked him about the handling image uploads, and how to to serve them.",
+      "outcome": "failure",
+      "reflection": "For recipe image uploads I went with multer saving files straight into an uploads/ folder in the backend. Uploading works fine, but actually serving the images back is more of a hassle than I expected, especially thinking about production. The folder sits inside the app directory, so the image data ends up tied to the app's lifecycle in a container, a redeploy would just wipe everything while the database still points to those paths. And every image request has to go through the api, which isn't great.",
       "aids": null
     }
   ]

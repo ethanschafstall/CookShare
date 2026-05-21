@@ -1,0 +1,24 @@
+{
+  "issue": {
+    "number": 4,
+    "title": "Recipes - View Recipe",
+    "description": "## 💡 User Story\nAs a user,\nI want to view a recipe,\nso that I can get more info about the recipe.\n\n## 📋Acceptance Criteria\n- [ ] Any user (visitor, contributor, admin) can view a published recipe page\n- [ ] The recipe page displays: title, description, duration, difficulty, ingredients, steps, image(s)\n- [ ] The recipe page displays the nutritional details table per serving\n- [ ] While nutritional data is still being fetched, a loading indicator is shown in the nutritional details table\n- [ ] If no nutritional data is available, a fallback message is shown in the nutritional details table\n- [ ] A serving size selector is available that scales ingredient quantities accordingly\n\n## 🔍 Tech Analysis\n### Backend\n- GET /recipes/:id\n- If recipe is not found, return 404\n- Return all recipe fields: title, description, duration, difficulty, ingredients, steps, image(s)\n- Return the associated nutritional details table data per serving alongside the recipe\n\n### Frontend\n- On page load, fetch the recipe data from the API and render all fields\n- Edit/delete buttons are conditionally rendered based on user.id === recipe.owner_id or user.role === admin\n- Recipe details are clear and visible on the page, based on the [mockup](url)\n- A clear zone showing nutritional details per serving is visible\n- A serving size selector scales ingredient quantities 1x (default), 2x, 4x",
+    "estimatedMins": 300,
+    "estimatedHours": 5,
+    "sprint": "Sprint 2"
+  },
+  "totalLoggedMins": 100,
+  "totalLoggedHours": 1.6666666666666667,
+  "logs": [
+    {
+      "date": "2026-05-21",
+      "durationMins": 100,
+      "durationHours": 1.6666666666666667,
+      "description": "Created the view recipe related backend and frontend elements (route, controller/service/repo functions, frontend routes) etc.",
+      "outcome": "partial",
+      "reflection": "Ran into issues with the user images. I'm not sure how I can handle serving images from my backend to the client via the frontend.",
+      "aids": null
+    }
+  ],
+  "completionRate": 0.33
+}

@@ -7,8 +7,8 @@
     "estimatedHours": 7,
     "sprint": "Sprint 2"
   },
-  "totalLoggedMins": 490,
-  "totalLoggedHours": 8.166666666666666,
+  "totalLoggedMins": 620,
+  "totalLoggedHours": 10.333333333333334,
   "logs": [
     {
       "date": "2026-05-20",
@@ -27,7 +27,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-21",
+      "durationMins": 130,
+      "durationHours": 2.1666666666666665,
+      "description": "Finished the frontend part of the create recipe feat.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 1.17
+  "completionRate": 1.48
 }
