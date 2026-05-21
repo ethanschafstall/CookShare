@@ -558,7 +558,7 @@
 		<hr class="mb-6 border-border-subtle" />
 
 		<div class="flex flex-col gap-5">
-			{#each $form.steps as _step, i (i)}
+			{#each $form.steps as step, i (i)}
 				<div class="flex items-start gap-3">
 					<span
 						class="mt-6 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-semibold text-surface"
@@ -570,7 +570,7 @@
 						>
 						<textarea
 							id="step-{i}"
-							bind:value={$form.steps[i].instruction}
+							bind:value={step.instruction}
 							rows="2"
 							placeholder={i === 0 ? 'e.g. Preheat oven at 200c' : 'e.g. Mix herbs and spices'}
 							class="w-full resize-none rounded border px-3 py-2.5 text-sm text-text placeholder-text-muted focus:ring-1 focus:outline-none {$errors
