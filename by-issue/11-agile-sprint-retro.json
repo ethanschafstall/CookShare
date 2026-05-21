@@ -7,8 +7,8 @@
     "estimatedHours": 1,
     "sprint": null
   },
-  "totalLoggedMins": 30,
-  "totalLoggedHours": 0.5,
+  "totalLoggedMins": 65,
+  "totalLoggedHours": 1.0833333333333333,
   "logs": [
     {
       "date": "2026-05-11",
@@ -18,7 +18,16 @@
       "outcome": "partial",
       "reflection": "Mostly how the login task took double the amount of time todo because I was implementing middleware which will be used by other features; and how repo / service / controller design pattern takes longer to implement than normal mvc.",
       "aids": null
+    },
+    {
+      "date": "2026-05-21",
+      "durationMins": 35,
+      "durationHours": 0.5833333333333334,
+      "description": "Self reflection on past sprint.",
+      "outcome": "partial",
+      "reflection": "Didn't go well. Was unable to add the edit or delete features, ran into issues, create recipe tasks way longer than planned. Was unable to write my tests or work on the rapport as I would've liked.",
+      "aids": null
     }
   ],
-  "completionRate": 0.5
+  "completionRate": 1.08
 }

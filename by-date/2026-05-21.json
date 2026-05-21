@@ -1,7 +1,7 @@
 {
   "date": "2026-05-21",
-  "totalMins": 385,
-  "totalHours": 6.416666666666667,
+  "totalMins": 430,
+  "totalHours": 7.166666666666667,
   "logs": [
     {
       "issue": {
@@ -60,6 +60,29 @@
       "description": "Asked him about the handling image uploads, and how to to serve them.",
       "outcome": "failure",
       "reflection": "For recipe image uploads I went with multer saving files straight into an uploads/ folder in the backend. Uploading works fine, but actually serving the images back is more of a hassle than I expected, especially thinking about production. The folder sits inside the app directory, so the image data ends up tied to the app's lifecycle in a container, a redeploy would just wipe everything while the database still points to those paths. And every image request has to go through the api, which isn't great.",
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 11,
+        "title": "Agile - Sprint Retro"
+      },
+      "sprint": null,
+      "durationMins": 35,
+      "durationHours": 0.5833333333333334,
+      "description": "Self reflection on past sprint.",
+      "outcome": "partial",
+      "reflection": "Didn't go well. Was unable to add the edit or delete features, ran into issues, create recipe tasks way longer than planned. Was unable to write my tests or work on the rapport as I would've liked.",
+      "aids": null
+    },
+    {
+      "customTitle": "Work Logs",
+      "sprint": null,
+      "durationMins": 10,
+      "durationHours": 0.16666666666666666,
+      "description": "Filling out the worklogs, and daily reflection summary for the work log docs.",
+      "outcome": "success",
+      "reflection": null,
       "aids": null
     }
   ]
