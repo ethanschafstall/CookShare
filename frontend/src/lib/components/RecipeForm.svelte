@@ -39,10 +39,7 @@
 
 	// ── Steps ─────────────────────────────────────────────────────────────────
 	function addStep() {
-		$form.steps = [
-			...$form.steps,
-			{ stepNumber: $form.steps.length + 1, instruction: '' }
-		];
+		$form.steps = [...$form.steps, { stepNumber: $form.steps.length + 1, instruction: '' }];
 	}
 
 	function removeStep(i: number) {
@@ -383,11 +380,7 @@
 							</svg>
 						</button>
 
-						<img
-							src={previews[i]}
-							alt="preview"
-							class="h-20 w-20 shrink-0 rounded object-cover"
-						/>
+						<img src={previews[i]} alt="preview" class="h-20 w-20 shrink-0 rounded object-cover" />
 						<div class="flex flex-1 flex-col gap-2">
 							<input
 								type="text"

@@ -13,16 +13,16 @@
 	--color-error: #ff7c7c;
 
 	--color-bg: #f7f3ee;
-	--color-surface: #ffffff; /* cards */
-	--color-page: #f0ede8; /* page background (slightly different from --color-bg) */
+	--color-surface: #ffffff;
+	--color-page: #f0ede8;
 
 	--color-text: #222;
 	--color-text-muted: #bfbdbd;
-	--color-text-secondary: #555; /* labels, secondary text */
-	--color-text-tertiary: #888; /* hints, helper text */
+	--color-text-secondary: #555;
+	--color-text-tertiary: #888;
 
-	--color-border: #ccc; /* default input border */
-	--color-border-light: #ddd; /* card border */
-	--color-border-subtle: #eee; /* dividers (hr) */
-	--color-border-muted: #d0ccc7; /* back button */
+	--color-border: #ccc;
+	--color-border-light: #ddd;
+	--color-border-subtle: #eee;
+	--color-border-muted: #d0ccc7;
 }

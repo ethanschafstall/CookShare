@@ -51,11 +51,10 @@ export class RecipeService {
     const recipe = await this.recipeRepo.assertRecipeExists(
       imageInputs[0].recipeId,
     );
-    if (!recipe) {
-      throw new NotFoundError("Recipe not found");
-    }
+    if (!recipe) throw new NotFoundError("Recipe not found");
+
     return Promise.all(
-      imageInputs.map((input) => {
+      imageInputs.map((input) =>
         this.recipeRepo.addImage({
           filename: input.filename,
           storagePath: input.storagePath,
@@ -63,8 +62,8 @@ export class RecipeService {
           isCover: input.isCover,
           displayOrder: input.displayOrder,
           recipe: { connect: { id: input.recipeId } },
-        });
-      }),
+        }),
+      ),
     );
   }
 }
