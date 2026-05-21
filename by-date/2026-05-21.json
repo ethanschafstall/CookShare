@@ -1,7 +1,7 @@
 {
   "date": "2026-05-21",
-  "totalMins": 355,
-  "totalHours": 5.916666666666667,
+  "totalMins": 385,
+  "totalHours": 6.416666666666667,
   "logs": [
     {
       "issue": {
@@ -45,8 +45,8 @@
         "title": "Recipes - View Recipe"
       },
       "sprint": "Sprint 2",
-      "durationMins": 100,
-      "durationHours": 1.6666666666666667,
+      "durationMins": 130,
+      "durationHours": 2.1666666666666665,
       "description": "Created the view recipe related backend and frontend elements (route, controller/service/repo functions, frontend routes) etc.",
       "outcome": "partial",
       "reflection": "Ran into issues with the user images. I'm not sure how I can handle serving images from my backend to the client via the frontend.",
