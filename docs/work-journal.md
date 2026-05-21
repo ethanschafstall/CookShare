@@ -1,6 +1,46 @@
 # Work Journal — @ethanschafstall's CookShare project
 
-*7 days*
+*9 days*
+
+---
+
+## 21 May 2026
+
+**Sprint:** Sprint 2 (13 May 2026 → 22 May 2026)
+
+**Day summary**
+
+> Was able to finish the create recipe task and partial finished the view recipe task (missing images). I wasn't able to do any of the planned nutritional facts using the external api.
+> No sprint review because B. Sahli was busy so next time we see each other is on the 28th.
+
+| # | Task | Time spent | Description | Outcome | Reflection | Aids used |
+|---|------|------------|-------------|---------|------------|-----------|
+| [#5](https://github.com/ethanschafstall/CookShare/issues/5) | Recipes - Create Recipe | 1h 10m | Finally got the image uploading working completely. There is some technical debt however. | ✅ Success | — | — |
+| [#5](https://github.com/ethanschafstall/CookShare/issues/5) | Recipes - Create Recipe | 2h 10m | Finished the frontend part of the create recipe feat. | ✅ Success | — | — |
+| — | Git and task updating | 0h 15m | Finalised git commits; created the PR; updated github project tasks | ✅ Success | — | — |
+| [#4](https://github.com/ethanschafstall/CookShare/issues/4) | Recipes - View Recipe | 2h 10m | Created the view recipe related backend and frontend elements (route, controller/service/repo functions, frontend routes) etc. | ⚠️ Partial | Ran into issues with the user images. I'm not sure how I can handle serving images from my backend to the client via the frontend. | — |
+| — | Asking question to M. Meylan (teacher) | 0h 40m | Asked him about the handling image uploads, and how to to serve them. | ❌ Failure | For recipe image uploads I went with multer saving files straight into an uploads/ folder in the backend. Uploading works fine, but actually serving the images back is more of a hassle than I expected, especially thinking about production. The folder sits inside the app directory, so the image data ends up tied to the app's lifecycle in a container, a redeploy would just wipe everything while the database still points to those paths. And every image request has to go through the api, which isn't great. | — |
+| [#11](https://github.com/ethanschafstall/CookShare/issues/11) | Agile - Sprint Retro | 0h 35m | Self reflection on past sprint. | ⚠️ Partial | Didn't go well. Was unable to add the edit or delete features, ran into issues, create recipe tasks way longer than planned. Was unable to write my tests or work on the rapport as I would've liked. | — |
+| — | Work Logs | 0h 10m | Filling out the worklogs, and daily reflection summary for the work log docs. | ✅ Success | — | — |
+
+**Total time:** 7h 10m
+
+---
+
+## 20 May 2026
+
+**Sprint:** Sprint 2 (13 May 2026 → 22 May 2026)
+
+**Day summary**
+
+> It was okay, I made a nice frontend and got the main recipe create feat working, but it's missing many things.
+
+| # | Task | Time spent | Description | Outcome | Reflection | Aids used |
+|---|------|------------|-------------|---------|------------|-----------|
+| [#18](https://github.com/ethanschafstall/CookShare/issues/18) | Agile - Daily | 0h 10m | Looking at sprint planning and preping for today's tasks | ✅ Success | — | — |
+| [#5](https://github.com/ethanschafstall/CookShare/issues/5) | Recipes - Create Recipe | 7h | Created the backend elements for the create recipe & recipe images (repo, service, controller, routes); added two near middleware for authorisation and image uploading (multer). | ⚠️ Partial | Ran into issues with the image uploading, I was able to get the images. I was able to get the images to upload but there are issues with the schemas, and req data. So atm it's not being saved in the db. I will try to fix tomorrow. · Was able to work on the frontend but it's not finished or polished, so tomorrow too. · And nothing atm relating to external api and nut facts, i will see when i can do that, | For handling user image uploads · https://dev.to/satyasootar/storing-uploaded-files-and-serving-them-in-express-ob4 · https://expressjs.com/en/resources/middleware/multer/ · Question about custom slugs · https://claude.ai/share/bdb6c5ee-0ea1-45c0-a64b-b928f9fe7001 · https://github.com/ai/nanoid · https://github.com/simov/slugify |
+
+**Total time:** 7h 10m
 
 ---
 
