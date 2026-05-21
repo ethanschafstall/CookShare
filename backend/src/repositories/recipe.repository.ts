@@ -11,4 +11,7 @@ export class RecipeRepository {
   addImage(imageInput: client.RecipeImageCreateInput) {
     return model.recipeImage.create({ data: imageInput });
   }
+  assertRecipeExists(recipeId: number) {
+    return model.recipe.findUnique({ where: { id: recipeId } });
+  }
 }

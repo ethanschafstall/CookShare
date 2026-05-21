@@ -1,3 +1,4 @@
+import { NotFoundError } from "@errors/app.error.js";
 import { RecipeRepository } from "@repositories/recipe.repository.js";
 import { RecipeImageInput, RecipeInput } from "@validators/recipe.validator.js";
 import { nanoid } from "nanoid";
@@ -40,7 +41,30 @@ export class RecipeService {
         })),
       },
     });
-
+    if (!recipe) {
+      throw new Error("Failed to create recipe");
+    }
     return recipe;
+  }
+
+  async addImages(imageInputs: RecipeImageInput[]) {
+    const recipe = await this.recipeRepo.assertRecipeExists(
+      imageInputs[0].recipeId,
+    );
+    if (!recipe) {
+      throw new NotFoundError("Recipe not found");
+    }
+    return Promise.all(
+      imageInputs.map((input) => {
+        this.recipeRepo.addImage({
+          filename: input.filename,
+          storagePath: input.storagePath,
+          altText: input.altText,
+          isCover: input.isCover,
+          displayOrder: input.displayOrder,
+          recipe: { connect: { id: input.recipeId } },
+        });
+      }),
+    );
   }
 }

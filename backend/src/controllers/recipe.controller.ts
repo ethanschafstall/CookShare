@@ -1,4 +1,5 @@
 import { RecipeService } from "@services/recipe.service.js";
+import { RecipeImageInput } from "@validators/recipe.validator.js";
 import { NextFunction, Request, Response } from "express";
 
 export class RecipeController {
@@ -8,6 +9,29 @@ export class RecipeController {
       const userId = req.user.id;
       const recipe = await this.recipeService.create(req.body, userId);
       res.status(201).json(recipe);
+    } catch (error) {
+      next(error);
+    }
+  };
+  addImages = async (req: Request, res: Response, next: NextFunction) => {
+    const files = req.files;
+    const { altText, isCover, displayOrder } = req.body;
+    const id = Number(req.params.id);
+    if (!files || !Array.isArray(files) || files.length === 0) {
+      return res.status(400).json({ error: "No images uploaded" });
+    }
+
+    try {
+      const imageData: RecipeImageInput[] = files.map((file, i) => ({
+        recipeId: id,
+        filename: file.filename,
+        storagePath: file.path,
+        altText: altText[i] ?? "",
+        isCover: isCover[i] ?? false,
+        displayOrder: displayOrder[i],
+      }));
+      const images = await this.recipeService.addImages(imageData);
+      res.status(201).json({ images });
     } catch (error) {
       next(error);
     }
