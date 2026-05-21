@@ -23,6 +23,7 @@ async function main() {
         "create:recipes",
         "update:recipes",
         "delete:recipes",
+        "upload:images",
       ],
     },
     {
@@ -34,6 +35,7 @@ async function main() {
         "update:recipes",
         "delete:recipes",
         "manage:users",
+        "upload:images",
       ],
     },
   ];

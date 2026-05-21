@@ -1,10 +1,8 @@
 <script lang="ts">
-	import SideBar from '$lib/components/SideBar.svelte';
 	const recipes = Array.from({ length: 6 }, () => ({ name: 'Placeholder Recipe' }));
 </script>
 
 <div class="flex min-h-screen bg-[#EDEAE6]">
-	<SideBar />
 	<!-- Divider -->
 	<div class="w-px bg-gray-300"></div>
 

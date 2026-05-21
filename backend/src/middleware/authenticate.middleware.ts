@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 
 const privateKey = process.env.PRIVATE_KEY!;
 
-const authMiddleware = (req: Request, res: Response, next: NextFunction) => {
+const authenticate = (req: Request, res: Response, next: NextFunction) => {
   const token = req.cookies.session_token;
 
   if (!token) {
@@ -22,4 +22,4 @@ const authMiddleware = (req: Request, res: Response, next: NextFunction) => {
   });
 };
 
-export default authMiddleware;
+export default authenticate;
