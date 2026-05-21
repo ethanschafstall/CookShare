@@ -1,0 +1,20 @@
+{
+  "date": "2026-05-21",
+  "totalMins": 70,
+  "totalHours": 1.1666666666666667,
+  "logs": [
+    {
+      "issue": {
+        "number": 5,
+        "title": "Recipes - Create Recipe"
+      },
+      "sprint": "Sprint 2",
+      "durationMins": 70,
+      "durationHours": 1.1666666666666667,
+      "description": "Finally got the image uploading working completely. There is some technical debt however.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    }
+  ]
+}

@@ -7,8 +7,8 @@
     "estimatedHours": 7,
     "sprint": "Sprint 2"
   },
-  "totalLoggedMins": 420,
-  "totalLoggedHours": 7,
+  "totalLoggedMins": 490,
+  "totalLoggedHours": 8.166666666666666,
   "logs": [
     {
       "date": "2026-05-20",
@@ -18,7 +18,16 @@
       "outcome": "partial",
       "reflection": "Ran into issues with the image uploading, I was able to get the images. I was able to get the images to upload but there are issues with the schemas, and req data. So atm it's not being saved in the db. I will try to fix tomorrow.\r\nWas able to work on the frontend but it's not finished or polished, so tomorrow too.\r\nAnd nothing atm relating to external api and nut facts, i will see when i can do that,",
       "aids": "For handling user image uploads\r\nhttps://dev.to/satyasootar/storing-uploaded-files-and-serving-them-in-express-ob4\r\nhttps://expressjs.com/en/resources/middleware/multer/\r\n\r\nQuestion about custom slugs\r\nhttps://claude.ai/share/bdb6c5ee-0ea1-45c0-a64b-b928f9fe7001\r\nhttps://github.com/ai/nanoid\r\nhttps://github.com/simov/slugify\r\n"
+    },
+    {
+      "date": "2026-05-21",
+      "durationMins": 70,
+      "durationHours": 1.1666666666666667,
+      "description": "Finally got the image uploading working completely. There is some technical debt however.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 1
+  "completionRate": 1.17
 }
