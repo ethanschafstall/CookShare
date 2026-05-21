@@ -5,10 +5,27 @@ import { NextFunction, Request, Response } from "express";
 export class RecipeController {
   constructor(private recipeService: RecipeService) {}
   create = async (req: Request, res: Response, next: NextFunction) => {
+    const userId = req.user.id;
+    if (!userId) {
+      return res.status(400).json({ error: "No user id" });
+    }
     try {
       const userId = req.user.id;
       const recipe = await this.recipeService.create(req.body, userId);
       res.status(201).json(recipe);
+    } catch (error) {
+      next(error);
+    }
+  };
+  read = async (req: Request, res: Response, next: NextFunction) => {
+    const slug = String(req.params.slug);
+    const urlId = slug.split("-").pop();
+    if (!urlId) {
+      res.status(400).json({ error: "Invalid slug" });
+    }
+    try {
+      const recipe = await this.recipeService.getRecipe(urlId);
+      res.status(200).json(recipe);
     } catch (error) {
       next(error);
     }
