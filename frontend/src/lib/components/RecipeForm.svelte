@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { recipeSchema } from '$lib/validators/schemas';
-	import { superForm, type SuperValidated, type Infer } from 'sveltekit-superforms';
+	import { superForm, type Infer, type SuperValidated } from 'sveltekit-superforms';
 	import { zodClient } from 'sveltekit-superforms/adapters';
 
 	type Props = {
@@ -261,7 +261,7 @@
 		<div>
 			<label class="mb-2 block text-sm text-text-secondary">Difficulty</label>
 			<div class="flex gap-3">
-				{#each ['easy', 'medium', 'hard'] as level}
+				{#each ['easy', 'medium', 'hard'] as level (level)}
 					<label
 						class="flex cursor-pointer items-center gap-2 rounded-xl border px-5 py-2.5 text-sm transition-colors {$form.difficulty ===
 						level
@@ -558,7 +558,7 @@
 		<hr class="mb-6 border-border-subtle" />
 
 		<div class="flex flex-col gap-5">
-			{#each $form.steps as step, i (i)}
+			{#each $form.steps as _step, i (i)}
 				<div class="flex items-start gap-3">
 					<span
 						class="mt-6 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-semibold text-surface"
@@ -628,6 +628,7 @@
 	<div class="flex justify-end gap-3 pb-10">
 		<a
 			href="/recipes"
+			rel="external"
 			class="rounded-lg border border-border px-8 py-3 text-sm text-text-secondary transition-colors hover:border-text-tertiary hover:bg-bg"
 		>
 			Cancel
