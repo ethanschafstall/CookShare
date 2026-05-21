@@ -34,15 +34,32 @@ const RecipeSchema = z.object({
     .min(1),
 });
 
+// TECH DEBT: RecipeImageSchema only validates req.body fields (altText, isCover, displayOrder).
+// Fields like filename and storagePath come from req.files (multer) and can't be part of the schema.
+// Because of this, RecipeImageInput cannot be inferred from RecipeImageSchema and must be maintained manually.
+// z.infer only reflects what Zod validates, it has no awareness of data coming from other parts of the request.
 const RecipeImageSchema = z.object({
-  /* FormData sends data as string, so a transform is needed in order to convert it to correct type */
-  altText: z.string().max(255),
-  isCover: z.string().transform((v) => v === "true"),
-  displayOrder: z.number().int().optional(),
+  altText: z
+    .union([z.string(), z.array(z.string())])
+    .transform((v) => [v].flat()),
+  isCover: z
+    .union([z.string(), z.array(z.string())])
+    .transform((v) => [v].flat().map((s) => s === "true")),
+  displayOrder: z
+    .union([z.coerce.number().int(), z.array(z.coerce.number().int())])
+    .optional()
+    .transform((v) => (v === undefined ? [] : [v].flat())),
 });
 
 type RecipeInput = z.infer<typeof RecipeSchema>;
-type RecipeImageInput = z.infer<typeof RecipeImageSchema>;
+type RecipeImageInput = {
+  altText: string;
+  isCover: boolean;
+  displayOrder: number;
+  filename: string;
+  storagePath: string;
+  recipeId: number;
+};
 
 export default { RecipeSchema, RecipeImageSchema };
 export type { RecipeImageInput, RecipeInput };
