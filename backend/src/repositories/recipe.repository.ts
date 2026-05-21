@@ -7,7 +7,12 @@ export class RecipeRepository {
       return tx.recipe.create({ data });
     });
   }
-
+  get(urlId: string) {
+    return model.recipe.findUnique({
+      where: { urlId: urlId },
+      include: { images: true, steps: true, ingredients: true },
+    });
+  }
   addImage(imageInput: client.RecipeImageCreateInput) {
     return model.recipeImage.create({ data: imageInput });
   }
