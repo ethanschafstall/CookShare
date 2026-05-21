@@ -7,18 +7,18 @@
     "estimatedHours": 5,
     "sprint": "Sprint 2"
   },
-  "totalLoggedMins": 100,
-  "totalLoggedHours": 1.6666666666666667,
+  "totalLoggedMins": 130,
+  "totalLoggedHours": 2.1666666666666665,
   "logs": [
     {
       "date": "2026-05-21",
-      "durationMins": 100,
-      "durationHours": 1.6666666666666667,
+      "durationMins": 130,
+      "durationHours": 2.1666666666666665,
       "description": "Created the view recipe related backend and frontend elements (route, controller/service/repo functions, frontend routes) etc.",
       "outcome": "partial",
       "reflection": "Ran into issues with the user images. I'm not sure how I can handle serving images from my backend to the client via the frontend.",
       "aids": null
     }
   ],
-  "completionRate": 0.33
+  "completionRate": 0.43333333333333335
 }
