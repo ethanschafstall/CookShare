@@ -46,7 +46,13 @@ export class RecipeService {
     }
     return recipe;
   }
-
+  async getRecipe(urlId: string) {
+    const recipe = this.recipeRepo.get(urlId);
+    if (!recipe) {
+      throw new NotFoundError("Failed to find recipe");
+    }
+    return recipe;
+  }
   async addImages(imageInputs: RecipeImageInput[]) {
     const recipe = await this.recipeRepo.assertRecipeExists(
       imageInputs[0].recipeId,
