@@ -47,7 +47,7 @@ export class RecipeService {
     return recipe;
   }
   async getRecipe(urlId: string) {
-    const recipe = this.recipeRepo.get(urlId);
+    const recipe = await this.recipeRepo.get(urlId);
     if (!recipe) {
       throw new NotFoundError("Failed to find recipe");
     }

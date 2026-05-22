@@ -21,7 +21,7 @@ export class RecipeController {
     const slug = String(req.params.slug);
     const urlId = slug.split("-").pop();
     if (!urlId) {
-      res.status(400).json({ error: "Invalid slug" });
+      return res.status(400).json({ error: "Invalid slug" });
     }
     try {
       const recipe = await this.recipeService.getRecipe(urlId);
