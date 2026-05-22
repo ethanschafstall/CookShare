@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-22",
+  "totalMins": 35,
+  "totalHours": 0.5833333333333334,
+  "logs": [
+    {
+      "issue": {
+        "number": 18,
+        "title": "Agile - Daily"
+      },
+      "sprint": null,
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "Wrote an email to my chef de projet to ask about how to tackle the rest of the project, since I didn't complete the features planned for sprint 2.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "customTitle": "Meeting with project manager (Sahli. B)",
+      "sprint": null,
+      "durationMins": 10,
+      "durationHours": 0.16666666666666666,
+      "description": "Discussed with Sahli. B about the state of the projet:\r\nHe said that I can be agile and continue the unfinished tasks from sprint 2 during sprint 3 so that the core CRUD is working. The search and filtering tasks orginally planned for sprint 3 are minor features compared to the CRUD so if they aren't done because of time then it's okay.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 9,
+        "title": "Agile - Sprint Planning"
+      },
+      "sprint": null,
+      "durationMins": 10,
+      "durationHours": 0.16666666666666666,
+      "description": "Attributed the tasks to sprint 3",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    }
+  ]
+}

@@ -7,8 +7,8 @@
     "estimatedHours": 1,
     "sprint": null
   },
-  "totalLoggedMins": 50,
-  "totalLoggedHours": 0.8333333333333334,
+  "totalLoggedMins": 60,
+  "totalLoggedHours": 1,
   "logs": [
     {
       "date": "2026-05-06",
@@ -27,7 +27,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-22",
+      "durationMins": 10,
+      "durationHours": 0.16666666666666666,
+      "description": "Attributed the tasks to sprint 3",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.83
+  "completionRate": 1
 }

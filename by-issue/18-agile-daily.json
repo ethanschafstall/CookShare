@@ -7,8 +7,8 @@
     "estimatedHours": 2.5,
     "sprint": null
   },
-  "totalLoggedMins": 125,
-  "totalLoggedHours": 2.0833333333333335,
+  "totalLoggedMins": 140,
+  "totalLoggedHours": 2.3333333333333335,
   "logs": [
     {
       "date": "2026-05-06",
@@ -81,7 +81,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-22",
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "Wrote an email to my chef de projet to ask about how to tackle the rest of the project, since I didn't complete the features planned for sprint 2.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.83
+  "completionRate": 0.93
 }
