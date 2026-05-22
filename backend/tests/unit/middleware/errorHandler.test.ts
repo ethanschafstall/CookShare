@@ -1,8 +1,8 @@
 import {
-    AppError,
-    ConflictError,
-    NotFoundError,
-    UnauthorizedError,
+  AppError,
+  ConflictError,
+  NotFoundError,
+  UnauthorizedError,
 } from "@errors/app.error.js";
 import errorHandler from "@middleware/errorHandler.middleware.js";
 import type { NextFunction, Request, Response } from "express";
