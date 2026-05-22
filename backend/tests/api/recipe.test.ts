@@ -27,6 +27,26 @@ const mockRecipe = {
   ingredients: [],
 };
 
+const validRecipeBody = {
+  title: "Tomato Soup",
+  description: "A classic tomato soup",
+  difficulty: "easy",
+  servings: 4,
+  prepTimeMin: 10,
+  cookTimeMin: 20,
+  steps: [{ stepNumber: 1, instruction: "Boil tomatoes" }],
+  ingredients: [
+    {
+      name: "tomato",
+      displayOrder: 1,
+      quantityG: 500,
+      quantityNumeric: 4,
+      displayUnit: "pcs",
+      note: null,
+    },
+  ],
+};
+
 const app = createRecipeTestApp(mockRecipeService);
 
 describe("Recipe API", () => {
@@ -41,6 +61,7 @@ describe("Recipe API", () => {
       const res = await request(app)
         .get("/api/v1/recipes/tomato-soup-abc123")
         .set("Cookie", `session_token=${validToken}`);
+
       expect(res.status).toBe(200);
       expect(res.body).toEqual(mockRecipe);
       expect(mockRecipeService.getRecipe).toHaveBeenCalledWith("abc123");
@@ -60,7 +81,72 @@ describe("Recipe API", () => {
       const res = await request(app)
         .get("/api/v1/recipes/ghost-recipe-zzz999")
         .set("Cookie", `session_token=${validToken}`);
+
       expect(res.status).toBe(404);
+    });
+  });
+
+  describe("POST /api/v1/recipes", () => {
+    it("returns 201 with the created recipe", async () => {
+      mockRecipeService.create.mockResolvedValue(mockRecipe);
+
+      const res = await request(app)
+        .post("/api/v1/recipes")
+        .set("Cookie", `session_token=${validToken}`)
+        .send(validRecipeBody);
+
+      expect(res.status).toBe(201);
+      expect(res.body).toEqual(mockRecipe);
+      expect(mockRecipeService.create).toHaveBeenCalledWith(
+        expect.objectContaining({ title: "Tomato Soup" }),
+        1,
+      );
+    });
+
+    it("returns 401 when no token provided", async () => {
+      const res = await request(app)
+        .post("/api/v1/recipes")
+        .send(validRecipeBody);
+
+      expect(res.status).toBe(401);
+    });
+
+    it("returns 400 when title is missing", async () => {
+      const { title: _title, ...body } = validRecipeBody;
+
+      const res = await request(app)
+        .post("/api/v1/recipes")
+        .set("Cookie", `session_token=${validToken}`)
+        .send(body);
+
+      expect(res.status).toBe(400);
+    });
+
+    it("returns 400 when difficulty is invalid", async () => {
+      const res = await request(app)
+        .post("/api/v1/recipes")
+        .set("Cookie", `session_token=${validToken}`)
+        .send({ ...validRecipeBody, difficulty: "impossible" });
+
+      expect(res.status).toBe(400);
+    });
+
+    it("returns 400 when steps is empty", async () => {
+      const res = await request(app)
+        .post("/api/v1/recipes")
+        .set("Cookie", `session_token=${validToken}`)
+        .send({ ...validRecipeBody, steps: [] });
+
+      expect(res.status).toBe(400);
+    });
+
+    it("returns 400 when ingredients is empty", async () => {
+      const res = await request(app)
+        .post("/api/v1/recipes")
+        .set("Cookie", `session_token=${validToken}`)
+        .send({ ...validRecipeBody, ingredients: [] });
+
+      expect(res.status).toBe(400);
     });
   });
 });
