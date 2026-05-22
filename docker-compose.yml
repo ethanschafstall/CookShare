@@ -22,12 +22,28 @@ services:
       context: ./backend
     restart: unless-stopped
     environment:
+      HOST: ${HOST}
+      PORT: ${BACKEND_PORT}
       DATABASE_URL: mysql://${DB_USER}:${DB_PASSWORD}@db:3306/${DB_NAME}
-    ports:
-      - "3002:3000"
+      DATABASE_HOST: db
+      DATABASE_USER: ${DB_USER}
+      DATABASE_PASSWORD: ${DB_PASSWORD}
+      DATABASE_NAME: ${DB_NAME}
+      CORS_ORIGIN: http://localhost:${FRONTEND_PORT}
+      PRIVATE_KEY: ${PRIVATE_KEY}
+      ADMIN_EMAIL: ${ADMIN_EMAIL}
+      ADMIN_FIRSTNAME: ${ADMIN_FIRSTNAME}
+      ADMIN_LASTNAME: ${ADMIN_LASTNAME}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
     depends_on:
       db:
         condition: service_healthy
+    command: >
+      sh -c "
+        npx prisma migrate deploy &&
+        npx prisma db seed &&
+        node dist/src/server.js
+      "
 
   frontend:
     build:
@@ -37,6 +53,10 @@ services:
       - "${FRONTEND_PORT}:3000"
     depends_on:
       - backend
+    environment:
+      ORIGIN: http://localhost:${FRONTEND_PORT}
+      BACKEND_HOST: backend
+      BACKEND_PORT: ${BACKEND_PORT}
 
 volumes:
   db_data:
