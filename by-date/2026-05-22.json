@@ -1,7 +1,7 @@
 {
   "date": "2026-05-22",
-  "totalMins": 35,
-  "totalHours": 0.5833333333333334,
+  "totalMins": 240,
+  "totalHours": 4,
   "logs": [
     {
       "issue": {
@@ -35,6 +35,19 @@
       "durationMins": 10,
       "durationHours": 0.16666666666666666,
       "description": "Attributed the tasks to sprint 3",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 15,
+        "title": "Tests - Definition"
+      },
+      "sprint": "Sprint 2",
+      "durationMins": 205,
+      "durationHours": 3.4166666666666665,
+      "description": "Wrote tests for create recipe feat (unit & api); view recipe feat (unit & api); authenticate/authorise/validate/erroHandler middleware (unit); jwt/password helpers (unit)",
       "outcome": "success",
       "reflection": null,
       "aids": null

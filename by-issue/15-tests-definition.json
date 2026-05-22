@@ -7,8 +7,8 @@
     "estimatedHours": 8,
     "sprint": "Sprint 1"
   },
-  "totalLoggedMins": 150,
-  "totalLoggedHours": 2.5,
+  "totalLoggedMins": 355,
+  "totalLoggedHours": 5.916666666666667,
   "logs": [
     {
       "date": "2026-05-08",
@@ -27,7 +27,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-22",
+      "durationMins": 205,
+      "durationHours": 3.4166666666666665,
+      "description": "Wrote tests for create recipe feat (unit & api); view recipe feat (unit & api); authenticate/authorise/validate/erroHandler middleware (unit); jwt/password helpers (unit)",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.31
+  "completionRate": 0.74
 }
