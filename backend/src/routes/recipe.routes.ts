@@ -23,6 +23,12 @@ const recipeRouter = (recipeController: RecipeController) => {
     validate(recipeValidator.RecipeImageSchema),
     recipeController.addImages,
   );
+  router.get(
+    "/:slug",
+    authenticate,
+    authorise("read:recipes"),
+    recipeController.read,
+  );
   return router;
 };
 
