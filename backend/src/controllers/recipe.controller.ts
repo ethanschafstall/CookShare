@@ -1,3 +1,4 @@
+import { BadRequestError } from "@errors/app.error.js";
 import { RecipeService } from "@services/recipe.service.js";
 import { RecipeImageInput } from "@validators/recipe.validator.js";
 import { NextFunction, Request, Response } from "express";
@@ -21,7 +22,7 @@ export class RecipeController {
     const slug = String(req.params.slug);
     const urlId = slug.split("-").pop();
     if (!urlId) {
-      return res.status(400).json({ error: "Invalid slug" });
+      throw new BadRequestError("Invalid slug");
     }
     try {
       const recipe = await this.recipeService.getRecipe(urlId);
@@ -35,7 +36,7 @@ export class RecipeController {
     const { altText, isCover, displayOrder } = req.body;
     const id = Number(req.params.id);
     if (!files || !Array.isArray(files) || files.length === 0) {
-      return res.status(400).json({ error: "No images uploaded" });
+      throw new BadRequestError("No images uploaded");
     }
 
     try {
