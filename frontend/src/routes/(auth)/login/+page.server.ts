@@ -1,4 +1,4 @@
-import { BACKEND_HOST, BACKEND_PORT } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 import { loginSchema } from '$lib/validators/schemas.js';
 import { fail, redirect } from '@sveltejs/kit';
 import { message, superValidate } from 'sveltekit-superforms';
@@ -16,11 +16,14 @@ export const actions = {
 		const form = await superValidate(request, zod(loginSchema));
 		if (!form.valid) return fail(400, { form });
 
-		const response = await fetch(`http://${BACKEND_HOST}:${BACKEND_PORT}/api/v1/auth/login`, {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(form.data)
-		});
+		const response = await fetch(
+			`http://${env.BACKEND_HOST}:${env.BACKEND_PORT}/api/v1/auth/login`,
+			{
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(form.data)
+			}
+		);
 		if (!response.ok) {
 			const body = await response.json();
 			return message(form, body.error ?? 'Login failed', { status: 400 });

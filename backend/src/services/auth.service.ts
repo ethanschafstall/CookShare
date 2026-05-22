@@ -45,6 +45,7 @@ export class AuthService {
       passwordSalt: salt,
       firstname: input.firstname,
       lastname: input.lastname,
+      role: { connect: { id: 1 } },
     });
     if (!user) {
       throw new Error("Failed to create user");

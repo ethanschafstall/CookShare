@@ -1,25 +1,25 @@
+import { UnauthorizedError } from "@errors/app.error.js";
 import type { NextFunction, Request, Response } from "express";
-import jwt from "jsonwebtoken";
+import jwt, { JwtPayload } from "jsonwebtoken";
 
 const privateKey = process.env.PRIVATE_KEY!;
 
 const authenticate = (req: Request, res: Response, next: NextFunction) => {
   const token = req.cookies.session_token;
 
-  if (!token) {
-    return res.status(401).json({ error: "No token provided" });
-  }
-  jwt.verify(token, privateKey, (error, decodedToken) => {
-    if (error) {
-      const message =
-        error.name === "TokenExpiredError"
-          ? "Your session has expired. Please log in again."
-          : "The request is invalid. Please check your login details.";
-      return res.status(401).json({ error: message });
-    }
+  if (!token) throw new UnauthorizedError("No token provided");
+
+  try {
+    const decodedToken = jwt.verify(token, privateKey) as JwtPayload;
     req.user = decodedToken;
     next();
-  });
+  } catch (error) {
+    const message =
+      error instanceof Error && error.name === "TokenExpiredError"
+        ? "Your session has expired. Please log in again."
+        : "The request is invalid. Please check your login details.";
+    throw new UnauthorizedError(message);
+  }
 };
 
 export default authenticate;

@@ -54,9 +54,10 @@ export class RecipeService {
     return recipe;
   }
   async addImages(imageInputs: RecipeImageInput[]) {
-    const recipe = await this.recipeRepo.assertRecipeExists(
-      imageInputs[0].recipeId,
-    );
+    const first = imageInputs[0];
+    if (!first) throw new Error("imageInputs must contain at least one image");
+
+    const recipe = await this.recipeRepo.assertRecipeExists(first.recipeId);
     if (!recipe) throw new NotFoundError("Recipe not found");
 
     return Promise.all(

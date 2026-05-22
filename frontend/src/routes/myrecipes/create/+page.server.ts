@@ -1,4 +1,4 @@
-import { BACKEND_HOST, BACKEND_PORT } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 import { recipeSchema } from '$lib/validators/schemas.js';
 import { fail, redirect } from '@sveltejs/kit';
 import { message, superValidate, withFiles } from 'sveltekit-superforms';
@@ -6,7 +6,7 @@ import { zod } from 'sveltekit-superforms/adapters';
 import { z } from 'zod/v3';
 
 const ALLOWED_ROLES = ['admin', 'contributor'];
-const BACKEND = `http://${BACKEND_HOST}:${BACKEND_PORT}`;
+const BACKEND = `http://${env.BACKEND_HOST}:${env.BACKEND_PORT}`;
 
 /**
  * Server-only extension of the recipe schema that also accepts a list of
