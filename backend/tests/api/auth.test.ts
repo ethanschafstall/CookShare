@@ -4,7 +4,7 @@ import {
   UnauthorizedError,
 } from "@errors/app.error.js";
 import generateToken from "@helpers/jwt.helper.js";
-import { createTestApp } from "@tests/helpers/createTestApp.js";
+import { createAuthTestApp } from "@tests/helpers/createAuthTestApp.js";
 import mockAuthService from "@tests/mocks/services/authService.mock.js";
 import request from "supertest";
 import { beforeEach, describe, expect, it, vi } from "vitest";
@@ -15,7 +15,7 @@ const validToken = generateToken({
   role: "visitor",
 });
 
-const app = createTestApp(mockAuthService);
+const app = createAuthTestApp(mockAuthService);
 
 describe("Auth API", () => {
   beforeEach(() => {
