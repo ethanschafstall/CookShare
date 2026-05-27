@@ -1,0 +1,24 @@
+{
+  "issue": {
+    "number": 6,
+    "title": "Recipes - Delete Recipe",
+    "description": "## 💡 User Story\nAs a contributor,\nI want to delete a recipe,\nso that other users don't try to make it.\n\n## 📋Acceptance Criteria\n\n- [ ] Only the recipe owner with the delete:recipes permission or an admin can delete a recipe\n- [ ] A delete option is visible on the \"My Recipes\" page and on indiviual recipe page\n- [ ] Before deletion, the user is shown a confirmation dialog to confirm the deletion\n- [ ] After confirmation, the recipe and its associated nutritional details table are permanently deleted\n- [ ] After deletion the user remains on or is redirected to the \"My Recipes\" page (depending where they performed the delete action)\n\n## 🔍 Tech Analysis\n### Backend\n- Create a DELETE recipes/:id\n- Verifiy that the requesting user has delete:recipes and ownership of the recipe\n- Remove all entries from the DB relating to the deleted recipe\n\n### Frontend\n- Delete button is conditionally rendered based on user.id === recipe.owner_id or user.role === admin\n- On success, the recipe is removed the user is redirected and a success dialog is shown\n- On failed deletion, an error/notification is shown to the user",
+    "estimatedMins": 120,
+    "estimatedHours": 2,
+    "sprint": "Sprint 2"
+  },
+  "totalLoggedMins": 245,
+  "totalLoggedHours": 4.083333333333333,
+  "logs": [
+    {
+      "date": "2026-05-27",
+      "durationMins": 245,
+      "durationHours": 4.083333333333333,
+      "description": "Created the delete recipe feat with the backend elements, and frontend elements.\r\nAdded ui components to standardise style across frontend routes/components",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    }
+  ],
+  "completionRate": 2.04
+}

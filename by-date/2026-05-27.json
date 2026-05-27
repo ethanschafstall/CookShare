@@ -1,0 +1,56 @@
+{
+  "date": "2026-05-27",
+  "totalMins": 370,
+  "totalHours": 6.166666666666667,
+  "logs": [
+    {
+      "issue": {
+        "number": 18,
+        "title": "Agile - Daily"
+      },
+      "sprint": null,
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "daily for checking the tasks and stuff to do.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 6,
+        "title": "Recipes - Delete Recipe"
+      },
+      "sprint": "Sprint 2",
+      "durationMins": 245,
+      "durationHours": 4.083333333333333,
+      "description": "Created the delete recipe feat with the backend elements, and frontend elements.\r\nAdded ui components to standardise style across frontend routes/components",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 8,
+        "title": "Doc - Project Report"
+      },
+      "sprint": "Sprint 2",
+      "durationMins": 95,
+      "durationHours": 1.5833333333333333,
+      "description": "Worked on schemas, 1.5 of the project report based on the github project tasks \"Tech Analysis\" + paper notes written (the TODOs), and the 1.7 based off of notes",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "customTitle": "Git and task updating",
+      "sprint": null,
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "commiting work, filling work log, updating github projects tasks",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    }
+  ]
+}

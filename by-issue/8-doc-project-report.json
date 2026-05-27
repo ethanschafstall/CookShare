@@ -7,8 +7,8 @@
     "estimatedHours": 20,
     "sprint": "Sprint 1"
   },
-  "totalLoggedMins": 605,
-  "totalLoggedHours": 10.083333333333334,
+  "totalLoggedMins": 700,
+  "totalLoggedHours": 11.666666666666666,
   "logs": [
     {
       "date": "2026-05-06",
@@ -63,7 +63,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-27",
+      "durationMins": 95,
+      "durationHours": 1.5833333333333333,
+      "description": "Worked on schemas, 1.5 of the project report based on the github project tasks \"Tech Analysis\" + paper notes written (the TODOs), and the 1.7 based off of notes",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.5
+  "completionRate": 0.58
 }

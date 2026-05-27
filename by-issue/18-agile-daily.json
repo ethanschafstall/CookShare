@@ -7,8 +7,8 @@
     "estimatedHours": 2.5,
     "sprint": null
   },
-  "totalLoggedMins": 140,
-  "totalLoggedHours": 2.3333333333333335,
+  "totalLoggedMins": 155,
+  "totalLoggedHours": 2.5833333333333335,
   "logs": [
     {
       "date": "2026-05-06",
@@ -90,7 +90,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-27",
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "daily for checking the tasks and stuff to do.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.93
+  "completionRate": 1.03
 }
