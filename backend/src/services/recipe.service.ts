@@ -73,4 +73,19 @@ export class RecipeService {
       ),
     );
   }
+  async getRecipesByUser(userId: number) {
+    const recipe = await this.recipeRepo.getByUser(userId);
+    if (!recipe) {
+      throw new NotFoundError("Failed to find recipe");
+    }
+    return recipe;
+  }
+  async deleteRecipe(urlId: string) {
+    const recipe = await this.recipeRepo.get(urlId);
+
+    if (!recipe) {
+      throw new NotFoundError("Failed to find recipe");
+    }
+    return await this.recipeRepo.delete(urlId);
+  }
 }
