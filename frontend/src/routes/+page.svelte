@@ -2,10 +2,7 @@
 	const recipes = Array.from({ length: 6 }, () => ({ name: 'Placeholder Recipe' }));
 </script>
 
-<div class="flex min-h-screen bg-[#EDEAE6]">
-	<!-- Divider -->
-	<div class="w-px bg-gray-300"></div>
-
+<div class="flex min-h-screen">
 	<!-- Main content -->
 	<main class="flex-1 px-10 py-8">
 		<!-- Search -->
