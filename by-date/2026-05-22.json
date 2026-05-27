@@ -1,7 +1,7 @@
 {
   "date": "2026-05-22",
-  "totalMins": 240,
-  "totalHours": 4,
+  "totalMins": 420,
+  "totalHours": 7,
   "logs": [
     {
       "issue": {
@@ -50,6 +50,29 @@
       "description": "Wrote tests for create recipe feat (unit & api); view recipe feat (unit & api); authenticate/authorise/validate/erroHandler middleware (unit); jwt/password helpers (unit)",
       "outcome": "success",
       "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 8,
+        "title": "Doc - Project Report"
+      },
+      "sprint": "Sprint 2",
+      "durationMins": 95,
+      "durationHours": 1.5833333333333333,
+      "description": "worked on the project report added the tests table, worked on the mockups and db schemas.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "customTitle": "CI / CD",
+      "sprint": null,
+      "durationMins": 85,
+      "durationHours": 1.4166666666666667,
+      "description": "Worked on the docker elements (dockerfiles, compose), fixed building issues; issues with the frontend static env; tsc issues; removed user.role default from prisma schema; added missing env vars to docker compose",
+      "outcome": "partial",
+      "reflection": "There is an issue where the post recipe isn't working from the containers. I will check wednesday morning",
       "aids": null
     }
   ]
