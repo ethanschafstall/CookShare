@@ -1,21 +1,64 @@
 <script lang="ts">
-	let { data } = $props();
+	import { enhance } from '$app/forms';
+	import ConfirmDialog from '$lib/components/ConfirmDialog.svelte';
+	import Button from '$lib/components/ui/Button.svelte';
+	import Card from '$lib/components/ui/Card.svelte';
+	import Icon from '$lib/components/ui/Icon.svelte';
+	import { onMount } from 'svelte';
 
-	const recipe = data.recipe;
-	const images = recipe.images;
-	const ingredients = recipe.ingredients;
-	const steps = recipe.steps;
+	let cameFromMyRecipes = $state(false);
+	let { data } = $props();
+	const recipe = $derived(data.recipe);
+	const user = $derived(data.user);
+	const images = $derived(recipe.images);
+	const ingredients = $derived(recipe.ingredients);
+	const steps = $derived(recipe.steps);
 
 	let activeImage = $state(0);
+	let confirming = $state(false);
+	let deleteForm = $state<HTMLFormElement | null>(null);
 
-	// Split ingredients into two columns
-	const half = Math.ceil(ingredients.length / 2);
-	const leftIngredients = ingredients.slice(0, half);
-	const rightIngredients = ingredients.slice(half);
+	// Show edit/delete to the owner
+	const canManage = $derived(!!user && (user.id === recipe.userId || user.role === 'admin'));
+
+	const half = $derived(Math.ceil(ingredients.length / 2));
+	const leftIngredients = $derived(ingredients.slice(0, half));
+	const rightIngredients = $derived(ingredients.slice(half));
+
+	function confirmDelete() {
+		deleteForm?.requestSubmit();
+	}
+	onMount(() => {
+		cameFromMyRecipes = document.referrer.includes('/myrecipes');
+	});
 </script>
 
-<article class="min-h-screen bg-bg px-8 py-10">
-	<div class="mx-auto max-w-5xl">
+{#if canManage}
+	<div class="flex shrink-0 gap-2 justify-self-end">
+		{#if cameFromMyRecipes}
+			<Button
+				variant="ghost"
+				size="icon"
+				href="/myrecipes"
+				rel="external"
+				aria-label="Back to my recipes"
+			>
+				<Icon name="chevron-left" size={16} />
+			</Button>
+		{/if}
+		<Button
+			variant="ghost"
+			size="icon"
+			onclick={() => (confirming = true)}
+			aria-label="Delete recipe"
+			class="hover:border-primary hover:text-primary"
+		>
+			<Icon name="trash" size={16} />
+		</Button>
+	</div>
+{/if}
+<article class="min-h-screen px-8 py-10">
+	<div class="mx-auto max-w-5/6">
 		<!-- Top section -->
 		<div class="grid gap-8 md:grid-cols-2">
 			<div class="flex flex-col gap-3">
@@ -37,20 +80,7 @@
 					<div
 						class="absolute bottom-3 left-3 flex items-center gap-1.5 rounded bg-surface/90 px-2 py-1 text-xs text-text-tertiary"
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="14"
-							height="14"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						>
-							<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-							<circle cx="12" cy="12" r="3" />
-						</svg>
+						<Icon name="eye" size={14} />
 						{recipe.hits} Views
 					</div>
 
@@ -69,29 +99,32 @@
 				</div>
 
 				<div class="grid grid-cols-4 gap-2">
-					<div class="rounded border border-border-light bg-surface px-3 py-2">
+					<Card padding="md">
 						<p class="text-xs text-text-tertiary">Prep time</p>
 						<p class="text-sm font-medium text-text">{recipe.prepTimeMin} min</p>
-					</div>
-					<div class="rounded border border-border-light bg-surface px-3 py-2">
+					</Card>
+					<Card padding="md">
 						<p class="text-xs text-text-tertiary">Cook time</p>
 						<p class="text-sm font-medium text-text">{recipe.cookTimeMin} min</p>
-					</div>
-					<div class="rounded border border-border-light bg-surface px-3 py-2">
+					</Card>
+					<Card padding="md">
 						<p class="text-xs text-text-tertiary">Difficulty</p>
 						<p class="text-sm font-medium text-text">
 							{recipe.difficulty.charAt(0).toUpperCase() + recipe.difficulty.slice(1)}
 						</p>
-					</div>
-					<div class="rounded border border-border-light bg-surface px-3 py-2">
+					</Card>
+					<Card padding="md">
 						<p class="text-xs text-text-tertiary">Servings</p>
 						<p class="text-sm font-medium text-text">{recipe.servings}</p>
-					</div>
+					</Card>
 				</div>
 			</div>
 
 			<div class="flex flex-col gap-4">
-				<h1 class="text-4xl font-semibold text-text">{recipe.title}</h1>
+				<div class="flex items-start justify-between gap-4">
+					<h1 class="text-4xl font-semibold text-text">{recipe.title}</h1>
+				</div>
+
 				<p class="text-base leading-relaxed text-text">{recipe.description}</p>
 			</div>
 		</div>
@@ -141,3 +174,18 @@
 		</section>
 	</div>
 </article>
+
+<!-- Hidden delete form, submitted on confirm -->
+{#if canManage}
+	<form bind:this={deleteForm} method="POST" action="?/delete" use:enhance class="hidden"></form>
+{/if}
+
+<ConfirmDialog
+	open={confirming}
+	title="Delete recipe?"
+	message="{recipe.title} will be permanently deleted. This cannot be undone."
+	confirmLabel="Delete"
+	variant="danger"
+	onConfirm={confirmDelete}
+	onCancel={() => (confirming = false)}
+/>
