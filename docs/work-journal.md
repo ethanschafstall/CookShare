@@ -1,6 +1,27 @@
 # Work Journal — @ethanschafstall's CookShare project
 
-*9 days*
+*10 days*
+
+---
+
+## 22 May 2026
+
+**Sprint:** Sprint 2 (13 May 2026 → 22 May 2026)
+
+**Day summary**
+
+> Was able to write tests for all controllers, services, middleware (except the upload multer one), Also also worked on the dockerfile and docker compose. Did some bug fixing to fix the build not completing.
+
+| # | Task | Time spent | Description | Outcome | Reflection | Aids used |
+|---|------|------------|-------------|---------|------------|-----------|
+| [#18](https://github.com/ethanschafstall/CookShare/issues/18) | Agile - Daily | 0h 15m | Wrote an email to my chef de projet to ask about how to tackle the rest of the project, since I didn't complete the features planned for sprint 2. | ✅ Success | — | — |
+| — | Meeting with project manager (Sahli. B) | 0h 10m | Discussed with Sahli. B about the state of the projet: · He said that I can be agile and continue the unfinished tasks from sprint 2 during sprint 3 so that the core CRUD is working. The search and filtering tasks orginally planned for sprint 3 are minor features compared to the CRUD so if they aren't done because of time then it's okay. | ✅ Success | — | — |
+| [#9](https://github.com/ethanschafstall/CookShare/issues/9) | Agile - Sprint Planning | 0h 10m | Attributed the tasks to sprint 3 | ✅ Success | — | — |
+| [#15](https://github.com/ethanschafstall/CookShare/issues/15) | Tests - Definition | 3h 25m | Wrote tests for create recipe feat (unit & api); view recipe feat (unit & api); authenticate/authorise/validate/erroHandler middleware (unit); jwt/password helpers (unit) | ✅ Success | — | — |
+| [#8](https://github.com/ethanschafstall/CookShare/issues/8) | Doc - Project Report | 1h 35m | worked on the project report added the tests table, worked on the mockups and db schemas. | ✅ Success | — | — |
+| — | CI / CD | 1h 25m | Worked on the docker elements (dockerfiles, compose), fixed building issues; issues with the frontend static env; tsc issues; removed user.role default from prisma schema; added missing env vars to docker compose | ⚠️ Partial | There is an issue where the post recipe isn't working from the containers. I will check wednesday morning | — |
+
+**Total time:** 7h
 
 ---
 
