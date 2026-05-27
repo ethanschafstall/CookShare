@@ -77,7 +77,7 @@ model RecipeImage {
   isCover      Boolean
   displayOrder Int
   recipeId     Int
-  recipe       Recipe  @relation(fields: [recipeId], references: [id])
+  recipe       Recipe  @relation(fields: [recipeId], references: [id], onDelete: Cascade)
 }
 
 model RecipeStep {
@@ -85,7 +85,7 @@ model RecipeStep {
   stepNumber  Int
   instruction String @db.LongText
   recipeId    Int
-  recipe      Recipe @relation(fields: [recipeId], references: [id])
+  recipe      Recipe @relation(fields: [recipeId], references: [id], onDelete: Cascade)
 }
 
 model RecipeIngredient {
@@ -99,7 +99,7 @@ model RecipeIngredient {
   ingredientId    Int?
   recipeId        Int
   ingredient      Ingredient? @relation(fields: [ingredientId], references: [id])
-  recipe          Recipe      @relation(fields: [recipeId], references: [id])
+  recipe          Recipe      @relation(fields: [recipeId], references: [id], onDelete: Cascade)
 }
 
 model RecipeNutritionFacts {
@@ -115,5 +115,5 @@ model RecipeNutritionFacts {
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
   recipeId           Int      @unique
-  recipe             Recipe   @relation(fields: [recipeId], references: [id])
+  recipe             Recipe   @relation(fields: [recipeId], references: [id], onDelete: Cascade)
 }
