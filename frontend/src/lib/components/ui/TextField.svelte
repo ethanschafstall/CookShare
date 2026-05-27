@@ -7,8 +7,8 @@
 		type?: 'text' | 'number' | 'email' | 'password';
 		value: string | number | null | undefined;
 		placeholder?: string;
-		min?: number;
-		max?: number;
+		min?: number | string;
+		max?: number | string;
 		error?: string | string[];
 		hint?: string;
 		'aria-label'?: string;
