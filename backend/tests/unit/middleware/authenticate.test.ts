@@ -38,22 +38,18 @@ describe("authenticate middleware", () => {
   });
 
   it("returns 401 when no token provided", () => {
-    authenticate(req as Request, res as Response, next);
-
-    expect(res.status).toHaveBeenCalledWith(401);
-    expect(res.json).toHaveBeenCalledWith({ error: "No token provided" });
+    expect(() => authenticate(req as Request, res as Response, next)).toThrow(
+      "No token provided",
+    );
     expect(next).not.toHaveBeenCalled();
   });
 
   it("returns 401 when token is invalid", () => {
     req.cookies = { session_token: "not.a.valid.token" };
 
-    authenticate(req as Request, res as Response, next);
-
-    expect(res.status).toHaveBeenCalledWith(401);
-    expect(res.json).toHaveBeenCalledWith({
-      error: "The request is invalid. Please check your login details.",
-    });
+    expect(() => authenticate(req as Request, res as Response, next)).toThrow(
+      "The request is invalid. Please check your login details.",
+    );
     expect(next).not.toHaveBeenCalled();
   });
 
@@ -65,12 +61,9 @@ describe("authenticate middleware", () => {
     );
     req.cookies = { session_token: expiredToken };
 
-    authenticate(req as Request, res as Response, next);
-
-    expect(res.status).toHaveBeenCalledWith(401);
-    expect(res.json).toHaveBeenCalledWith({
-      error: "Your session has expired. Please log in again.",
-    });
+    expect(() => authenticate(req as Request, res as Response, next)).toThrow(
+      "Your session has expired. Please log in again.",
+    );
     expect(next).not.toHaveBeenCalled();
   });
 });

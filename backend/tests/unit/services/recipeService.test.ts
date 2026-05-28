@@ -49,12 +49,12 @@ const mockRecipeInput = {
 const mockImageInputs = [
   {
     recipeId: 1,
-    storagePath: "recipes/abc123/img1.jpg",
-    filename: "img1.jpg",
+    filename: "img.jpg",
+    storagePath: "/uploads/img.jpg",
     mimeType: "image/jpeg",
     size: 1024,
-    altText: "Tomato soup in a bowl",
-    isCover: true,
+    altText: "A bowl of soup",
+    isCover: false,
     displayOrder: 1,
   },
 ];
@@ -171,10 +171,10 @@ describe("RecipeService", () => {
     it("calls addImage once per input", async () => {
       mockRecipeRepo.assertRecipeExists.mockResolvedValue(mockRecipe);
       mockRecipeRepo.addImage.mockResolvedValue({ id: 1 });
-
+      const base = mockImageInputs[0]!;
       const inputs = [
-        { ...mockImageInputs[0], filename: "img1.jpg" },
-        { ...mockImageInputs[0], filename: "img2.jpg" },
+        { ...base, filename: "img1.jpg" },
+        { ...base, filename: "img2.jpg" },
       ];
 
       await recipeService.addImages(inputs);
