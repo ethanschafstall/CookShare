@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
+	import type { Pathname } from '$app/types';
 	import type { Snippet } from 'svelte';
 
 	type Variant = 'primary' | 'secondary' | 'ghost' | 'danger';
@@ -7,7 +9,7 @@
 	interface Props {
 		variant?: Variant;
 		size?: Size;
-		href?: string;
+		href?: Pathname;
 		rel?: string;
 		type?: 'button' | 'submit' | 'reset';
 		disabled?: boolean;
@@ -33,7 +35,7 @@
 
 {#if href}
 	<a
-		{href}
+		href={resolve(href)}
 		{rel}
 		aria-label={ariaLabel}
 		class="inline-flex cursor-pointer items-center justify-center transition-colors
