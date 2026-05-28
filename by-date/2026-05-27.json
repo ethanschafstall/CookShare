@@ -1,7 +1,7 @@
 {
   "date": "2026-05-27",
-  "totalMins": 370,
-  "totalHours": 6.166666666666667,
+  "totalMins": 430,
+  "totalHours": 7.166666666666667,
   "logs": [
     {
       "issue": {
@@ -35,8 +35,8 @@
         "title": "Doc - Project Report"
       },
       "sprint": "Sprint 2",
-      "durationMins": 95,
-      "durationHours": 1.5833333333333333,
+      "durationMins": 155,
+      "durationHours": 2.5833333333333335,
       "description": "Worked on schemas, 1.5 of the project report based on the github project tasks \"Tech Analysis\" + paper notes written (the TODOs), and the 1.7 based off of notes",
       "outcome": "success",
       "reflection": null,
