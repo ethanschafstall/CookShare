@@ -145,3 +145,4 @@ resources/db-models/looping/*
 
 
 backend/uploads/*
+.data/*
