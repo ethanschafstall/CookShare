@@ -2,13 +2,14 @@ import fs from "fs";
 import multer from "multer";
 import path from "path";
 
-// Ensures the uploads folder exists
-const uploadsDir = path.join(__dirname, "uploads");
-if (!fs.existsSync(uploadsDir)) {
-  fs.mkdirSync(uploadsDir);
-}
+const UPLOADS_DIR = path.resolve(
+  process.env.UPLOADS_DIR ?? path.join(__dirname, "uploads"),
+);
+
+fs.mkdirSync(UPLOADS_DIR, { recursive: true });
+
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, "uploads/"),
+  destination: UPLOADS_DIR,
   filename: (req, file, cb) => {
     const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
     const ext = path.extname(file.originalname);
