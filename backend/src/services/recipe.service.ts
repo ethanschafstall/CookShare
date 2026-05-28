@@ -44,6 +44,9 @@ export class RecipeService {
     if (!recipe) {
       throw new Error("Failed to create recipe");
     }
+    this.nutritionService?.buildForRecipe(recipe.id).catch((err) => {
+      console.error("nutrition build failed", err);
+    });
     return recipe;
   }
   async getRecipe(urlId: string) {

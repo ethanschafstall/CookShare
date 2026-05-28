@@ -10,7 +10,12 @@ export class RecipeRepository {
   get(urlId: string) {
     return model.recipe.findUnique({
       where: { urlId: urlId },
-      include: { images: true, steps: true, ingredients: true },
+      include: {
+        images: true,
+        steps: true,
+        ingredients: true,
+        nutritionFacts: true,
+      },
     });
   }
   addImage(imageInput: client.RecipeImageCreateInput) {
@@ -26,5 +31,8 @@ export class RecipeRepository {
     return model.recipe.delete({
       where: { urlId: urlId },
     });
+  }
+  getIngredients(recipeId: number) {
+    return model.recipeIngredient.findMany({ where: { recipeId } });
   }
 }
