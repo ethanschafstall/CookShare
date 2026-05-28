@@ -30,20 +30,35 @@ export class RecipeController {
   };
   addImages = async (req: Request, res: Response, next: NextFunction) => {
     const files = req.files;
-    const { altText, isCover, displayOrder } = req.body;
     const id = Number(req.params.id);
     if (!files || !Array.isArray(files) || files.length === 0)
       throw new BadRequestError("No images uploaded");
 
+    // After the Zod transform on the body, req.body.metadata is a parsed array
+    const metadata = req.body.metadata as Array<{
+      altText: string;
+      isCover: boolean;
+      displayOrder: number;
+    }>;
+
+    if (metadata.length !== files.length) {
+      throw new BadRequestError(
+        `Metadata count (${metadata.length}) does not match file count (${files.length})`,
+      );
+    }
+
     try {
-      const imageData: RecipeImageInput[] = files.map((file, i) => ({
-        recipeId: id,
-        filename: file.filename,
-        storagePath: file.path,
-        altText: altText[i] ?? "",
-        isCover: isCover[i] ?? false,
-        displayOrder: displayOrder[i],
-      }));
+      const imageData: RecipeImageInput[] = files.map((file, i) => {
+        const meta = metadata[i]!;
+        return {
+          recipeId: id,
+          filename: file.filename,
+          storagePath: file.path,
+          altText: meta.altText,
+          isCover: meta.isCover,
+          displayOrder: meta.displayOrder,
+        };
+      });
       const images = await this.recipeService.addImages(imageData);
       res.status(201).json({ images });
     } catch (error) {

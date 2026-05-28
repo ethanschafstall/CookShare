@@ -1,4 +1,9 @@
 import * as z from "zod";
+const ImageMetadataSchema = z.object({
+  altText: z.string(),
+  isCover: z.boolean(),
+  displayOrder: z.number().int(),
+});
 
 const RecipeSchema = z.object({
   // recipes table
@@ -39,16 +44,30 @@ const RecipeSchema = z.object({
 // Because of this, RecipeImageInput cannot be inferred from RecipeImageSchema and must be maintained manually.
 // z.infer only reflects what Zod validates, it has no awareness of data coming from other parts of the request.
 const RecipeImageSchema = z.object({
-  altText: z
-    .union([z.string(), z.array(z.string())])
-    .transform((v) => [v].flat()),
-  isCover: z
-    .union([z.string(), z.array(z.string())])
-    .transform((v) => [v].flat().map((s) => s === "true")),
-  displayOrder: z
-    .union([z.coerce.number().int(), z.array(z.coerce.number().int())])
-    .optional()
-    .transform((v) => (v === undefined ? [] : [v].flat())),
+  metadata: z.string().transform((s, ctx) => {
+    try {
+      const parsed = JSON.parse(s);
+      const result = z
+        .array(ImageMetadataSchema)
+        .min(1)
+        .max(10)
+        .safeParse(parsed);
+      if (!result.success) {
+        ctx.addIssue({
+          code: "custom",
+          message: "Invalid metadata structure",
+        });
+        return z.NEVER;
+      }
+      return result.data;
+    } catch {
+      ctx.addIssue({
+        code: "custom",
+        message: "Invalid metadata JSON",
+      });
+      return z.NEVER;
+    }
+  }),
 });
 
 type RecipeInput = z.infer<typeof RecipeSchema>;

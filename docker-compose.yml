@@ -22,21 +22,58 @@ services:
       context: ./backend
     restart: unless-stopped
     environment:
+      HOST: 0.0.0.0
+      PORT: 3000
+      DATABASE_USER: ${DB_USER}
+      DATABASE_PASSWORD: ${DB_PASSWORD}
+      DATABASE_NAME: ${DB_NAME}
+      DATABASE_HOST: db
+      DATABASE_PORT: 3306
+      UPLOADS_DIR: /var/data/uploads
       DATABASE_URL: mysql://${DB_USER}:${DB_PASSWORD}@db:3306/${DB_NAME}
+      CORS_ORIGIN: http://localhost:${FRONTEND_PORT}
+      PRIVATE_KEY: ${PRIVATE_KEY}
+      ADMIN_EMAIL: ${ADMIN_EMAIL}
+      ADMIN_FIRSTNAME: ${ADMIN_FIRSTNAME}
+      ADMIN_LASTNAME: ${ADMIN_LASTNAME}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+    volumes:
+      - uploads:/var/data/uploads
     ports:
-      - "3002:3000"
+      - "${BACKEND_PORT}:3000"
     depends_on:
       db:
         condition: service_healthy
+    command: >
+      sh -c "
+        npx prisma migrate deploy &&
+        npx prisma db seed &&
+        node dist/src/server.js
+      "
 
   frontend:
     build:
       context: ./frontend
     restart: unless-stopped
+    environment:
+      UPLOADS_DIR: /var/data/uploads
+      BACKEND_HOST: backend
+      BACKEND_PORT: 3000
+      ORIGIN: http://localhost:${FRONTEND_PORT}
+    volumes:
+      - uploads:/var/data/uploads:ro
     ports:
       - "${FRONTEND_PORT}:3000"
+<<<<<<< Updated upstream
     depends_on:
       - backend
+    environment:
+      ORIGIN: http://localhost:${FRONTEND_PORT}
+      BACKEND_HOST: backend
+      BACKEND_PORT: ${BACKEND_PORT}
+=======
+>>>>>>> Stashed changes
 
 volumes:
   db_data:
+  uploads:

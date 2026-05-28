@@ -67,18 +67,27 @@ export const actions = {
 		// Step 2: upload images
 		if (images.length > 0) {
 			const fd = new FormData();
+			const metadata = images.map((img) => ({
+				altText: img.altText,
+				isCover: img.isCover,
+				displayOrder: img.displayOrder
+			}));
+			fd.append('metadata', JSON.stringify(metadata));
 			for (const img of images) {
 				fd.append('images', img.file, img.file.name);
-				fd.append('altText', img.altText);
-				fd.append('isCover', String(img.isCover));
-				fd.append('displayOrder', String(img.displayOrder));
 			}
 
-			await fetch(`${BACKEND}/api/v1/recipes/${recipe.id}/images`, {
+			const imgRes = await fetch(`${BACKEND}/api/v1/recipes/${recipe.id}/images`, {
 				method: 'POST',
 				headers: { Cookie: `session_token=${token}` },
 				body: fd
 			});
+
+			if (!imgRes.ok) {
+				const body = await imgRes.json().catch(() => ({}));
+				console.error('Image upload failed:', imgRes.status, body);
+				return message(form, 'Recipe created but image upload failed', { status: 400 });
+			}
 		}
 		redirect(303, `/recipes/${recipe.slug}`);
 	}

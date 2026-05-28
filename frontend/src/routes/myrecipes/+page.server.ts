@@ -23,7 +23,21 @@ export const load: PageServerLoad = async ({ parent, cookies, fetch }) => {
 	if (!res.ok) {
 		throw error(res.status, 'Failed to load recipes');
 	}
-	const recipes = await res.json();
+
+	const backendRecipes = await res.json();
+	const recipes = backendRecipes.map((r: any) => {
+		const cover = r.images?.find((img: any) => img.isCover) ?? r.images?.[0];
+		return {
+			urlId: r.urlId,
+			slug: r.slug,
+			title: r.title,
+			coverImage: cover ? `/uploads/${cover.filename}` : null,
+			cookTimeMin: r.cookTimeMin,
+			servings: r.servings,
+			hits: r.hits
+		};
+	});
+
 	return { recipes };
 };
 export const actions = {
