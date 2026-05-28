@@ -1,0 +1,53 @@
+{
+  "date": "2026-05-28",
+  "totalMins": 380,
+  "totalHours": 6.333333333333333,
+  "logs": [
+    {
+      "customTitle": "DB normalisation explaination",
+      "sprint": null,
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "Asked Schaffter C. for an explaination of DB normalisation for the project report.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 8,
+        "title": "Doc - Project Report"
+      },
+      "sprint": "Sprint 2",
+      "durationMins": 225,
+      "durationHours": 3.75,
+      "description": "wrote alot about the DB, the mandate, added terms to glossaire, formating, added info to the tests section. SMART objectives, livrables\r\n",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "customTitle": "Meeting with project manager (Sahli. B)",
+      "sprint": null,
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "Told him about the state of the project, and how I wasn't able to finish all the features from the CDC. He encourged me to try to add the nutritional facts, and said I could use a \"mock\" api. The idea is to have something presentable for the POC.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "issue": {
+        "number": 5,
+        "title": "Recipes - Create Recipe"
+      },
+      "sprint": "Sprint 3",
+      "durationMins": 125,
+      "durationHours": 2.0833333333333335,
+      "description": "Created the backend and frontend elements for the nutritional facts. Had claude generate a mock api file to return nutritional facts.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    }
+  ]
+}

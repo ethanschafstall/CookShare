@@ -7,8 +7,8 @@
     "estimatedHours": 20,
     "sprint": "Sprint 1"
   },
-  "totalLoggedMins": 760,
-  "totalLoggedHours": 12.666666666666666,
+  "totalLoggedMins": 985,
+  "totalLoggedHours": 16.416666666666668,
   "logs": [
     {
       "date": "2026-05-06",
@@ -72,7 +72,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-28",
+      "durationMins": 225,
+      "durationHours": 3.75,
+      "description": "wrote alot about the DB, the mandate, added terms to glossaire, formating, added info to the tests section. SMART objectives, livrables\r\n",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.6333333333333333
+  "completionRate": 0.82
 }

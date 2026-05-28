@@ -7,8 +7,8 @@
     "estimatedHours": 7,
     "sprint": "Sprint 2"
   },
-  "totalLoggedMins": 620,
-  "totalLoggedHours": 10.333333333333334,
+  "totalLoggedMins": 745,
+  "totalLoggedHours": 12.416666666666666,
   "logs": [
     {
       "date": "2026-05-20",
@@ -36,7 +36,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-28",
+      "durationMins": 125,
+      "durationHours": 2.0833333333333335,
+      "description": "Created the backend and frontend elements for the nutritional facts. Had claude generate a mock api file to return nutritional facts.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 1.48
+  "completionRate": 1.77
 }
