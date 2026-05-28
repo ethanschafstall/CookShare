@@ -50,4 +50,25 @@ export class RecipeController {
       next(error);
     }
   };
+  readByUser = async (req: Request, res: Response, next: NextFunction) => {
+    const userId = Number(req.params.id);
+    if (!userId) throw new BadRequestError("Invalid slug");
+    try {
+      const recipe = await this.recipeService.getRecipesByUser(userId);
+      res.status(200).json(recipe);
+    } catch (error) {
+      next(error);
+    }
+  };
+  delete = async (req: Request, res: Response, next: NextFunction) => {
+    const slug = String(req.params.slug);
+    const urlId = slug.split("-").pop();
+    if (!urlId) throw new BadRequestError("Invalid slug");
+    try {
+      const recipe = await this.recipeService.deleteRecipe(urlId);
+      res.status(200).json(recipe);
+    } catch (error) {
+      next(error);
+    }
+  };
 }

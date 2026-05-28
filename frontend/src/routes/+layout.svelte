@@ -10,7 +10,7 @@
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
 <Header user={data.user} />
-<div class="flex min-h-screen bg-[#EDEAE6]">
+<div class="flex min-h-screen bg-[#F9F8F6]">
 	<SideBar />
 	<Body {children} />
 </div>

@@ -3,6 +3,14 @@ import { RecipeService } from "@services/recipe.service.js";
 import mockRecipeRepo from "@tests/mocks/repositories/recipeRepo.mock.js";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
+vi.mock("nanoid", () => ({
+  nanoid: vi.fn().mockReturnValue("abc123"),
+}));
+
+vi.mock("slugify", () => ({
+  default: vi.fn((s: string) => s.toLowerCase().replace(/\s+/g, "-")),
+}));
+
 const mockRecipe = {
   id: 1,
   urlId: "abc123",
@@ -18,7 +26,38 @@ const mockRecipe = {
   steps: [],
   ingredients: [],
 };
+const mockRecipeInput = {
+  title: "Tomato Soup",
+  description: "A classic tomato soup",
+  difficulty: "easy" as const,
+  servings: 4,
+  prepTimeMin: 10,
+  cookTimeMin: 20,
+  steps: [{ stepNumber: 1, instruction: "Boil tomatoes" }],
+  ingredients: [
+    {
+      name: "tomato",
+      displayOrder: 1,
+      quantityG: 500,
+      quantityNumeric: 4,
+      displayUnit: "pcs",
+      note: null,
+    },
+  ],
+};
 
+const mockImageInputs = [
+  {
+    recipeId: 1,
+    filename: "img.jpg",
+    storagePath: "/uploads/img.jpg",
+    mimeType: "image/jpeg",
+    size: 1024,
+    altText: "A bowl of soup",
+    isCover: false,
+    displayOrder: 1,
+  },
+];
 describe("RecipeService", () => {
   let recipeService: RecipeService;
 
@@ -132,7 +171,6 @@ describe("RecipeService", () => {
     it("calls addImage once per input", async () => {
       mockRecipeRepo.assertRecipeExists.mockResolvedValue(mockRecipe);
       mockRecipeRepo.addImage.mockResolvedValue({ id: 1 });
-
       const base = mockImageInputs[0]!;
       const inputs = [
         { ...base, filename: "img1.jpg" },

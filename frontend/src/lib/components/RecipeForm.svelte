@@ -1,4 +1,9 @@
 <script lang="ts">
+	import Button from '$lib/components/ui/Button.svelte';
+	import Card from '$lib/components/ui/Card.svelte';
+	import Icon from '$lib/components/ui/Icon.svelte';
+	import TextArea from '$lib/components/ui/TextArea.svelte';
+	import TextField from '$lib/components/ui/TextField.svelte';
 	import { recipeSchema } from '$lib/validators/schemas';
 	import { superForm, type Infer, type SuperValidated } from 'sveltekit-superforms';
 	import { zodClient } from 'sveltekit-superforms/adapters';
@@ -27,7 +32,7 @@
 		}
 	});
 
-	// ── UI-only state ─────────────────────────────────────────────────────────
+	// UI-only state
 	let dragOver = $state(false);
 	let imageError = $state('');
 	let previews = $state<string[]>([]);
@@ -37,7 +42,7 @@
 	const MAX_IMAGES = 10;
 	const MAX_BYTES = 5 * 1024 * 1024;
 
-	// ── Steps ─────────────────────────────────────────────────────────────────
+	// Steps
 	function addStep() {
 		$form.steps = [...$form.steps, { stepNumber: $form.steps.length + 1, instruction: '' }];
 	}
@@ -48,7 +53,7 @@
 			.map((s, idx) => ({ ...s, stepNumber: idx + 1 }));
 	}
 
-	// ── Ingredients ───────────────────────────────────────────────────────────
+	// Ingredients
 	function addIngredient() {
 		$form.ingredients = [
 			...$form.ingredients,
@@ -72,7 +77,7 @@
 	if ($form.steps.length === 0) addStep();
 	if ($form.ingredients.length === 0) addIngredient();
 
-	// ── Images: add / remove / cover ──────────────────────────────────────────
+	// Images: add / remove / cover
 	function handleFiles(files: FileList | null) {
 		if (!files || files.length === 0) return;
 		imageError = '';
@@ -171,91 +176,59 @@
 
 <form method="POST" use:enhance enctype="multipart/form-data" class="flex flex-col gap-5">
 	<!-- Basic Information -->
-	<div class="rounded-lg border border-border-light bg-surface px-8 py-6">
+	<Card>
 		<h2 class="mb-4 text-xl font-semibold text-text">Basic information</h2>
 		<hr class="mb-6 border-border-subtle" />
 
 		<div class="mb-5">
-			<label class="mb-1.5 block text-sm text-text-secondary" for="title">Recipe title</label>
-			<input
-				id="title"
+			<TextField
+				label="Recipe title"
 				name="title"
-				type="text"
 				bind:value={$form.title}
 				placeholder="e.g. Herb roasted chicken"
-				class="w-full rounded border px-3 py-2.5 text-sm text-text placeholder-text-muted focus:ring-1 focus:outline-none {$errors.title
-					? 'border-error focus:ring-error'
-					: 'border-border focus:border-primary focus:ring-primary'}"
+				error={$errors.title}
 			/>
-			{#if $errors.title}<span class="mt-1 block text-xs text-error">{$errors.title}</span>{/if}
 		</div>
 
 		<div class="mb-6">
-			<label class="mb-1.5 block text-sm text-text-secondary" for="description">Description</label>
-			<textarea
-				id="description"
+			<TextArea
+				label="Description"
 				name="description"
+				rows={5}
 				bind:value={$form.description}
-				rows="5"
 				placeholder="e.g. Herb roasted chicken with potatoes perfect for a sunday roast."
-				class="w-full resize-none rounded border px-3 py-2.5 text-sm text-text placeholder-text-muted focus:ring-1 focus:outline-none {$errors.description
-					? 'border-error focus:ring-error'
-					: 'border-border focus:border-primary focus:ring-primary'}"
-			></textarea>
-			{#if $errors.description}<span class="mt-1 block text-xs text-error"
-					>{$errors.description}</span
-				>{/if}
+				error={$errors.description}
+			/>
 		</div>
 
 		<div class="mb-6 grid grid-cols-3 gap-4">
-			<div>
-				<label class="mb-1.5 block text-sm text-text-secondary" for="servings">Servings</label>
-				<input
-					id="servings"
-					name="servings"
-					type="number"
-					min="1"
-					bind:value={$form.servings}
-					placeholder="e.g. 4"
-					class="w-full rounded border border-border px-3 py-2.5 text-sm text-text placeholder-text-muted focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
-				/>
-				{#if $errors.servings}<span class="mt-1 block text-xs text-error">{$errors.servings}</span
-					>{/if}
-			</div>
-			<div>
-				<label class="mb-1.5 block text-sm text-text-secondary" for="prepTimeMin"
-					>Prep time (min)</label
-				>
-				<input
-					id="prepTimeMin"
-					name="prepTimeMin"
-					type="number"
-					min="0"
-					bind:value={$form.prepTimeMin}
-					placeholder="e.g. 30"
-					class="w-full rounded border border-border px-3 py-2.5 text-sm text-text placeholder-text-muted focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
-				/>
-				{#if $errors.prepTimeMin}<span class="mt-1 block text-xs text-error"
-						>{$errors.prepTimeMin}</span
-					>{/if}
-			</div>
-			<div>
-				<label class="mb-1.5 block text-sm text-text-secondary" for="cookTimeMin"
-					>Cook time (min)</label
-				>
-				<input
-					id="cookTimeMin"
-					name="cookTimeMin"
-					type="number"
-					min="0"
-					bind:value={$form.cookTimeMin}
-					placeholder="e.g. 120"
-					class="w-full rounded border border-border px-3 py-2.5 text-sm text-text placeholder-text-muted focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
-				/>
-				{#if $errors.cookTimeMin}<span class="mt-1 block text-xs text-error"
-						>{$errors.cookTimeMin}</span
-					>{/if}
-			</div>
+			<TextField
+				label="Servings"
+				name="servings"
+				type="number"
+				min="1"
+				bind:value={$form.servings}
+				placeholder="e.g. 4"
+				error={$errors.servings}
+			/>
+			<TextField
+				label="Prep time (min)"
+				name="prepTimeMin"
+				type="number"
+				min="0"
+				bind:value={$form.prepTimeMin}
+				placeholder="e.g. 30"
+				error={$errors.prepTimeMin}
+			/>
+			<TextField
+				label="Cook time (min)"
+				name="cookTimeMin"
+				type="number"
+				min="0"
+				bind:value={$form.cookTimeMin}
+				placeholder="e.g. 120"
+				error={$errors.cookTimeMin}
+			/>
 		</div>
 
 		<div>
@@ -283,10 +256,10 @@
 					>{$errors.difficulty}</span
 				>{/if}
 		</div>
-	</div>
+	</Card>
 
 	<!-- Photos -->
-	<div class="rounded-lg border border-border-light bg-surface px-8 py-6">
+	<Card>
 		<h2 class="mb-4 text-xl font-semibold text-text">Photos</h2>
 		<hr class="mb-6 border-border-subtle" />
 		<p class="mb-4 text-sm text-text-tertiary">At least one photo. Drag thumbnails to reorder.</p>
@@ -314,20 +287,12 @@
 			onclick={() => document.getElementById('image-input')?.click()}
 			onkeydown={(e) => e.key === 'Enter' && document.getElementById('image-input')?.click()}
 		>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="36"
-				height="36"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke={dragOver ? 'var(--color-primary)' : 'var(--color-text-muted)'}
-				stroke-width="1.5"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			>
-				<rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" />
-				<polyline points="21 15 16 10 5 21" />
-			</svg>
+			<Icon
+				name="image"
+				size={36}
+				strokeWidth={1.5}
+				class={dragOver ? 'text-primary' : 'text-text-muted'}
+			/>
 			<p class="text-sm text-text-tertiary">
 				Drag & drop or <span class="text-primary">browse</span>
 			</p>
@@ -366,28 +331,16 @@
 							class="mt-6 shrink-0 cursor-grab text-text-muted hover:text-text-tertiary active:cursor-grabbing"
 							tabindex="-1"
 						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="16"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="currentColor"
-								aria-hidden="true"
-							>
-								<circle cx="9" cy="5" r="1.5" /><circle cx="15" cy="5" r="1.5" />
-								<circle cx="9" cy="12" r="1.5" /><circle cx="15" cy="12" r="1.5" />
-								<circle cx="9" cy="19" r="1.5" /><circle cx="15" cy="19" r="1.5" />
-							</svg>
+							<Icon name="drag-handle" size={16} />
 						</button>
 
 						<img src={previews[i]} alt="preview" class="h-20 w-20 shrink-0 rounded object-cover" />
 						<div class="flex flex-1 flex-col gap-2">
-							<input
-								type="text"
+							<TextField
 								bind:value={$form.images[i].altText}
 								placeholder="Alt text (describe the image)"
-								class="w-full rounded border border-border px-3 py-2 text-sm text-text placeholder-text-muted focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
 								aria-label="Image alt text"
+								class="py-2"
 							/>
 							<button
 								type="button"
@@ -410,29 +363,17 @@
 							class="mt-1 text-text-muted transition-colors hover:text-primary"
 							aria-label="Remove image"
 						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="18"
-								height="18"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							>
-								<line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
-							</svg>
+							<Icon name="x" size={18} />
 						</button>
 					</li>
 				{/each}
 			</ul>
 		{/if}
 		{#if imageError}<p class="mt-3 text-sm text-error">{imageError}</p>{/if}
-	</div>
+	</Card>
 
 	<!-- Ingredients -->
-	<div class="rounded-lg border border-border-light bg-surface px-8 py-6">
+	<Card>
 		<h2 class="mb-4 text-xl font-semibold text-text">Ingredients</h2>
 		<hr class="mb-6 border-border-subtle" />
 
@@ -440,102 +381,62 @@
 			{#each $form.ingredients as ingredient, i (i)}
 				<div
 					class="grid items-start gap-3"
-					style="grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr auto"
+					style="grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr 1.5rem"
 				>
-					<div>
-						{#if i === 0}<label
-								class="mb-1.5 block text-xs text-text-tertiary"
-								for="ingredient-name-{i}">Ingredient</label
-							>{/if}
-						<input
-							id="ingredient-name-{i}"
-							type="text"
-							bind:value={ingredient.name}
-							placeholder="e.g. chicken"
-							class="w-full rounded border px-3 py-2 text-sm text-text placeholder-text-muted focus:ring-1 focus:outline-none {$errors
-								.ingredients?.[i]?.name
-								? 'border-error focus:ring-error'
-								: 'border-border focus:border-primary focus:ring-primary'}"
-						/>
-						{#if $errors.ingredients?.[i]?.name}<span class="mt-1 block text-xs text-error"
-								>{$errors.ingredients[i].name}</span
-							>{/if}
-					</div>
-					<div>
-						{#if i === 0}<label
-								class="mb-1.5 block text-xs text-text-tertiary"
-								for="ingredient-qty-{i}">Qty</label
-							>{/if}
-						<input
-							id="ingredient-qty-{i}"
-							type="number"
-							bind:value={$form.ingredients[i].quantityNumeric}
-							placeholder="e.g. 1"
-							class="w-full rounded border border-border px-3 py-2 text-sm text-text placeholder-text-muted focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
-						/>
-					</div>
-					<div>
-						{#if i === 0}<label
-								class="mb-1.5 block text-xs text-text-tertiary"
-								for="ingredient-unit-{i}">Unit</label
-							>{/if}
-						<input
-							id="ingredient-unit-{i}"
-							type="text"
-							bind:value={$form.ingredients[i].displayUnit}
-							placeholder="e.g. grams"
-							class="w-full rounded border border-border px-3 py-2 text-sm text-text placeholder-text-muted focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
-						/>
-					</div>
-					<div>
-						{#if i === 0}<label
-								class="mb-1.5 block text-xs text-text-tertiary"
-								for="ingredient-weight-{i}">Weight (g)</label
-							>{/if}
-						<input
-							id="ingredient-weight-{i}"
-							type="number"
-							bind:value={$form.ingredients[i].quantityG}
-							placeholder="e.g. 100"
-							class="w-full rounded border border-border px-3 py-2 text-sm text-text placeholder-text-muted focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
-						/>
-					</div>
-					<div>
-						{#if i === 0}<label
-								class="mb-1.5 block text-xs text-text-tertiary"
-								for="ingredient-note-{i}">Note</label
-							>{/if}
-						<input
-							id="ingredient-note-{i}"
-							type="text"
-							bind:value={$form.ingredients[i].note}
-							placeholder="e.g. sub: rosemary"
-							class="w-full rounded border border-border px-3 py-2 text-sm text-text placeholder-text-muted focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
-						/>
-					</div>
+					<TextField
+						label={i === 0 ? 'Ingredient' : undefined}
+						labelSize="xs"
+						id="ingredient-name-{i}"
+						bind:value={ingredient.name}
+						placeholder="e.g. chicken"
+						error={$errors.ingredients?.[i]?.name}
+						class="py-2"
+					/>
+					<TextField
+						label={i === 0 ? 'Qty' : undefined}
+						labelSize="xs"
+						id="ingredient-qty-{i}"
+						type="number"
+						bind:value={$form.ingredients[i].quantityNumeric}
+						placeholder="e.g. 1"
+						class="py-2"
+					/>
+					<TextField
+						label={i === 0 ? 'Unit' : undefined}
+						labelSize="xs"
+						id="ingredient-unit-{i}"
+						bind:value={$form.ingredients[i].displayUnit}
+						placeholder="e.g. grams"
+						class="py-2"
+					/>
+					<TextField
+						label={i === 0 ? 'Weight (g)' : undefined}
+						labelSize="xs"
+						id="ingredient-weight-{i}"
+						type="number"
+						bind:value={$form.ingredients[i].quantityG}
+						placeholder="e.g. 100"
+						class="py-2"
+					/>
+					<TextField
+						label={i === 0 ? 'Note' : undefined}
+						labelSize="xs"
+						id="ingredient-note-{i}"
+						bind:value={$form.ingredients[i].note}
+						placeholder="e.g. sub: rosemary"
+						class="py-2"
+					/>
 					<div class="flex h-full items-center {i === 0 ? 'pt-6' : ''}">
-						{#if $form.ingredients.length > 1}
-							<button
-								type="button"
-								onclick={() => removeIngredient(i)}
-								class="text-primary hover:text-primary-hover"
-								aria-label="Remove ingredient"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2.5"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
-								</svg>
-							</button>
-						{/if}
+						<button
+							type="button"
+							onclick={() => removeIngredient(i)}
+							class="text-primary hover:text-primary-hover {$form.ingredients.length > 1
+								? ''
+								: 'invisible'}"
+							aria-label="Remove ingredient"
+						>
+							<Icon name="x" size={16} strokeWidth={2.5} />
+						</button>
 					</div>
 				</div>
 			{/each}
@@ -543,17 +444,13 @@
 		{#if $errors.ingredients?._errors}<p class="mt-2 text-xs text-error">
 				{$errors.ingredients._errors}
 			</p>{/if}
-		<button
-			type="button"
-			onclick={addIngredient}
-			class="mt-5 rounded border border-border px-4 py-2 text-sm text-text-secondary hover:border-text-tertiary hover:bg-bg"
-		>
-			+ Add ingredient
-		</button>
-	</div>
+		<div class="mt-5">
+			<Button variant="secondary" size="sm" onclick={addIngredient}>+ Add ingredient</Button>
+		</div>
+	</Card>
 
 	<!-- Steps -->
-	<div class="rounded-lg border border-border-light bg-surface px-8 py-6">
+	<Card>
 		<h2 class="mb-4 text-xl font-semibold text-text">Steps</h2>
 		<hr class="mb-6 border-border-subtle" />
 
@@ -566,21 +463,15 @@
 						{i + 1}
 					</span>
 					<div class="flex-1">
-						<label class="mb-1.5 block text-xs text-text-tertiary" for="step-{i}">Instruction</label
-						>
-						<textarea
+						<TextArea
+							label="Instruction"
+							labelSize="xs"
 							id="step-{i}"
+							rows={2}
 							bind:value={step.instruction}
-							rows="2"
 							placeholder={i === 0 ? 'e.g. Preheat oven at 200c' : 'e.g. Mix herbs and spices'}
-							class="w-full resize-none rounded border px-3 py-2.5 text-sm text-text placeholder-text-muted focus:ring-1 focus:outline-none {$errors
-								.steps?.[i]?.instruction
-								? 'border-error focus:ring-error'
-								: 'border-border focus:border-primary focus:ring-primary'}"
-						></textarea>
-						{#if $errors.steps?.[i]?.instruction}<span class="mt-1 block text-xs text-error"
-								>{$errors.steps[i].instruction}</span
-							>{/if}
+							error={$errors.steps?.[i]?.instruction}
+						/>
 					</div>
 					{#if $form.steps.length > 1}
 						<button
@@ -589,20 +480,10 @@
 							class="mt-8 text-primary hover:text-primary-hover"
 							aria-label="Remove step"
 						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="16"
-								height="16"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2.5"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							>
-								<line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
-							</svg>
+							<Icon name="x" size={16} strokeWidth={2.5} />
 						</button>
+					{:else}
+						<div class="w-4"></div>
 					{/if}
 				</div>
 			{/each}
@@ -610,14 +491,10 @@
 		{#if $errors.steps?._errors}<p class="mt-2 text-xs text-error">
 				{$errors.steps._errors}
 			</p>{/if}
-		<button
-			type="button"
-			onclick={addStep}
-			class="mt-5 rounded border border-border px-4 py-2 text-sm text-text-secondary hover:border-text-tertiary hover:bg-bg"
-		>
-			+ Add step
-		</button>
-	</div>
+		<div class="mt-5">
+			<Button variant="secondary" size="sm" onclick={addStep}>+ Add step</Button>
+		</div>
+	</Card>
 
 	<!-- Server error -->
 	{#if $message && typeof $message === 'string'}
@@ -626,19 +503,9 @@
 
 	<!-- Actions -->
 	<div class="flex justify-end gap-3 pb-10">
-		<a
-			href="/recipes"
-			rel="external"
-			class="rounded-lg border border-border px-8 py-3 text-sm text-text-secondary transition-colors hover:border-text-tertiary hover:bg-bg"
-		>
-			Cancel
-		</a>
-		<button
-			type="submit"
-			disabled={$submitting}
-			class="cursor-pointer rounded-lg bg-primary px-10 py-3 text-sm font-medium text-surface transition-colors hover:bg-primary-hover active:bg-primary-active disabled:opacity-60"
-		>
+		<Button variant="secondary" size="lg" href="/recipes" rel="external">Cancel</Button>
+		<Button variant="primary" size="lg" type="submit" disabled={$submitting}>
 			{$submitting ? submittingLabel : submitLabel}
-		</button>
+		</Button>
 	</div>
 </form>

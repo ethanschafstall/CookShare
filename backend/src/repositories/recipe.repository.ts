@@ -19,4 +19,12 @@ export class RecipeRepository {
   assertRecipeExists(recipeId: number) {
     return model.recipe.findUnique({ where: { id: recipeId } });
   }
+  getByUser(userId: number) {
+    return model.recipe.findMany({ where: { userId: userId } });
+  }
+  delete(urlId: string) {
+    return model.recipe.delete({
+      where: { urlId: urlId },
+    });
+  }
 }

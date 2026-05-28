@@ -29,6 +29,18 @@ const recipeRouter = (recipeController: RecipeController) => {
     authorise("read:recipes"),
     recipeController.read,
   );
+  router.get(
+    "/user/:id",
+    authenticate,
+    authorise("read:recipes"),
+    recipeController.readByUser,
+  );
+  router.delete(
+    "/:slug",
+    authenticate,
+    authorise("delete:recipes"),
+    recipeController.delete,
+  );
   return router;
 };
 
