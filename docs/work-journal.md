@@ -1,6 +1,26 @@
 # Work Journal — @ethanschafstall's CookShare project
 
-*11 days*
+*12 days*
+
+---
+
+## 28 May 2026
+
+**Sprint:** Sprint 2 (13 May 2026 → 22 May 2026)
+
+**Day summary**
+
+> Did a good amount of the project report, still kind of behind. Feeling good about the nutritional facts feat, even though it doesnt use an external api.
+
+| # | Task | Time spent | Description | Outcome | Reflection | Aids used |
+|---|------|------------|-------------|---------|------------|-----------|
+| — | DB normalisation explaination | 0h 15m | Asked Schaffter C. for an explaination of DB normalisation for the project report. | ✅ Success | — | — |
+| [#8](https://github.com/ethanschafstall/CookShare/issues/8) | Doc - Project Report | 3h 45m | wrote alot about the DB, the mandate, added terms to glossaire, formating, added info to the tests section. SMART objectives, livrables | ✅ Success | — | — |
+| — | Meeting with project manager (Sahli. B) | 0h 15m | Told him about the state of the project, and how I wasn't able to finish all the features from the CDC. He encourged me to try to add the nutritional facts, and said I could use a "mock" api. The idea is to have something presentable for the POC. | ✅ Success | — | — |
+| [#5](https://github.com/ethanschafstall/CookShare/issues/5) | Recipes - Create Recipe | 2h 5m | Created the backend and frontend elements for the nutritional facts. Had claude generate a mock api file to return nutritional facts. | ✅ Success | — | — |
+| — | Git and task updating | 0h 50m | Commiting the nutritional facts changes; bug fixes for the delete and create features; Created the feat/delete-recipe PR and the feat/create-recipe (before the nutritional facts changes) because it was missing a test file which I didn't push. | ✅ Success | — | — |
+
+**Total time:** 7h 10m
 
 ---
 
