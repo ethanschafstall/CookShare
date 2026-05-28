@@ -26,7 +26,6 @@ const mockRecipe = {
   steps: [],
   ingredients: [],
 };
-
 const mockRecipeInput = {
   title: "Tomato Soup",
   description: "A classic tomato soup",
@@ -50,14 +49,15 @@ const mockRecipeInput = {
 const mockImageInputs = [
   {
     recipeId: 1,
+    storagePath: "recipes/abc123/img1.jpg",
     filename: "img1.jpg",
-    storagePath: "/uploads/img1.jpg",
-    altText: "A bowl of soup",
+    mimeType: "image/jpeg",
+    size: 1024,
+    altText: "Tomato soup in a bowl",
     isCover: true,
-    displayOrder: 0,
+    displayOrder: 1,
   },
 ];
-
 describe("RecipeService", () => {
   let recipeService: RecipeService;
 
