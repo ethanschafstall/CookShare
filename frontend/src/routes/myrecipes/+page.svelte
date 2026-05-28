@@ -6,7 +6,6 @@
 
 	let { data } = $props();
 	const recipes = $derived(data.recipes);
-
 	let pending = $state<{ urlId: string; title: string } | null>(null);
 	let deleteForm = $state<HTMLFormElement | null>(null);
 
@@ -35,7 +34,7 @@
 	</div>
 {:else}
 	<ul class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-		{#each recipes as recipe (recipe.id)}
+		{#each recipes as recipe (recipe)}
 			<RecipeCard {recipe} showActions onDelete={requestDelete} />
 		{/each}
 	</ul>
