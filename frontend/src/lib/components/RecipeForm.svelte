@@ -406,7 +406,7 @@
 						labelSize="xs"
 						id="ingredient-unit-{i}"
 						bind:value={$form.ingredients[i].displayUnit}
-						placeholder="e.g. grams"
+						placeholder="e.g. tbsp"
 						class="py-2"
 					/>
 					<TextField
