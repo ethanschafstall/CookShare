@@ -1,6 +1,21 @@
 # Work Journal — @ethanschafstall's CookShare project
 
-*10 days*
+*11 days*
+
+---
+
+## 27 May 2026
+
+**Sprint:** Sprint 3 (22 May 2026 → 30 May 2026)
+
+| # | Task | Time spent | Description | Outcome | Reflection | Aids used |
+|---|------|------------|-------------|---------|------------|-----------|
+| [#18](https://github.com/ethanschafstall/CookShare/issues/18) | Agile - Daily | 0h 15m | daily for checking the tasks and stuff to do. | ✅ Success | — | — |
+| [#6](https://github.com/ethanschafstall/CookShare/issues/6) | Recipes - Delete Recipe | 5h 5m | Created the delete recipe feat with the backend elements, and frontend elements. · Added ui components to standardise style across frontend routes/components | ✅ Success | — | — |
+| [#8](https://github.com/ethanschafstall/CookShare/issues/8) | Doc - Project Report | 1h 35m | Worked on schemas, 1.5 of the project report based on the github project tasks "Tech Analysis" + paper notes written (the TODOs), and the 1.7 based off of notes | ✅ Success | — | — |
+| — | Git and task updating | 0h 15m | commiting work, filling work log, updating github projects tasks | ✅ Success | — | — |
+
+**Total time:** 7h 10m
 
 ---
 
@@ -27,7 +42,7 @@
 
 ## 21 May 2026
 
-**Sprint:** Sprint 2 (13 May 2026 → 22 May 2026)
+**Sprint:** Sprint 3 (22 May 2026 → 30 May 2026)
 
 **Day summary**
 
@@ -50,7 +65,7 @@
 
 ## 20 May 2026
 
-**Sprint:** Sprint 2 (13 May 2026 → 22 May 2026)
+**Sprint:** Sprint 3 (22 May 2026 → 30 May 2026)
 
 **Day summary**
 
