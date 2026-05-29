@@ -6,7 +6,6 @@
 	import Card from '$lib/components/ui/Card.svelte';
 	import Icon from '$lib/components/ui/Icon.svelte';
 	import { onMount } from 'svelte';
-
 	let cameFromMyRecipes = $state(false);
 	let { data } = $props();
 	const recipe = $derived(data.recipe);

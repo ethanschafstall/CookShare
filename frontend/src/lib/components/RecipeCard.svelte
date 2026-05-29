@@ -20,10 +20,10 @@
 <li
 	class="flex flex-col overflow-hidden rounded-lg border border-border-light bg-surface transition-shadow hover:shadow-md"
 >
-	<!-- Image area: 4:3 ratio, image centered with padding -->
-	<a href="/recipes/{recipe.slug}" rel="external" class="block aspect-[4/3] bg-bg p-4">
+	<!-- Image area: 4:3 ratio -->
+	<a href="/recipes/{recipe.slug}" rel="external" class="block aspect-[4/3] h-60 bg-bg">
 		{#if recipe.coverImage}
-			<img src={recipe.coverImage} alt={recipe.title} class="h-full w-full object-contain" />
+			<img src={recipe.coverImage} alt={recipe.title} class="h-full w-full object-cover" />
 		{:else}
 			<div class="flex h-full w-full items-center justify-center text-text-muted">
 				<svg

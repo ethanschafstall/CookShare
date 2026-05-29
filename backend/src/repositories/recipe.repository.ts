@@ -25,7 +25,10 @@ export class RecipeRepository {
     return model.recipe.findUnique({ where: { id: recipeId } });
   }
   getByUser(userId: number) {
-    return model.recipe.findMany({ where: { userId: userId } });
+    return model.recipe.findMany({
+      where: { userId: userId },
+      include: { images: true },
+    });
   }
   delete(urlId: string) {
     return model.recipe.delete({

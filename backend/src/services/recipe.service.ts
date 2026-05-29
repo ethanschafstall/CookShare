@@ -86,7 +86,7 @@ export class RecipeService {
   async getRecipesByUser(userId: number) {
     const recipe = await this.recipeRepo.getByUser(userId);
     if (!recipe) {
-      throw new NotFoundError("Failed to find recipe");
+      throw new NotFoundError("Failed to find recipes");
     }
     return recipe;
   }
