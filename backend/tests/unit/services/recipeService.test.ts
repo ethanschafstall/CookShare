@@ -3,10 +3,13 @@ import { RecipeService } from "@services/recipe.service.js";
 import mockRecipeRepo from "@tests/mocks/repositories/recipeRepo.mock.js";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-vi.mock("nanoid", () => ({
-  nanoid: vi.fn().mockReturnValue("abc123"),
-}));
-
+vi.mock("nanoid", async (importOriginal) => {
+  const actual = await importOriginal<typeof import("nanoid")>();
+  return {
+    ...actual,
+    customAlphabet: vi.fn(() => vi.fn(() => "abc123")),
+  };
+});
 vi.mock("slugify", () => ({
   default: vi.fn((s: string) => s.toLowerCase().replace(/\s+/g, "-")),
 }));
@@ -58,6 +61,7 @@ const mockImageInputs = [
     displayOrder: 1,
   },
 ];
+
 describe("RecipeService", () => {
   let recipeService: RecipeService;
 

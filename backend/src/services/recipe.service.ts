@@ -1,13 +1,20 @@
 import { NotFoundError } from "@errors/app.error.js";
 import { RecipeRepository } from "@repositories/recipe.repository.js";
 import { RecipeImageInput, RecipeInput } from "@validators/recipe.validator.js";
-import { nanoid } from "nanoid";
+import { customAlphabet } from "nanoid";
 import slugify from "slugify";
+import { NutritionService } from "./nutrition.service.js";
 
 export class RecipeService {
-  constructor(private recipeRepo: RecipeRepository) {}
-
+  constructor(
+    private recipeRepo: RecipeRepository,
+    private nutritionService?: NutritionService,
+  ) {}
   async create(input: RecipeInput, userId: number) {
+    const nanoid = customAlphabet(
+      "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      6,
+    );
     const urlId = nanoid(6);
     const slug = slugify(input.title) + "-" + urlId;
 
@@ -44,6 +51,9 @@ export class RecipeService {
     if (!recipe) {
       throw new Error("Failed to create recipe");
     }
+    this.nutritionService?.buildForRecipe(recipe.id).catch((err) => {
+      console.error("nutrition build failed", err);
+    });
     return recipe;
   }
   async getRecipe(urlId: string) {
@@ -76,7 +86,7 @@ export class RecipeService {
   async getRecipesByUser(userId: number) {
     const recipe = await this.recipeRepo.getByUser(userId);
     if (!recipe) {
-      throw new NotFoundError("Failed to find recipe");
+      throw new NotFoundError("Failed to find recipes");
     }
     return recipe;
   }

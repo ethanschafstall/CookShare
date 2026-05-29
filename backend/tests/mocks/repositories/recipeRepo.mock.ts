@@ -7,8 +7,7 @@ const mockRecipeRepo = {
   delete: vi.fn(),
   addImage: vi.fn(),
   assertRecipeExists: vi.fn(),
-  getByUser: vi.fn(),
-  delete: vi.fn(),
+  getIngredients: vi.fn(),
 };
 
 export default mockRecipeRepo;

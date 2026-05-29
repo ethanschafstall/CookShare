@@ -4,10 +4,13 @@
 	import { zodClient } from 'sveltekit-superforms/adapters';
 
 	let { data } = $props();
-	const { form, errors, message, enhance } = superForm(data.form, {
-		validators: zodClient(loginSchema),
-		validationMethod: 'onsubmit'
-	});
+
+	const { form, errors, message, enhance } = $derived.by(() =>
+		superForm(data.form, {
+			validators: zodClient(loginSchema),
+			validationMethod: 'onsubmit'
+		})
+	);
 </script>
 
 <div class="flex min-h-screen flex-col items-center bg-[#F7F3EE] px-4 pt-24">

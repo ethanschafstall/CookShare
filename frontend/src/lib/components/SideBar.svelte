@@ -13,7 +13,6 @@
 		{#each navItems as item (item.href)}
 			<a
 				href={item.href}
-				rel="external"
 				class="text-left text-lg font-semibold text-[#4A4440] transition-colors hover:text-[#FF6B2C] {$page
 					.url.pathname === item.href
 					? 'text-[#F4571D]'
