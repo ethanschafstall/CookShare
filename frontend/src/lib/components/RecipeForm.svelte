@@ -406,7 +406,7 @@
 						labelSize="xs"
 						id="ingredient-unit-{i}"
 						bind:value={$form.ingredients[i].displayUnit}
-						placeholder="e.g. grams"
+						placeholder="e.g. tbsp"
 						class="py-2"
 					/>
 					<TextField
@@ -503,7 +503,7 @@
 
 	<!-- Actions -->
 	<div class="flex justify-end gap-3 pb-10">
-		<Button variant="secondary" size="lg" href="/recipes" rel="external">Cancel</Button>
+		<Button variant="secondary" size="lg" href="/recipes">Cancel</Button>
 		<Button variant="primary" size="lg" type="submit" disabled={$submitting}>
 			{$submitting ? submittingLabel : submitLabel}
 		</Button>

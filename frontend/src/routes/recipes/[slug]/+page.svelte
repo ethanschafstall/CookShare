@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import ConfirmDialog from '$lib/components/ConfirmDialog.svelte';
+	import NutritionFacts from '$lib/components/NutritionFacts.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
 	import Card from '$lib/components/ui/Card.svelte';
 	import Icon from '$lib/components/ui/Icon.svelte';
 	import { onMount } from 'svelte';
-
 	let cameFromMyRecipes = $state(false);
 	let { data } = $props();
 	const recipe = $derived(data.recipe);
@@ -13,6 +13,7 @@
 	const images = $derived(recipe.images);
 	const ingredients = $derived(recipe.ingredients);
 	const steps = $derived(recipe.steps);
+	const nutritionFacts = $derived(recipe.nutritionFacts);
 
 	let activeImage = $state(0);
 	let confirming = $state(false);
@@ -36,13 +37,7 @@
 {#if canManage}
 	<div class="flex shrink-0 gap-2 justify-self-end">
 		{#if cameFromMyRecipes}
-			<Button
-				variant="ghost"
-				size="icon"
-				href="/myrecipes"
-				rel="external"
-				aria-label="Back to my recipes"
-			>
+			<Button variant="ghost" size="icon" href="/myrecipes" aria-label="Back to my recipes">
 				<Icon name="chevron-left" size={16} />
 			</Button>
 		{/if}
@@ -172,6 +167,9 @@
 				{/each}
 			</ol>
 		</section>
+		<div class="max-w-sm px-5 py-10 text-text">
+			<NutritionFacts facts={nutritionFacts} servings={recipe.servings} />
+		</div>
 	</div>
 </article>
 
