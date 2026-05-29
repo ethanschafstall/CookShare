@@ -1,13 +1,13 @@
 import { fetchNutritionData } from "@mock/nutrition.mock.js";
 import { IngredientRepository } from "@repositories/ingredient.repository.js";
-import { NutritionFactsRepository } from "@repositories/nutrition-facts.repository.js";
+import { NutritionalFactsRepository } from "@repositories/nutritional-facts.repository.js";
 import { RecipeRepository } from "@repositories/recipe.repository.js";
 
 export class NutritionService {
   constructor(
     private recipeRepo: RecipeRepository,
     private ingredientRepo: IngredientRepository,
-    private nutritionFactsRepo: NutritionFactsRepository,
+    private nutritionFactsRepo: NutritionalFactsRepository,
   ) {}
 
   // Resolve one ingredient's per-100g data: DB cache first, then mock API.
