@@ -7,8 +7,8 @@
     "estimatedHours": 20,
     "sprint": "Sprint 1"
   },
-  "totalLoggedMins": 985,
-  "totalLoggedHours": 16.416666666666668,
+  "totalLoggedMins": 1295,
+  "totalLoggedHours": 21.583333333333332,
   "logs": [
     {
       "date": "2026-05-06",
@@ -81,7 +81,16 @@
       "outcome": "success",
       "reflection": null,
       "aids": null
+    },
+    {
+      "date": "2026-05-29",
+      "durationMins": 310,
+      "durationHours": 5.166666666666667,
+      "description": "Basically finished the report. Added and completed the missing section. Added some diagrams/schemas which I had made previously but forgot to add; formating; printed a version to read during the weekend to find final errors.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
     }
   ],
-  "completionRate": 0.82
+  "completionRate": 1.08
 }

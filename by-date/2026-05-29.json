@@ -1,0 +1,50 @@
+{
+  "date": "2026-05-29",
+  "totalMins": 420,
+  "totalHours": 7,
+  "logs": [
+    {
+      "customTitle": "Git",
+      "sprint": null,
+      "durationMins": 50,
+      "durationHours": 0.8333333333333334,
+      "description": "Did some merge issue resolving and created a pull request for the nutritional facts element of create recipe",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "customTitle": "Readme & install guide",
+      "sprint": null,
+      "durationMins": 45,
+      "durationHours": 0.75,
+      "description": "Updated the project readme file and created a install guide markdown file",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    },
+    {
+      "customTitle": "Logo",
+      "sprint": null,
+      "durationMins": 15,
+      "durationHours": 0.25,
+      "description": "Created a logo for the website and the project report. I had an initial idea a few weeks ago, used ai to create it.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": "https://chatgpt.com/share/6a19410e-b8ec-83eb-a3c4-033728f93762"
+    },
+    {
+      "issue": {
+        "number": 8,
+        "title": "Doc - Project Report"
+      },
+      "sprint": "Sprint 2",
+      "durationMins": 310,
+      "durationHours": 5.166666666666667,
+      "description": "Basically finished the report. Added and completed the missing section. Added some diagrams/schemas which I had made previously but forgot to add; formating; printed a version to read during the weekend to find final errors.",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    }
+  ]
+}
