@@ -51,7 +51,7 @@ cd ..
 Lancer la command docker run avec variables défini dans le fichier .env
 
 ```bash
-docker run --name <DATABASE_NAME> -e MYSQL_ROOT_PASSWORD=<DATABASE_PASSWORD>
+docker run --name cookshare-database -e MYSQL_ROOT_PASSWORD=<DATABASE_PASSWORD>
  -e MYSQL_DATABASE=<DATABASE_NAME> -e MYSQL_USER=<DATABASE_USER>
  -e MYSQL_PASSWORD=<DATABASE_PASSWORD> -p <DATABASE_PORT>:3306 -d mysql:8
 ```
