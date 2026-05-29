@@ -7,8 +7,6 @@ services:
       MYSQL_DATABASE: ${DB_NAME}
       MYSQL_USER: ${DB_USER}
       MYSQL_PASSWORD: ${DB_PASSWORD}
-    ports:
-      - "${DB_PORT}:3306"
     volumes:
       - db_data:/var/lib/mysql
     healthcheck:
@@ -39,8 +37,6 @@ services:
       ADMIN_PASSWORD: ${ADMIN_PASSWORD}
     volumes:
       - uploads:/var/data/uploads
-    ports:
-      - "${BACKEND_PORT}:3000"
     depends_on:
       db:
         condition: service_healthy
@@ -64,15 +60,8 @@ services:
       - uploads:/var/data/uploads:ro
     ports:
       - "${FRONTEND_PORT}:3000"
-<<<<<<< Updated upstream
     depends_on:
       - backend
-    environment:
-      ORIGIN: http://localhost:${FRONTEND_PORT}
-      BACKEND_HOST: backend
-      BACKEND_PORT: ${BACKEND_PORT}
-=======
->>>>>>> Stashed changes
 
 volumes:
   db_data:
