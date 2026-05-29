@@ -11,3 +11,109 @@ generator client {
 datasource db {
   provider = "mysql"
 }
+
+model User {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique
+  firstname    String
+  lastname     String
+  passwordHash String
+  passwordSalt String
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime? @updatedAt
+  roleId       Int
+  role         Role      @relation(fields: [roleId], references: [id])
+  recipes      Recipe[]
+}
+model Role {
+  id Int @id @default(autoincrement())
+  name String @unique
+  permissions Json
+  users User[]
+}
+
+model Ingredient {
+  id                  Int                  @id @default(autoincrement())
+  name                String               @db.VarChar(255)
+  caloriesPer100      Decimal              @db.Decimal(15, 2)
+  proteinPer100       Decimal              @db.Decimal(15, 2)
+  fatPer100           Decimal              @db.Decimal(15, 2)
+  fatSaturatedPer100  Decimal              @db.Decimal(15, 2)
+  carbsPer100         Decimal              @db.Decimal(15, 2)
+  carbsSugarsPer100   Decimal              @db.Decimal(15, 2)
+  sodiumPer100        Decimal              @db.Decimal(15, 2)
+  fiberPer100         Decimal              @db.Decimal(15, 2)
+  createdAt           DateTime             @default(now())
+  updatedAt           DateTime             @updatedAt
+  recipeIngredients   RecipeIngredient[]
+}
+
+model Recipe {
+  id             Int                   @id @default(autoincrement())
+  urlId          String                @unique
+  title          String                @db.VarChar(255)
+  slug           String                @unique @db.VarChar(255)
+  description    String                @db.LongText
+  servings       Int?
+  prepTimeMin    Int?
+  cookTimeMin    Int?
+  difficulty     String                @db.VarChar(50)
+  createdAt      DateTime              @default(now())
+  updatedAt      DateTime              @updatedAt
+  hits           Int                   @default(0)
+  userId         Int
+  user           User                  @relation(fields: [userId], references: [id])
+  images         RecipeImage[]
+  steps          RecipeStep[]
+  ingredients    RecipeIngredient[]
+  nutritionFacts RecipeNutritionFacts?
+}
+
+model RecipeImage {
+  id           Int     @id @default(autoincrement())
+  filename     String  @db.VarChar(255)
+  altText      String  @db.VarChar(255)
+  storagePath  String  @unique @db.VarChar(2048)
+  isCover      Boolean
+  displayOrder Int
+  recipeId     Int
+  recipe       Recipe  @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+}
+
+model RecipeStep {
+  id          Int    @id @default(autoincrement())
+  stepNumber  Int
+  instruction String @db.LongText
+  recipeId    Int
+  recipe      Recipe @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+}
+
+model RecipeIngredient {
+  id              Int         @id @default(autoincrement())
+  name            String      @db.VarChar(255)
+  displayOrder    Int
+  quantityG       Decimal?    @db.Decimal(15, 2)
+  quantityNumeric Decimal?    @db.Decimal(5, 2)
+  displayUnit     String?     @db.VarChar(255)
+  note            String?     @db.VarChar(255)
+  ingredientId    Int?
+  recipeId        Int
+  ingredient      Ingredient? @relation(fields: [ingredientId], references: [id])
+  recipe          Recipe      @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+}
+
+model RecipeNutritionFacts {
+  id                 Int      @id @default(autoincrement())
+  totalCalories      Decimal  @db.Decimal(15, 2)
+  totalProteinG      Decimal  @db.Decimal(15, 2)
+  totalFatG          Decimal  @db.Decimal(15, 2)
+  totalFatSaturatedG Decimal  @db.Decimal(15, 2)
+  totalCarbsG        Decimal  @db.Decimal(15, 2)
+  totalCarbsSugarsG  Decimal  @db.Decimal(15, 2)
+  totalFiberG        Decimal  @db.Decimal(15, 2)
+  totalSodiumMg      Decimal  @db.Decimal(15, 2)
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  recipeId           Int      @unique
+  recipe             Recipe   @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+}

@@ -1,9 +1,16 @@
 <script lang="ts">
-	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
-
-	let { children } = $props();
+	import Body from '$lib/components/Body.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import SideBar from '$lib/components/SideBar.svelte';
+	import './layout.css';
+	let { children, data } = $props();
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
-{@render children()}
+
+<Header user={data.user} />
+<div class="flex min-h-screen bg-[#F9F8F6]">
+	<SideBar />
+	<Body {children} />
+</div>

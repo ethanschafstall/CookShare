@@ -1,3 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+@theme {
+	--font-sans: 'Figtree', sans-serif;
+	--color-primary: #f4571d;
+	--color-primary-hover: #e04a14;
+	--color-primary-active: #c93e0e;
+	--color-primary-light: #fff0eb;
+
+	--color-error: #ff7c7c;
+
+	--color-bg: #f7f3ee;
+	--color-surface: #ffffff;
+	--color-page: #f0ede8;
+
+	--color-text: #222;
+	--color-text-muted: #bfbdbd;
+	--color-text-secondary: #555;
+	--color-text-tertiary: #888;
+
+	--color-border: #ccc;
+	--color-border-light: #ddd;
+	--color-border-subtle: #eee;
+	--color-border-muted: #d0ccc7;
+}

@@ -12,9 +12,12 @@ export default defineConfig({
       "@middleware": resolve(__dirname, "src/middleware"),
       "@helpers": resolve(__dirname, "src/helpers"),
       "@validators": resolve(__dirname, "src/validators"),
+      "@errors": resolve(__dirname, "src/errors"),
+      "@tests": resolve(__dirname, "tests"),
     },
   },
   test: {
     globals: true,
+    setupFiles: ["./tests/setup.ts"],
   },
 });
