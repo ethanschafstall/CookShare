@@ -37,13 +37,8 @@
 {#if canManage}
 	<div class="flex shrink-0 gap-2 justify-self-end">
 		{#if cameFromMyRecipes}
-			<Button
-				variant="ghost"
-				size="icon"
-				href="/myrecipes"
-				rel="external"
-				aria-label="Back to my recipes"
-			>
+			<!-- svelte-ignore a11y_invalid_attribute -->
+			<Button variant="ghost" size="icon" href="/myrecipes" aria-label="Back to my recipes">
 				<Icon name="chevron-left" size={16} />
 			</Button>
 		{/if}

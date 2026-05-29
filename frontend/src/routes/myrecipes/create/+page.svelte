@@ -10,13 +10,8 @@
 	<div class="mx-auto max-w-4xl">
 		<!-- Page title -->
 		<div class="mb-8 flex items-center gap-3">
-			<Button
-				variant="ghost"
-				size="icon"
-				href="/myrecipes"
-				rel="external"
-				aria-label="Back to my recipes"
-			>
+			<!-- svelte-ignore a11y_invalid_attribute -->
+			<Button variant="ghost" size="icon" href="/myrecipes" aria-label="Back to my recipes">
 				<Icon name="chevron-left" size={16} />
 			</Button>
 			<h1 class="text-3xl font-semibold text-text">New recipe</h1>

@@ -11,9 +11,9 @@
 	<p class="mb-3 text-sm text-[#BFBDBD]">Menu</p>
 	<nav class="flex flex-col">
 		{#each navItems as item (item.href)}
+			<!-- svelte-ignore a11y_invalid_attribute -->
 			<a
 				href={item.href}
-				rel="external"
 				class="text-left text-lg font-semibold text-[#4A4440] transition-colors hover:text-[#FF6B2C] {$page
 					.url.pathname === item.href
 					? 'text-[#F4571D]'

@@ -503,7 +503,8 @@
 
 	<!-- Actions -->
 	<div class="flex justify-end gap-3 pb-10">
-		<Button variant="secondary" size="lg" href="/recipes" rel="external">Cancel</Button>
+		<!-- svelte-ignore a11y_invalid_attribute -->
+		<Button variant="secondary" size="lg" href="/recipes">Cancel</Button>
 		<Button variant="primary" size="lg" type="submit" disabled={$submitting}>
 			{$submitting ? submittingLabel : submitLabel}
 		</Button>

@@ -1,6 +1,6 @@
+<!-- svelte-ignore a11y_invalid_attribute -->
 <a
 	href="/login"
-	rel="external"
 	class="flex cursor-pointer items-center gap-2 rounded-xl border-2 border-white bg-transparent px-4 py-2 text-base font-medium text-white transition-colors hover:bg-white/10"
 >
 	<svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">

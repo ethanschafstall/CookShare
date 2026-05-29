@@ -6,13 +6,10 @@
 
 <header class="box-border flex h-[120px] w-full items-center justify-between bg-[#F4571D] px-6">
 	<!-- Logo + Brand -->
-	<a href="/" rel="external">
+	<!-- svelte-ignore a11y_invalid_attribute -->
+	<a href="/">
 		<div class="flex items-center gap-3">
-			<div
-				class="flex h-[52px] w-[52px] items-center justify-center rounded-full border-2 border-white"
-			>
-				<span class="text-xs font-semibold text-white">Logo</span>
-			</div>
+			<img src="/logo.png" alt="CookShare logo" class="h-20 w-20 object-contain" />
 			<span class="text-3xl font-bold tracking-tight text-white">CookShare</span>
 		</div>
 	</a>
