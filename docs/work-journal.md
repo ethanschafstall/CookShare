@@ -1,6 +1,25 @@
 # Work Journal — @ethanschafstall's CookShare project
 
-*12 days*
+*13 days*
+
+---
+
+## 29 May 2026
+
+**Sprint:** Sprint 2 (13 May 2026 → 22 May 2026)
+
+**Day summary**
+
+> Finshed the rapport and did the final git related stuff (commit bug fixes, resolve merge issues, pull request)
+
+| # | Task | Time spent | Description | Outcome | Reflection | Aids used |
+|---|------|------------|-------------|---------|------------|-----------|
+| — | Git | 0h 50m | Did some merge issue resolving and created a pull request for the nutritional facts element of create recipe | ✅ Success | — | — |
+| — | Readme & install guide | 0h 45m | Updated the project readme file and created a install guide markdown file | ✅ Success | — | — |
+| — | Logo | 0h 15m | Created a logo for the website and the project report. I had an initial idea a few weeks ago, used ai to create it. | ✅ Success | — | https://chatgpt.com/share/6a19410e-b8ec-83eb-a3c4-033728f93762 |
+| [#8](https://github.com/ethanschafstall/CookShare/issues/8) | Doc - Project Report | 5h 10m | Basically finished the report. Added and completed the missing section. Added some diagrams/schemas which I had made previously but forgot to add; formating; printed a version to read during the weekend to find final errors. | ✅ Success | — | — |
+
+**Total time:** 7h
 
 ---
 
