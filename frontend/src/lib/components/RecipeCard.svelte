@@ -21,7 +21,6 @@
 	class="flex flex-col overflow-hidden rounded-lg border border-border-light bg-surface transition-shadow hover:shadow-md"
 >
 	<!-- Image area: 4:3 ratio -->
-	<!-- svelte-ignore a11y_invalid_attribute -->
 	<a href="/recipes/{recipe.slug}" class="block aspect-[4/3] h-60 bg-bg">
 		{#if recipe.coverImage}
 			<img src={recipe.coverImage} alt={recipe.title} class="h-full w-full object-cover" />
