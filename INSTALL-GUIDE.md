@@ -63,7 +63,7 @@ cd backend && npm install
 cd ../frontend && npm install
 ```
 
-### 4. Préparer la base avec Prisma
+### 4. Préparer la base de données avec Prisma
 
 ```bash
 cd backend
