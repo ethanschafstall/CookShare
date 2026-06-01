@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-01",
+  "totalMins": 90,
+  "totalHours": 1.5,
+  "logs": [
+    {
+      "issue": {
+        "number": 8,
+        "title": "Doc - Project Report"
+      },
+      "sprint": "Sprint 2",
+      "durationMins": 90,
+      "durationHours": 1.5,
+      "description": "corrections, formating and last edits of the project report",
+      "outcome": "success",
+      "reflection": null,
+      "aids": null
+    }
+  ]
+}
