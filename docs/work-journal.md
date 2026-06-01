@@ -1,6 +1,18 @@
 # Work Journal — @ethanschafstall's CookShare project
 
-*13 days*
+*14 days*
+
+---
+
+## 1 June 2026
+
+**Sprint:** Sprint 2 (13 May 2026 → 22 May 2026)
+
+| # | Task | Time spent | Description | Outcome | Reflection | Aids used |
+|---|------|------------|-------------|---------|------------|-----------|
+| [#8](https://github.com/ethanschafstall/CookShare/issues/8) | Doc - Project Report | 1h 30m | corrections, formating and last edits of the project report | ✅ Success | — | — |
+
+**Total time:** 1h 30m
 
 ---
 
